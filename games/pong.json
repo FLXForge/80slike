@@ -1,0 +1,78 @@
+{
+    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+
+    "states": {
+        "initial": "menu",
+
+        "menu":{
+            "next" : [ "game" ]
+        },
+
+        "game":{
+            "next" : [ "menu" ]
+        }
+    },
+
+    "children": {
+        "goal_effect": {
+            "origin": {
+                "x": 0,
+                "y": 0
+            },
+            "spawn": "manual",
+            "shape": {
+                "type": "block",
+                "color": "red",
+                "size": {
+                    "width": 320,
+                    "height": 20
+                }
+            },
+            "behavior": {
+                "scripts": [
+                    "pong/effect"
+                ]
+            }
+        },
+        "player": {
+            "like": "pong/actors/paddle.json",
+            "origin": {
+                "x": 16
+            },
+            "motion": {
+                "speed": 120
+            },
+            "behavior": {
+                "scripts": [
+                    "player"
+                ]
+            }
+        },
+        "enemy": {
+            "like": "pong/actors/paddle.json",
+            "origin": {
+                "x": 299
+            },
+            "motion": {
+                "speed": 55
+            },
+            "behavior": {
+                "scripts": [
+                    "enemy"
+                ]
+            }
+        },
+        "ball": "pong/actors/ball",
+        "court": "pong/land/court"
+    },
+
+    "music": {
+        "odetojoy": "/commons/musics:odetojoy"
+    },
+
+    "behavior": {
+        "scripts": [
+            "pong/game"
+        ]
+    }
+}

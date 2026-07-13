@@ -1,0 +1,6 @@
+machine:
+  title: Arcade machine
+
+  video: chips/video/color_video.yml
+  audio: chips/audio/buzzer.yml
+  input: chips/input/80arcade.yml

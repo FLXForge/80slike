@@ -1,0 +1,6 @@
+machine:
+  title: 70's machine
+
+  video: chips/video/basic_video.yml
+  audio: chips/audio/buzzer.yml
+  input: chips/input/pong.yml

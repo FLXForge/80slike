@@ -1,0 +1,25 @@
+audio:
+  voices:
+    music: 1
+    sound: 0
+    mode: shared 
+    overflow: replace_oldest 
+
+  synthesis:
+    model: pulse
+    texture: clean
+    movement: simple
+    noise: simple
+
+  fidelity:
+    resolution: low
+    dynamics: limited
+    space: mono
+
+  resources:
+    generated: false
+    samples: false
+    streams: false
+
+  fileAudio:
+    mode: off

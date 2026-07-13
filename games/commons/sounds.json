@@ -1,0 +1,60 @@
+{
+    "beep": {
+        "kind": {
+            "source": {
+                "type": "oscillator",
+                "wave": "square"
+            },
+            "note": 880
+        },
+        "duration": 0.08,
+        "volume": 0.7
+    },
+    "lost": {
+        "kind": {
+            "source": {
+                "type": "oscillator",
+                "wave": "triangle"
+            },
+            "note": 700,
+            "slide": 500
+        },
+        "duration": 0.08,
+        "volume": 0.7
+    },
+    "piuu": {
+        "kind": {
+            "note": "A4",
+            "slide": -350
+        },
+        "tone": {
+            "wave": "square",
+            "envelope": {
+                "attack": 0,
+                "decay": 0.14,
+                "sustain": 0,
+                "release": 0
+            }
+        },
+        "duration": 0.1,
+        "volume": 0.5
+    },
+    "goalA": {
+        "kind": {
+            "note": "A4",
+            "slide": -350
+        },
+        "tone": {
+            "wave": "pulse"
+        }
+    },
+    "goalB": {
+        "kind": {
+            "note": "F4",
+            "slide": -350
+        },
+        "tone": {
+            "wave": "pulse"
+        }
+    }
+}

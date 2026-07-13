@@ -1,0 +1,14 @@
+{
+    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+    "behavior": {
+        "scripts": [
+            "asteroids/game"
+        ]
+    },
+    "children": {
+        "level": "asteroids/space/level"
+    },
+    "music": {
+        "menu": "/commons/musics:composite1"
+    }
+}

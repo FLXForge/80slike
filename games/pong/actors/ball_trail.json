@@ -1,0 +1,19 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+
+  "shape": {
+    "type": "block",
+    "mode": "fill",
+    "color": "white",
+    "size": {
+      "width": 4,
+      "height": 4
+    }
+  },
+
+  "spawn": "manual",
+
+  "behavior": {
+    "scripts": ["ball_trail"]
+  }
+}

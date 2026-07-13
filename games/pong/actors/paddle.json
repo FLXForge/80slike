@@ -1,0 +1,36 @@
+{
+    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+
+    "spawn": "manual",
+    
+    "origin": {
+        "x": 0,
+        "y": 90
+    },
+    
+    "children": {
+        "trail": {
+            "like": "paddle_trail",
+            "spawn": "manual"
+        }
+    },
+
+    "shape": {
+        "type": "block",
+        "color": "white",
+        "size": {
+            "width": 5,
+            "height": 30
+        }
+    },
+    
+    "group": "paddle",
+    
+    "collision": {
+        "type": "box",
+        "active": true,
+        "with": [
+            "wall"
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+# Game data
+title=Asteroids
+name=Asteroids
+version=1.0
+engine=0.2.0
+
+# Configuration
+path=games
+root=asteroids
+window.mode=fullscreen
+machine=machines/arcade.yml
+input.mapping=controllers.input
+
+debug.console=true
