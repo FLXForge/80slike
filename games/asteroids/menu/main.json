@@ -1,0 +1,146 @@
+{
+    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+    "spawn": "auto",
+    "children": {
+        "title": {
+            "origin": {
+                "x": 190,
+                "y": 87
+            },
+            "shape": {
+                "type": "text",
+                "content": "A S T E R O I D S",
+                "color": "white",
+                "mode": "fill",
+                "size": {
+                    "width": 260,
+                    "height": 60
+                }
+            }
+        },
+        "cursor": {
+            "origin": {
+                "x": 210,
+                "y": 215
+            },
+            "shape": {
+                "type": "triangle",
+                "color": "green",
+                "size": {
+                    "width": 18,
+                    "height": 24
+                }
+            },
+            "motion": {
+                "angle": 90
+            },
+            "behavior":{
+                "scripts": ["cursor"]
+            }
+        },
+        "start": {
+            "origin": {
+                "x": 250,
+                "y": 200
+            },
+            "shape": {
+                "type": "text",
+                "content": "START GAME",
+                "color": "white",
+                "mode": "fill",
+                "size": {
+                    "width": 130,
+                    "height": 30
+                }
+            }
+        },
+        "difficulty": {
+            "origin": {
+                "x": 250,
+                "y": 240
+            },
+            "shape": {
+                "type": "text",
+                "content": "DIFFICULTY: ",
+                "color": "white",
+                "mode": "fill",
+                "size": {
+                    "width": 130,
+                    "height": 30
+                }
+            },
+            "children": {
+                "easy": {
+                    "spawn": "manual",
+                    "origin": {
+                        "x": 380,
+                        "y": 245
+                    },
+                    "shape": {
+                        "type": "text",
+                        "content": "-EASY-",
+                        "color": "blue",
+                        "mode": "fill",
+                        "size": {
+                            "width": 100,
+                            "height": 20
+                        }
+                    }
+                },
+                "normal": {
+                    "spawn": "auto",
+                    "origin": {
+                        "x": 380,
+                        "y": 245
+                    },
+                    "shape": {
+                        "type": "text",
+                        "content": "-NORMAL-",
+                        "color": "orange",
+                        "mode": "fill",
+                        "size": {
+                            "width": 100,
+                            "height": 20
+                        }
+                    }
+                },
+                "hard": {
+                    "spawn": "manual",
+                    "origin": {
+                        "x": 380,
+                        "y": 245
+                    },
+                    "shape": {
+                        "type": "text",
+                        "content": "-HARD-",
+                        "color": "red",
+                        "mode": "fill",
+                        "size": {
+                            "width": 100,
+                            "height": 20
+                        }
+                    }
+                }
+            }
+        },
+        "exit": {
+            "origin": {
+                "x": 250,
+                "y": 280
+            },
+            "shape": {
+                "type": "text",
+                "content": "EXIT",
+                "color": "white",
+                "mode": "fill",
+                "size": {
+                    "width": 130,
+                    "height": 30
+                }
+            }
+        }
+    },
+    "behavior":{
+        "scripts": ["menu"]
+    }
+}
