@@ -1,0 +1,12 @@
+{
+    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+    "behavior": {
+        "scripts": [
+            "sound/test"
+        ]
+    },
+    "music": {
+        "m1": "/commons/musics:odetojoy",
+        "m2": "/commons/musics:composite1"
+    }
+}

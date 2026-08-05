@@ -1,0 +1,13 @@
+# Game data
+title=Sound Test
+name=SundTest
+version=1.0
+engine=0.2.0
+
+# Configuration
+path=games
+root=sounds
+window.mode=fullscreen
+input.mapping=controllers.input
+
+debug.console=true
