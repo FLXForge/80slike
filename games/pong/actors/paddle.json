@@ -1,36 +1,35 @@
 {
-    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-
-    "spawn": "manual",
-    
-    "origin": {
-        "x": 0,
-        "y": 90
-    },
-    
-    "children": {
-        "trail": {
-            "like": "paddle_trail",
-            "spawn": "manual"
-        }
-    },
-
-    "shape": {
-        "type": "block",
-        "color": "white",
-        "size": {
-            "width": 5,
-            "height": 30
-        }
-    },
-    
-    "group": "paddle",
-    
-    "collision": {
-        "type": "box",
-        "active": true,
-        "with": [
-            "wall"
-        ]
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "origin": {
+    "x": 2.5,
+    "y": 105
+  },
+  "children": {
+    "trail": {
+      "like": "paddle_trail",
+      "spawn": "manual"
     }
+  },
+  "group": "paddle",
+  "size": {
+    "width": 5,
+    "height": 30
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "wall"
+      ]
+    }
+  }
 }

@@ -2,13 +2,10 @@
 title=Pong
 name=Pong
 version=1.0
-engine=0.2.0
+engine=0.3.0
 
 # Configuration
 path=games
 root=pong
-window.mode=fullscreen
-machine=machines/70s.yml
+machine=machines/pong.yml
 input.mapping=controllers.input
-
-debug.console=true

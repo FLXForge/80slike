@@ -1,38 +1,18 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/* 
-    The player moves using the up and down keys. 
-*/
+const MOVE = direction(0);
 
-function action(player) {
-    let moved = false;
-
-    if (Input.player(1).up()) {
-        move_y(player, UP);
-        moved = true;
-    }
-
-    if (Input.player(1).down()) {
-        move_y(player, DOWN);
-        moved = true;
-    }
-
-    if (global["effects"] == 1 && moved 
-        && probability(25)) {
-        spawn(player, "trail");
+function action(paddle) {
+    const vertical = input_direction(player(1), MOVE, VERTICAL);
+    move_vertical(paddle, vertical);
+    if (read_global("effects") == 1 && vertical != 0 && probability(25)) {
+        spawn(paddle, "trail");
     }
 }
 
-function collision(paddle, other) {
-    if (other.group != "wall") {
-        return;
-    }
-
-    if (other.role == "top") {
-        paddle.y = other.y + other.height;
-    }
-
-    if (other.role == "bottom") {
-        paddle.y = other.y - paddle.height;
+function collision(paddle, other, contacts) {
+    if (other.group != "wall") return;
+    for (const contact of contacts) {
+        position(paddle, contact);
     }
 }

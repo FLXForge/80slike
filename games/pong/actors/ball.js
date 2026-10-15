@@ -1,38 +1,37 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/*
-    The ball always moves forward. The collision determines its trajectory depending on what it hits:
-        -If it collides with the goal, it returns to the starting point.
-        -If it collides with the wall, it bounces along the y-axis.
-        -If it collides with the paddle, it bounces along the x-axis and accelerates.
-*/
-
 function motion(ball) {
     advance(ball);
-    if (global["effects"] == 1 && probability(35)) {
+    if (read_global("effects") == 1 && probability(35)) {
         spawn(ball, "trail");
     }
 }
 
-function collision(ball, other) {
+function collision(ball, other, contacts) {
     if (other.group == "goal") {
-        if (other.role == "left") {
-            global["pl2"] += 1;
+        if (other.name == "left_goal") {
+            write_global("pl2", read_global("pl2") + 1);
             play_sound(ball, "goal_left");
-        }
-        if (other.role == "right") {
-            global["pl1"] += 1;
+        } else if (other.name == "right_goal") {
+            write_global("pl1", read_global("pl1") + 1);
             play_sound(ball, "goal_right");
         }
-        global["goal_effect"] = 1;
-        to_origin(ball);
-    } else if (other.group == "wall") {
-        bounce_y(ball);
-        play_sound(ball, "beep");
-    } else if (other.group == "paddle") {
-        bounce_x(ball);
-        accelerate(ball, 5);
-        play_sound(ball, "beep");
+        write_global("goal_effect", 1);
+        position_origin(ball);
+        return;
     }
-    
+
+    if (other.group != "wall" && other.group != "paddle") return;
+    for (const contact of contacts) {
+        position(ball, contact);
+        if (Math.abs(contact.normalX) > Math.abs(contact.normalY)) {
+            reflect_x(ball);
+        } else {
+            reflect_y(ball);
+        }
+    }
+    if (other.group == "paddle") {
+        apply_speed(ball, ball.speed + 5);
+    }
+    play_sound(ball, "beep");
 }

@@ -1,34 +1,30 @@
 {
-    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-    "spawn": "manual",
-    "children": {
-        "left_goal": {
-            "like": "goal.json",
-            "role": "left",
-            "origin": {
-                "x": -10
-            }
-        },
-        "right_goal": {
-            "like": "goal.json",
-            "role": "right",
-            "origin": {
-                "x": 320
-            }
-        },
-        "top_wall": {
-            "like": "wall",
-            "role": "top",
-            "origin": {
-                "y": 18
-            }
-        },
-        "bottom_wall": {
-            "like": "wall",
-            "role": "bottom",
-            "origin": {
-                "y": 170
-            }
-        }
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "children": {
+    "left_goal": {
+      "like": "goal.json",
+      "origin": {
+        "x": -5
+      }
+    },
+    "right_goal": {
+      "like": "goal.json",
+      "origin": {
+        "x": 325
+      }
+    },
+    "top_wall": {
+      "like": "wall",
+      "origin": {
+        "y": 19
+      }
+    },
+    "bottom_wall": {
+      "like": "wall",
+      "origin": {
+        "y": 171
+      }
     }
+  }
 }

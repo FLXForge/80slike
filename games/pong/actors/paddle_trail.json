@@ -1,19 +1,22 @@
 {
   "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-
-  "shape": {
-    "type": "block",
-    "mode": "fill",
-    "color": "white",
-    "size": {
-      "width": 5,
-      "height": 30
-    }
-  },
-
   "spawn": "manual",
-
   "behavior": {
-    "scripts": ["paddle_trail"]
+    "scripts": [
+      "paddle_trail"
+    ]
+  },
+  "size": {
+    "width": 5,
+    "height": 30
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
   }
 }

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "component": true,
+  "origin": {
+    "x": 160,
+    "y": 90
+  },
+  "behavior": {
+    "scripts": [
+      "menu"
+    ]
+  },
+  "children": {
+    "title": {
+      "component": true,
+      "origin": {
+        "x": 160,
+        "y": 48
+      },
+      "size": {
+        "width": 120,
+        "height": 40
+      },
+      "visual": {
+        "color": "white",
+        "representation": [
+          {
+            "text": "PONG",
+            "fontSize": 40
+          }
+        ]
+      },
+      "behavior": {
+        "scripts": [
+          "title"
+        ]
+      }
+    }
+  },
+  "music": {
+    "theme": "/commons/musics:paddle_ceremony"
+  },
+  "sounds": {
+    "mode": {
+      "kind": {
+        "source": {
+          "type": "oscillator",
+          "wave": "square"
+        },
+        "note": "E5"
+      },
+      "duration": 0.045,
+      "volume": 0.25
+    },
+    "start": {
+      "kind": {
+        "source": {
+          "type": "oscillator",
+          "wave": "square"
+        },
+        "note": "C5",
+        "slide": 260
+      },
+      "duration": 0.16,
+      "volume": 0.35
+    }
+  }
+}

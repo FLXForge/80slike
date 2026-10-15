@@ -1,45 +1,29 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/* 
-	The enemy paddle always follows the ball on the y-axis 
-*/
-
+const MOVE = direction(0);
 const PLAYER_SPEED = 120;
 
 function motion(enemy) {
     let moved = false;
-
-    if (global["players"] == 1){
-        follow_y(enemy, "ball");
-        moved = true;    
+    if (read_global("players") == 1) {
+        const balls = find_name("ball");
+        if (balls.length > 0) {
+            follow_y(enemy, balls[0]);
+            moved = true;
+        }
     } else {
-        if (Input.player(2).up()) {
-            enemy.y += UP * PLAYER_SPEED * delta();
-            moved = true;
-        }
-
-        if (Input.player(2).down()) {
-            enemy.y += DOWN * PLAYER_SPEED * delta();
-            moved = true;
-        }
+        const vertical = input_direction(player(2), MOVE, VERTICAL);
+        position_y(enemy, enemy.y + vertical * PLAYER_SPEED * delta());
+        moved = vertical != 0;
     }
-
-    if (global["effects"] == 1 && moved 
-        && probability(25)) {
+    if (read_global("effects") == 1 && moved && probability(25)) {
         spawn(enemy, "trail");
     }
 }
 
-function collision(paddle, other) {
-    if (other.group != "wall") {
-        return;
-    }
-
-    if (other.role == "top") {
-        paddle.y = other.y + other.height;
-    }
-
-    if (other.role == "bottom") {
-        paddle.y = other.y - paddle.height;
+function collision(paddle, other, contacts) {
+    if (other.group != "wall") return;
+    for (const contact of contacts) {
+        position(paddle, contact);
     }
 }

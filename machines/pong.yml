@@ -1,0 +1,5 @@
+machine:
+  title: 80s Like Pong
+  video: chips/video/basic_video.yml
+  audio: chips/audio/pong.yml
+  input: chips/input/pong.yml

@@ -8,14 +8,13 @@
 const LIFE = 0.18;
 
 function born(trail){
-    timer(trail, "life", LIFE);
+    play_timer(trail, "life", LIFE);
 }
 
 function motion(trail){
     let factor = timer_left(trail, "life") / LIFE;
 
-    trail.width = 4 * factor;
-    trail.height = 4 * factor;
+    resize(trail, 4 * factor, 4 * factor);
 
     if (!timer_active(trail, "life")) {
         kill(trail);

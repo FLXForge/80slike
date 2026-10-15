@@ -3,7 +3,7 @@
 const LIFE = 0.18;
 
 function born(flash){
-    timer(flash, "life", LIFE);
+    play_timer(flash, "life", LIFE);
 }
 
 function motion(flash){

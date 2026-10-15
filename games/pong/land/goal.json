@@ -1,20 +1,26 @@
 {
-    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-
-    "shape": {
-        "type": "block",
-        "color": "black",
-        "size": {
-            "width": 10,
-            "height": 180
-        }
-    },
-
-    "group": "goal",
-
-    "collision": {
-        "type": "box"
-    },
-    
-    "visible": false
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "group": "goal",
+  "visible": false,
+  "size": {
+    "width": 10,
+    "height": 180
+  },
+  "visual": {
+    "color": "black",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "origin": {
+    "x": 5,
+    "y": 90
+  }
 }
