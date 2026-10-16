@@ -6,6 +6,17 @@ const MODE = button(2);
 const ACTION = button(0);
 const MOVE = direction(0);
 const DISPLAY_SECONDS = 8;
+const TEXT_SIZE = 11;
+
+// Collection variants are game data, not additional FLX input controls.
+const VARIANTS = [
+    { players: 1, frenetic: false, progressive: false, label: "Classic - Fixed CPU" },
+    { players: 1, frenetic: false, progressive: true,  label: "Classic - Progressive CPU" },
+    { players: 1, frenetic: true,  progressive: false, label: "Frenetic - Fixed CPU" },
+    { players: 1, frenetic: true,  progressive: true,  label: "Frenetic - Progressive CPU" },
+    { players: 2, frenetic: false, progressive: false, label: "Classic" },
+    { players: 2, frenetic: true,  progressive: false, label: "Frenetic" }
+];
 
 function born(menu) {
     write_local(menu, "lore", false);
@@ -18,6 +29,10 @@ function action(menu) {
     if (input_pressed(system(), EXIT)) return;
 
     if (input_pressed(system(), START)) {
+        const variant = VARIANTS[read_global("pong_variant")];
+        write_global("players", variant.players);
+        write_global("pong_frenetic", variant.frenetic);
+        write_global("pong_cpu_progressive", variant.progressive);
         stop_music();
         play_sound(menu, "start");
         state_to(menu, "game");
@@ -25,11 +40,10 @@ function action(menu) {
     }
 
     if (input_pressed(system(), MODE)) {
-        write_global("players", read_global("players") == 1 ? 2 : 1);
+        write_global("pong_variant", (read_global("pong_variant") + 1) % VARIANTS.length);
         play_sound(menu, "mode");
     }
 
-    // Logical FLX controls only; unmapped keyboard keys are not observable.
     if (input_down(system(), MODE) || input_down(system(), START) ||
         input_down(player(1), ACTION) || input_down(player(2), ACTION) ||
         input_direction(player(1), MOVE, VERTICAL) != 0 ||
@@ -47,13 +61,16 @@ function action(menu) {
 function draw(menu) {
     if (!state_active(menu, "menu")) return;
     if (read_local(menu, "lore")) {
-        draw_text(160, 98, "Every few years, two paddle warriors", 8);
-        draw_text(160, 110, "are summoned to the great Pong tournament.", 8);
-        draw_text(160, 122, "Nobody knows who keeps booking the court.", 8);
+        draw_text(160, 85, "Every few years, two paddle", TEXT_SIZE);
+        draw_text(160, 100, "warriors answer Pong's call.", TEXT_SIZE);
+        draw_text(160, 115, "Nobody knows who keeps", TEXT_SIZE);
+        draw_text(160, 130, "booking the court.", TEXT_SIZE);
     } else {
-        draw_text(106, 110, "1 Player", 10);
-        draw_text(151, 110, "Vs", 10, "red");
-        draw_text(202, 110, read_global("players") == 1 ? "Computer" : "2 Player", 10);
+        const variant = VARIANTS[read_global("pong_variant")];
+        draw_text(105, 100, "1 Player", TEXT_SIZE);
+        draw_text(160, 100, "Vs", TEXT_SIZE, "red");
+        draw_text(215, 100, variant.players == 1 ? "Computer" : "2 Player", TEXT_SIZE);
+        draw_text(160, 121, variant.label, TEXT_SIZE);
     }
-    draw_text(160, 160, "Mode: change game   Start: play", 8);
+    draw_text(160, 160, "Mode: change game   Start: play", TEXT_SIZE);
 }

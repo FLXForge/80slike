@@ -8,6 +8,9 @@ function born(game) {
     write_global("pl1", 0);
     write_global("pl2", 0);
     write_global("players", 1);
+    write_global("pong_variant", 0);
+    write_global("pong_frenetic", false);
+    write_global("pong_cpu_progressive", false);
     write_global("effects", 1);
     write_global("winer", 0);
     write_global("goal_effect", 0);
@@ -22,6 +25,9 @@ function action(game){
     if (state_entered(game)){
         keep_only(game);
         if (state_active(game, "game")){
+            write_global("pl1", 0);
+            write_global("pl2", 0);
+            write_global("goal_effect", 0);
             spawn(game, "player");
             spawn(game, "enemy");
             spawn(game, "ball");
@@ -54,14 +60,11 @@ function draw(game) {
             write_global("goal_effect", 0);
             spawn(game, "goal_effect")
         }
-        if (read_global("pl1") > 8 ){
-            draw_text(80, 5, "TO WIN", 10, "blue");
-        }
-        draw_text(65,10,"PLAYER 1: " + read_global("pl1"));
-        if (read_global("pl2") > 8 ){
-            draw_text(195, 5, "TO WIN", 10, "blue");
-        }
-        draw_text(255,10,"PLAYER 2: " + read_global("pl2"));
+        draw_text(65, 10, "PLAYER 1: " + read_global("pl1"), 11,
+            read_global("pl1") > 8 ? "blue" : "white");
+        const opponent = read_global("players") == 1 ? "CPU: " : "PLAYER 2: ";
+        draw_text(255, 10, opponent + read_global("pl2"), 11,
+            read_global("pl2") > 8 ? "blue" : "white");
         draw_rectangle(160,95,300,150);
         draw_line(160,30,160,160);
     }

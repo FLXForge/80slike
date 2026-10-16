@@ -18,6 +18,9 @@ function collision(ball, other, contacts) {
         }
         write_global("goal_effect", 1);
         position_origin(ball);
+        if (!read_global("pong_frenetic")) {
+            restore_speed(ball);
+        }
         return;
     }
 

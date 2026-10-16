@@ -23,18 +23,67 @@
         "height": 40
       },
       "visual": {
-        "color": "white",
-        "representation": [
-          {
-            "text": "PONG",
-            "fontSize": 40
-          }
-        ]
+        "depth": 3
       },
       "behavior": {
         "scripts": [
           "title"
         ]
+      },
+      "children": {
+        "red_echo": {
+          "component": true,
+          "visible": false,
+          "offset": {
+            "x": -3,
+            "y": -2
+          },
+          "visual": {
+            "depth": 1,
+            "color": "red",
+            "representation": [
+              {
+                "text": "PONG",
+                "fontSize": 40
+              }
+            ]
+          }
+        },
+        "blue_echo": {
+          "component": true,
+          "visible": false,
+          "offset": {
+            "x": 3,
+            "y": 2
+          },
+          "visual": {
+            "depth": 1,
+            "color": "blue",
+            "representation": [
+              {
+                "text": "PONG",
+                "fontSize": 40
+              }
+            ]
+          }
+        },
+        "face": {
+          "component": true,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "visual": {
+            "depth": 2,
+            "color": "white",
+            "representation": [
+              {
+                "text": "PONG",
+                "fontSize": 40
+              }
+            ]
+          }
+        }
       }
     }
   },
