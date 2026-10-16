@@ -9,6 +9,13 @@
     },
     "game": {
       "next": [
+        "menu",
+        "result"
+      ]
+    },
+    "result": {
+      "next": [
+        "game",
         "menu"
       ]
     }

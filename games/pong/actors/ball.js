@@ -1,6 +1,13 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
+const SERVE_PAUSE = 0.65;
+
+function born(ball) {
+    play_timer(ball, "serve_pause", SERVE_PAUSE);
+}
+
 function motion(ball) {
+    if (read_global("pong_round_over") || timer_active(ball, "serve_pause")) return;
     advance(ball);
     if (read_global("effects") == 1 && probability(35)) {
         spawn(ball, "trail");
@@ -8,6 +15,7 @@ function motion(ball) {
 }
 
 function collision(ball, other, contacts) {
+    if (read_global("pong_round_over") || timer_active(ball, "serve_pause")) return;
     if (other.group == "goal") {
         if (other.name == "left_goal") {
             write_global("pl2", read_global("pl2") + 1);
@@ -24,6 +32,8 @@ function collision(ball, other, contacts) {
         if (!read_global("pong_frenetic")) {
             restore_speed(ball);
         }
+        stop_timer(ball, "serve_pause");
+        play_timer(ball, "serve_pause", SERVE_PAUSE);
         return;
     }
 
