@@ -10,7 +10,7 @@ function born(enemy) {
 }
 
 function motion(enemy) {
-    let moved = false;
+    const previousY = enemy.y;
     if (read_global("players") == 1) {
         if (read_global("pong_cpu_progressive")) {
             const points = read_global("pl1") + read_global("pl2");
@@ -20,15 +20,20 @@ function motion(enemy) {
         const balls = find_name("ball");
         if (balls.length > 0) {
             follow_y(enemy, balls[0]);
-            moved = true;
+
         }
     } else {
         const vertical = input_direction(player(2), MOVE, VERTICAL);
         position_y(enemy, enemy.y + vertical * PLAYER_SPEED * delta());
-        moved = vertical != 0;
+
     }
-    if (read_global("effects") == 1 && moved && probability(25)) {
+    const movement = enemy.y - previousY;
+    if (read_global("effects") == 1 && movement != 0 &&
+        !timer_active(enemy, "speed_lines")) {
+        write_local(enemy, "trail_direction", movement > 0 ? 1 : -1);
         spawn(enemy, "trail");
+        stop_timer(enemy, "speed_lines");
+        play_timer(enemy, "speed_lines", 0.055);
     }
 }
 
