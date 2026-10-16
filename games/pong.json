@@ -35,7 +35,8 @@
           {
             "primitive": "rectangle"
           }
-        ]
+        ],
+        "depth": -2
       }
     },
     "player": {

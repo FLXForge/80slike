@@ -1,0 +1,19 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "size": {
+    "width": 1,
+    "height": 1
+  },
+  "visual": {
+    "depth": 2
+  },
+  "mechanics": {
+    "type": "direct"
+  },
+  "behavior": {
+    "scripts": [
+      "spark"
+    ]
+  }
+}

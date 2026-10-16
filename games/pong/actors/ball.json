@@ -9,6 +9,10 @@
     "trail": {
       "like": "ball_trail",
       "spawn": "manual"
+    },
+    "spark": {
+      "like": "spark",
+      "spawn": "manual"
     }
   },
   "group": "ball",
