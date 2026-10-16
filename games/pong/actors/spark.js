@@ -7,9 +7,9 @@ function born(spark) {
         return;
     }
     position(spark, read_local(ball, "spark_x"), read_local(ball, "spark_y"));
-    apply_velocity(spark, read_local(ball, "spark_angle") + random(-55, 55), random(25, 65));
+    apply_velocity(spark, read_local(ball, "spark_angle") + random(-55, 55), random(30, 75));
     write_local(spark, "color", read_local(ball, "spark_color"));
-    const life = random(0.10, 0.18);
+    const life = random(0.14, 0.22);
     write_local(spark, "life", life);
     play_timer(spark, "life", life);
 }
@@ -26,5 +26,5 @@ function draw(spark) {
     if (!timer_active(spark, "life")) return;
     if (spark.x < 0 || spark.x > 320 || spark.y < 20 || spark.y > 170) return;
     const remaining = timer_left(spark, "life") / read_local(spark, "life");
-    draw_pixel(spark, 0, 0, remaining > 0.5 ? "white" : read_local(spark, "color"));
+    draw_pixel(spark, 0, 0, remaining > 0.3 ? "white" : read_local(spark, "color"));
 }
