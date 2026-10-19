@@ -23,6 +23,12 @@
           {
             "primitive": "rectangle"
           }
+        ],
+        "depth": 5
+      },
+      "behavior": {
+        "scripts": [
+          "wall"
         ]
       }
     },
@@ -47,6 +53,12 @@
           {
             "primitive": "rectangle"
           }
+        ],
+        "depth": 5
+      },
+      "behavior": {
+        "scripts": [
+          "wall"
         ]
       }
     },
@@ -71,6 +83,12 @@
           {
             "primitive": "rectangle"
           }
+        ],
+        "depth": 5
+      },
+      "behavior": {
+        "scripts": [
+          "wall"
         ]
       }
     }
