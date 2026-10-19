@@ -10,7 +10,7 @@
     "level": "asteroids/space/level"
   },
   "music": {
-    "menu": "/commons/musics:composite1"
+    "menu": "/commons/musics:one_more_pilot"
   },
   "origin": {
     "x": 320,
@@ -38,7 +38,8 @@
     },
     "result": {
       "next": [
-        "game"
+        "game",
+        "menu"
       ]
     }
   }

@@ -1,6 +1,7 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
 const EXIT = button(0);
+const MODE = button(2);
 const INIT_LIVES = 3;
 let stars = [];
 
@@ -12,6 +13,8 @@ function born(game) {
     write_global("inGame", 0);
     write_global("shipDead", 0);
     write_global("asteroids_start", false);
+    write_global("asteroids_mode", 0);
+    write_global("asteroids_active_mode", 0);
     for (let i = 0; i < 100; i++) {
         stars.push({x: random(0, 639), y: random(0, 319)});
     }
@@ -41,6 +44,11 @@ function action(game) {
             play_music(game, "menu");
             spawn(game, "level");
         }
+        return;
+    }
+    if (state_active(game, "result") && input_pressed(system(), MODE)) {
+        write_global("asteroids_start", false);
+        state_to(game, "menu");
         return;
     }
     if (state_active(game, "game") && read_global("inGame") == 0) {
