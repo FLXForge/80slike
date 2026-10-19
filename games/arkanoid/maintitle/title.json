@@ -1,65 +1,8 @@
 {
   "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
   "origin": {
-    "x": 325,
-    "y": 115
-  },
-  "children": {
-    "left_titlle": {
-      "like": "wall",
-      "origin": {
-        "x": 145,
-        "y": 110
-      },
-      "group": "wall_side",
-      "size": {
-        "height": 60
-      },
-      "visual": {
-        "representation": [
-          {
-            "primitive": "rectangle"
-          }
-        ]
-      }
-    },
-    "right_titlle": {
-      "like": "wall",
-      "origin": {
-        "x": 505,
-        "y": 110
-      },
-      "group": "wall_side",
-      "size": {
-        "height": 60
-      },
-      "visual": {
-        "representation": [
-          {
-            "primitive": "rectangle"
-          }
-        ]
-      }
-    },
-    "bottom_top_titlle": {
-      "like": "wall",
-      "origin": {
-        "x": 325,
-        "y": 110
-      },
-      "group": "wall_top",
-      "size": {
-        "width": 350,
-        "height": 60
-      },
-      "visual": {
-        "representation": [
-          {
-            "primitive": "rectangle"
-          }
-        ]
-      }
-    }
+    "x": 320,
+    "y": 110
   },
   "group": "title",
   "behavior": {
@@ -73,7 +16,7 @@
     }
   },
   "size": {
-    "width": 370,
+    "width": 412,
     "height": 90
   },
   "visual": {

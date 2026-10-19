@@ -134,7 +134,7 @@ function collision(ball, other, contacts) {
 }
 
 function try_spawn_powerup(ball) {
-    if (!probability(15)) {
+    if (read_global("arkanoid_active_mode") == 1 || !probability(15)) {
         return;
     }
 

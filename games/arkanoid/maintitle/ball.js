@@ -1,64 +1,20 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-function motion(ball){
-	advance(ball);
-}
-
-function strongest_contact(contacts) {
-    if (contacts.length == 0) {
-        return null;
-    }
-
-    let strongest = contacts[0];
-
-    for (const contact of contacts) {
-        if (contact.penetration > strongest.penetration) {
-            strongest = contact;
-        }
-    }
-
-    return strongest;
-}
-
-function separate(ball, contact) {
-    if (contact == null) {
-        return;
-    }
-
-    position(ball, contact);
-}
-
-function reflect_from_contact(ball, contact) {
-    if (contact == null) {
-        return;
-    }
-
-    if (Math.abs(contact.normalX) > Math.abs(contact.normalY)) {
-        reflect_x(ball);
-    } else {
-        reflect_y(ball);
-    }
-}
-
+function motion(ball) { advance(ball); }
 function collision(ball, other, contacts) {
-    const contact = strongest_contact(contacts);
-
-    if (other.group == "wall_top") {
-        separate(ball, contact);
-        reflect_from_contact(ball, contact);
-        play_sound(ball, "paddle");
-    } else if (other.group == "wall_side") {
-        separate(ball, contact);
-        reflect_from_contact(ball, contact);
-        play_sound(ball, "paddle");
-    } else if (other.group == "paddle") {
-        separate(ball, contact);
-        reflect_from_contact(ball, contact);
-        play_sound(ball, "paddle");
-    } else if (other.group == "title") {
-        separate(ball, contact);
-        reflect_from_contact(ball, contact);
-        write_local(other, "hit", 1);
-        write_local(other, "hitTime", 0);
+    if (contacts.length == 0) return;
+    let contact = contacts[0];
+    for (const candidate of contacts) {
+        if (candidate.penetration > contact.penetration) contact = candidate;
     }
+    position(ball, contact);
+    // Ignore a face the ball is already leaving.
+    const radians = ball.angle * Math.PI / 180;
+    if (Math.sin(radians) * contact.normalX - Math.cos(radians) * contact.normalY >= 0) return;
+    if (Math.abs(contact.normalX) > Math.abs(contact.normalY)) reflect_x(ball);
+    else reflect_y(ball);
+    if (other.group == "title") {
+        stop_timer(other, "hit");
+        play_timer(other, "hit", 0.45);
+    } else play_sound(ball, "paddle");
 }

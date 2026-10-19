@@ -31,15 +31,14 @@
         "note": 440
       },
       "duration": 0.08,
-      "volume": 0.8
+      "volume": 0.16
     }
   },
   "collisions": {
     "body": {
       "type": "ellipse",
       "with": [
-        "wall_side",
-        "wall_top",
+        "wall",
         "title",
         "paddle"
       ]

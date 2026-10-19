@@ -3,9 +3,11 @@
 const ACTION = button(0);
 const EXIT = button(0);
 const MOVE = direction(0);
+const MUSIC_COUNT = 5;
 const LABELS = [
     "PONG - Ode to Joy", "ASTEROIDS - Composite 1",
     "PONG - Paddle Ceremony", "ASTEROIDS - One More Pilot",
+    "ARKANOID - Brick by Brick",
     "FX - Thruster", "FX - Hyperspace", "FX - Arrival",
     "FX - Player laser", "FX - Ship explosion",
     "FX - Saucer laser", "FX - Saucer explosion", "FX - Wave"
@@ -29,13 +31,13 @@ function action(test) {
         write_local(test, "option", option);
     }
     if (input_pressed(player(1), ACTION)) {
-        if (option < 4) {
+        if (option < MUSIC_COUNT) {
             const playing = !read_local(test, "playing");
             write_local(test, "playing", playing);
             if (playing) play_music(test, "m" + (option + 1));
             else stop_music();
         } else {
-            play_sound(test, "fx" + (option - 4));
+            play_sound(test, "fx" + (option - MUSIC_COUNT));
         }
     }
 }

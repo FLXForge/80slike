@@ -8,61 +8,49 @@
     "top_wall": {
       "like": "wall",
       "origin": {
-        "x": 0,
-        "y": -10
+        "x": 320,
+        "y": -5
       },
-      "group": "wall_top",
       "size": {
-        "width": 640
+        "width": 660,
+        "height": 10
       },
-      "visual": {
-        "representation": [
-          {
-            "primitive": "rectangle"
-          }
-        ]
-      }
+      "group": "wall"
     },
     "right_wall": {
       "like": "wall",
       "origin": {
-        "x": 640,
-        "y": 0
+        "x": 645,
+        "y": 160
       },
-      "group": "wall_side",
       "size": {
-        "height": 320
+        "width": 10,
+        "height": 340
       },
-      "visual": {
-        "representation": [
-          {
-            "primitive": "rectangle"
-          }
-        ]
-      }
+      "group": "wall"
     },
     "left_wall": {
       "like": "wall",
       "origin": {
-        "x": -10,
-        "y": 0
+        "x": -5,
+        "y": 160
       },
-      "group": "wall_side",
       "size": {
-        "height": 320
+        "width": 10,
+        "height": 340
       },
-      "visual": {
-        "representation": [
-          {
-            "primitive": "rectangle"
-          }
-        ]
-      }
+      "group": "wall"
     }
   },
   "behavior": {
     "scripts": [
       "titlescreen"
     ]
+  },
+  "control": {
+    "player": 1
+  },
+  "music": {
+    "menu": "/commons/musics:brick_by_brick"
   }
 }

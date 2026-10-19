@@ -1,32 +1,37 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/*
-    Title screen UI.
-    Draws the blinking start message over the animated title scene.
-*/
-
-function born(ui){
-    write_local(ui, "time", 0);
+const MODE_NAMES = ["Arkanoid", "Breakout style"];
+const MODE_COLORS = ["#102b67", "#631d26"];
+function born(ui) {
+    write_local(ui, "lore", false);
+    play_timer(ui, "display", 8);
+    play_music(ui, "menu");
 }
-
-function draw(ui){
-    write_local(ui, "time", read_local(ui, "time") + delta());
-
-    let intensity =
-        Math.floor(
-            64 + Math.sin(read_local(ui, "time") * 2) * 64
-        );
-
-    let hex =
-        intensity
-            .toString(16)
-            .padStart(2, "0");
-
-    draw_text(
-        320,
-        209,
-        "-- Press START to play --",
-        18,
-        "#" + hex + hex + "ff"
-    );
+function action(ui) {
+    if (input_pressed(system(), button(2))) write_global("arkanoid_mode", 1 - read_global("arkanoid_mode"));
+    const active = input_down(system(), button(1)) || input_down(system(), button(2)) ||
+        input_down(player(1), button(0)) ||
+        input_direction(player(1), direction(0), HORIZONTAL) != 0 ||
+        input_direction(player(1), direction(0), VERTICAL) != 0;
+    if (active) {
+        write_local(ui, "lore", false);
+        stop_timer(ui, "display");
+        play_timer(ui, "display", 8);
+    } else if (timer_done(ui, "display")) {
+        write_local(ui, "lore", !read_local(ui, "lore"));
+        stop_timer(ui, "display");
+        play_timer(ui, "display", 8);
+    }
+}
+function draw(ui) {
+    if (read_local(ui, "lore")) {
+        draw_text(320, 185, "Bricks have appeared. Out of nowhere.", 13, "black");
+        draw_text(320, 205, "The chosen one must solemnly clear the way.", 13, "black");
+        draw_text(320, 225, "The paradox? There are always more bricks.", 13, "black");
+    } else {
+        const mode = read_global("arkanoid_mode");
+        draw_text(320, 188, MODE_NAMES[mode], 22, MODE_COLORS[mode]);
+        draw_text(320, 217, mode == 0 ? "1 PLAYER / POWER-UPS" : "1 PLAYER / NO POWER-UPS", 11, "black");
+    }
+    draw_text(320, 305, "Mode: change game   Start: play", 11, "white");
 }

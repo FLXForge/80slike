@@ -17,6 +17,7 @@ let normalWidth = 70;
 let targetWidth = 70;
 
 function born(paddle){
+    if (read_global("arkanoid_active_mode") == 1) apply_color(paddle, "#e5e5dd");
     normalWidth = paddle.width;
     targetWidth = normalWidth;
 

@@ -8,6 +8,8 @@ let currentLevel = 0;
 let nextLevel = 0;
 
 function born(game){
+    write_global("arkanoid_mode", 0);
+    write_global("arkanoid_active_mode", 0);
     reset_game();
 
     fade_set(1);
@@ -46,7 +48,9 @@ function reset_game(){
 
 function handle_title_start(game){
 
-    if (currentLevel == 0 && read_local(game, "transition") != 1 && (input_pressed(system(), button(1)) || input_pressed(game, FIRE_BUTTON))){
+    if (currentLevel == 0 && read_local(game, "transition") != 1 && find_name("title_ball").length > 0 && input_pressed(system(), button(1))){
+        write_global("arkanoid_active_mode", read_global("arkanoid_mode"));
+        stop_music();
         nextLevel = 1;
         write_local(game, "transition", 1);
         fade_on();
