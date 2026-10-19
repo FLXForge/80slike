@@ -1,16 +1,5 @@
 {
   "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-  "shape": {
-    "type": "line",
-    "color": "orange",
-    "size": {
-      "width": 1,
-      "height": 10
-    }
-  },
-  "collision": {
-    "type": "none"
-  },
   "bounds": {
     "mode": "wrap",
     "overflow": false
@@ -19,5 +8,20 @@
     "scripts": [
       "asteroid_fragment"
     ]
+  },
+  "size": {
+    "width": 1,
+    "height": 10
+  },
+  "visual": {
+    "color": "orange",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "mechanics": {
+    "type": "direct"
   }
 }

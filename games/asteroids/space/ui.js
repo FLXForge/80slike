@@ -1,66 +1,31 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/*
-    Defines the initial game state.
-*/
+const ACTION = button(0);
 
-// CONSTANTS
-const INIT_LIVES = 3;
-const FIRE_BUTTON = 0;
+function born(ui) {
+    if (read_global("inGame") == 1) spawn(ui, "ship");
+}
 
 function action(ui) {
-    if (global["inGame"] == 0) {
-        if (Input.player(1).pressed(FIRE_BUTTON)) {
-            pause_music();
-            global["score"] = 0;
-            global["lives"] = INIT_LIVES;
-            global["inGame"] = 1;
-            global["asteroids"] = 0;
-
-            spawn(ui, "ship");   //no usa origin, le he tenido que añadir el offset
-        }
+    if (read_global("inGame") == 0 && input_pressed(player(1), ACTION)) {
+        write_global("asteroids_start", true);
     }
 }
 
-function motion(ui){
-    if (global["shipDead"] == 1) {
-        spawn(ui, "ship");   //no usa origin, le he tenido que añadir el offset
-        global["shipDead"] = 0;
+function motion(ui) {
+    if (read_global("inGame") == 1 && read_global("shipDead") == 1) {
+        write_global("shipDead", 0);
+        spawn(ui, "ship");
     }
 }
 
-function draw(ui){
-    if (global["inGame"] == 0) {
-        if (global["lives"] == 0){
-            draw_text(
-                250,
-                100,
-                "GAME OVER",
-                20
-            );
-
-            draw_text(
-                250,
-                140,
-                "SCORE: " + global["score"],
-                15
-            );
-        }
-	    draw_text(
-            270,
-            180,
-            "-- PRESS SPACE TO START --"
-        );
+function draw(ui) {
+    if (read_global("inGame") == 0) {
+        draw_text(320, 100, "GAME OVER", 20);
+        draw_text(320, 140, "SCORE: " + read_global("score"), 15);
+        draw_text(320, 180, "-- PRESS ACTION TO START --", 15);
     } else {
-        draw_text(
-                10,
-                10,
-                "SCORE: " + global["score"]
-            );
-        draw_text(
-                10,
-                20,
-                "LIVES: " + global["lives"]
-            );
+        draw_text(70, 12, "SCORE: " + read_global("score"), 11);
+        draw_text(70, 28, "LIVES: " + read_global("lives"), 11);
     }
 }

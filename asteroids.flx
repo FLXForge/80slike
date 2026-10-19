@@ -2,7 +2,7 @@
 title=Asteroids
 name=Asteroids
 version=1.0
-engine=0.2.0
+engine=0.3.1
 
 # Configuration
 path=games

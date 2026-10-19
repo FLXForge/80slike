@@ -1,15 +1,45 @@
 {
-    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-    "behavior": {
-        "scripts": [
-            "asteroids/game"
-        ]
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "asteroids/game"
+    ]
+  },
+  "children": {
+    "menu": "asteroids/menu/main",
+    "level": "asteroids/space/level"
+  },
+  "music": {
+    "menu": "/commons/musics:composite1"
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true,
+  "visual": {
+    "depth": -10
+  },
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "game"
+      ]
     },
-    "children": {
-        "menu": "asteroids/menu/main",
-        "level": "asteroids/space/level"
+    "game": {
+      "next": [
+        "result"
+      ]
     },
-    "music": {
-        "menu": "/commons/musics:composite1"
+    "result": {
+      "next": [
+        "game"
+      ]
     }
+  }
 }

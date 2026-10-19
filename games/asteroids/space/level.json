@@ -1,8 +1,6 @@
 {
   "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-  
   "spawn": "manual",
-
   "behavior": {
     "scripts": [
       "ui"
@@ -27,5 +25,8 @@
       "like": "ship/ship",
       "spawn": "manual"
     }
+  },
+  "visual": {
+    "depth": 10
   }
 }

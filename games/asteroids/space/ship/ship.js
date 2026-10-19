@@ -1,53 +1,36 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/* 
-    The player moves the ship using:
-        -up key to accelerate with acceleration, inertia and max speed defined in motion
-        -left and right keys to rotate using the rotation speed defined in motion
-        -space key shoot (laser spawn)
-*/
-
-const FIRE_BUTTON = 0;
+const FIRE = button(0);
+const MOVE = direction(0);
 
 function action(ship) {
-
-    if (Input.player(1).up()) {
-        accelerate(ship);
-
-        if (probability(20)) {
-            play_sound(ship, "motor");
-            spawn(ship, "tail");
-        }
+    if (read_global("inGame") == 0) return;
+    if (input_down(ship, MOVE, LEFT)) rotate(ship, -1);
+    if (input_down(ship, MOVE, RIGHT)) rotate(ship, 1);
+    if (input_down(ship, MOVE, UP) && probability(20)) {
+        play_sound(ship, "motor");
+        spawn(ship, "tail");
     }
-
-    if (Input.player(1).left()) {
-        rotate(ship, LEFT);
-    }
-
-    if (Input.player(1).right()) {
-        rotate(ship, RIGHT);
-    }
-
-    if (Input.player(1).pressed(FIRE_BUTTON)) {
+    if (input_pressed(ship, FIRE)) {
         play_sound(ship, "laser");
         spawn(ship, "laser");
     }
 }
 
 function motion(ship) {
-    advance(ship);
+    if (read_global("inGame") == 0) return;
+    // accelerate already moves this frame; never advance a second time.
+    if (input_down(ship, MOVE, UP)) accelerate(ship);
+    else advance(ship);
 }
 
 function dead(ship) {
+    if (read_global("inGame") == 0) return;
     play_sound(ship, "dead");
-    if (global["lives"] >= 2) {
-        global["shipDead"] = 1;
-        global["lives"]--;
-    } else {
-        global["inGame"] = 0;
-        global["lives"] = 0;
-        pause_music();
-    }
+    const lives = Math.max(0, read_global("lives") - 1);
+    write_global("lives", lives);
+    if (lives > 0) write_global("shipDead", 1);
+    else write_global("inGame", 0);
     spawn(ship, "fragment");
     spawn(ship, "fragment");
     spawn(ship, "fragment");

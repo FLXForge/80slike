@@ -1,20 +1,19 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-/*
-    When an asteroid is born, it receives random angle, speed and rotation.
-    Every frame it advances and rotates.
-    On collision with a laser or the ship, both objects die.
-*/
-
 function born(asteroid) {
-    asteroid.angle = random(0, 360);
-    asteroid.speed = random(20, 70);
-    asteroid.rotationSpeed = random(-90, 90);
-    asteroid.local["destroyed_by_laser"] = 0;
+    write_global("asteroids", read_global("asteroids") + 2);
+    write_global("asteroids_pending", Math.max(0, read_global("asteroids_pending") - 2));
+    const heading = random(0, 360);
+    const speed = random(20, 70);
+    write_local(asteroid, "drift_speed", speed);
+    write_local(asteroid, "destroyed_by_laser", false);
+    apply_angle(asteroid, heading);
+    apply_velocity(asteroid, heading, speed);
+    apply_rotation_speed(asteroid, random(-90, 90));
 }
 
 function motion(asteroid) {
-    if (global["inGame"] == 0){
+    if (read_global("inGame") == 0) {
         kill(asteroid);
         return;
     }
@@ -22,47 +21,34 @@ function motion(asteroid) {
     rotate(asteroid);
 }
 
-function collision(asteroid, other) {
-    if (other.group === "asteroid") {
-        asteroid.angle = random(0, 360);
-        other.angle = asteroid.angle + 180;
-
-        advance(asteroid);
-        advance(other);
-
+function collision(asteroid, other, contacts) {
+    if (!asteroid.alive || !other.alive || read_global("inGame") == 0) return;
+    if (other.group == "asteroid") {
+        for (const contact of contacts) position(asteroid, contact);
+        const heading = random(0, 360);
+        apply_velocity(asteroid, heading, read_local(asteroid, "drift_speed"));
+        apply_velocity(other, heading + 180, read_local(other, "drift_speed"));
         return;
     }
-
-    if (other.group === "laser") {
-        asteroid.local["destroyed_by_laser"] = 1;
-        global["score"] += 100;
-        kill(asteroid);
+    if (other.group == "laser" || other.group == "ship") {
+        write_local(asteroid, "destroyed_by_laser", other.group == "laser");
         kill(other);
-    }
-
-    if (other.group === "ship") {
-        global["asteroids"]-=2;
         kill(asteroid);
-        kill(other);
     }
 }
 
 function dead(asteroid) {
-
+    write_global("asteroids", Math.max(0, read_global("asteroids") - 2));
+    if (read_global("inGame") == 0) return;
     play_sound(asteroid, "pfooom");
-
     spawn(asteroid, "fragment");
     spawn(asteroid, "fragment");
-    
-    if (asteroid.local["destroyed_by_laser"] !== 1) {
-        return;
-    }
-
+    if (!read_local(asteroid, "destroyed_by_laser")) return;
+    write_global("score", read_global("score") + 100);
     spawn(asteroid, "fragment");
     spawn(asteroid, "fragment");
     spawn(asteroid, "fragment");
     spawn(asteroid, "fragment");
-
     spawn(asteroid, "small");
     spawn(asteroid, "small");
 }

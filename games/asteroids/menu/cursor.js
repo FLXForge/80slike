@@ -1,12 +1,9 @@
+/// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-const positions = [215, 255, 295];
+const POSITIONS = [215, 255, 295];
 
 function motion(cursor) {
-    var index = global["option"] - 1;
-
-    if (cursor.y < positions[index]) {
-        cursor.y = cursor.y + 1;
-    } else if (cursor.y > positions[index]) {
-        cursor.y = cursor.y - 1;
-    }
+    const target = POSITIONS[read_global("option") - 1];
+    const step = 60 * delta();
+    position_y(cursor, cursor.y + Math.max(-step, Math.min(step, target - cursor.y)));
 }

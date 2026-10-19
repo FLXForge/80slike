@@ -1,11 +1,11 @@
 input:
-  players: 1
-
-  direction: 4way
-
-  buttons:
-    player: 1
-    system: 1
-
-  pointer: false
-  text: false
+  system:
+    buttons: 3
+  players:
+    count: 2
+    controls:
+      directions:
+        - type: 4way
+          simultaneous: last
+          buffer: 0
+      buttons: 1
