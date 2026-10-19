@@ -1,0 +1,99 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "group": "saucer",
+  "size": {
+    "width": 28,
+    "height": 18
+  },
+  "mechanics": {
+    "type": "direct"
+  },
+  "visual": {
+    "color": "orange",
+    "representation": [
+      {
+        "geometry": [
+          {
+            "x": -14,
+            "y": 0
+          },
+          {
+            "x": -7,
+            "y": -4
+          },
+          {
+            "x": -4,
+            "y": -9
+          },
+          {
+            "x": 4,
+            "y": -9
+          },
+          {
+            "x": 7,
+            "y": -4
+          },
+          {
+            "x": 14,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 5
+          },
+          {
+            "x": -8,
+            "y": 5
+          }
+        ],
+        "mode": "close"
+      },
+      {
+        "geometry": [
+          {
+            "x": -14,
+            "y": 0
+          },
+          {
+            "x": 14,
+            "y": 0
+          }
+        ],
+        "mode": "open"
+      }
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "size": {
+        "width": 28,
+        "height": 14
+      },
+      "with": [
+        "laser",
+        "ship"
+      ]
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "saucer"
+    ]
+  },
+  "sounds": {
+    "fire": "/commons/sounds:asteroids_saucer_laser",
+    "down": "/commons/sounds:asteroids_saucer_down"
+  },
+  "children": {
+    "shot": {
+      "like": "shot",
+      "spawn": "manual"
+    },
+    "fragment": {
+      "like": "../asteroid/asteroid_fragment",
+      "spawn": "manual"
+    }
+  }
+}

@@ -1,12 +1,33 @@
 {
-    "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
-    "behavior": {
-        "scripts": [
-            "sound/test"
-        ]
-    },
-    "music": {
-        "m1": "/commons/musics:odetojoy",
-        "m2": "/commons/musics:composite1"
-    }
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "sound/test"
+    ]
+  },
+  "music": {
+    "m1": "/commons/musics:odetojoy",
+    "m2": "/commons/musics:composite1",
+    "m3": "/commons/musics:paddle_ceremony",
+    "m4": "/commons/musics:one_more_pilot"
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true,
+  "sounds": {
+    "fx0": "/commons/sounds:asteroids_thruster",
+    "fx1": "/commons/sounds:asteroids_hyperspace",
+    "fx2": "/commons/sounds:asteroids_arrival",
+    "fx3": "/commons/sounds:asteroids_laser",
+    "fx4": "/commons/sounds:asteroids_ship_down",
+    "fx5": "/commons/sounds:asteroids_saucer_laser",
+    "fx6": "/commons/sounds:asteroids_saucer_down",
+    "fx7": "/commons/sounds:asteroids_wave"
+  }
 }

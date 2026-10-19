@@ -7,18 +7,24 @@
     ]
   },
   "children": {
-    "DeepSpaceLeft": {
+    "field": {
       "like": "asteroid/deep_space",
       "origin": {
-        "x": 20,
-        "y": 20
+        "x": 0,
+        "y": 0
       }
     },
-    "DeepSpaceRight": {
-      "like": "asteroid/deep_space",
-      "origin": {
-        "x": 620,
-        "y": 20
+    "saucers": {
+      "behavior": {
+        "scripts": [
+          "saucer/director"
+        ]
+      },
+      "children": {
+        "saucer": {
+          "like": "saucer/saucer",
+          "spawn": "manual"
+        }
       }
     },
     "ship": {
@@ -28,5 +34,21 @@
   },
   "visual": {
     "depth": 10
+  },
+  "states": {
+    "initial": "announce",
+    "announce": {
+      "next": [
+        "active"
+      ]
+    },
+    "active": {
+      "next": [
+        "announce"
+      ]
+    }
+  },
+  "sounds": {
+    "wave": "/commons/sounds:asteroids_wave"
   }
 }

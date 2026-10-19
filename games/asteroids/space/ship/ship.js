@@ -3,8 +3,13 @@
 const FIRE = button(0);
 const MOVE = direction(0);
 
+function born(ship) {
+    collider_off(ship, "body");
+    play_timer(ship, "protection", read_global("asteroids_phase") == "announce" ? 2.9 : 1.5);
+}
+
 function action(ship) {
-    if (read_global("inGame") == 0) return;
+    if (read_global("inGame") == 0 || read_global("asteroids_phase") != "active") return;
     if (input_down(ship, MOVE, LEFT)) rotate(ship, -1);
     if (input_down(ship, MOVE, RIGHT)) rotate(ship, 1);
     if (input_down(ship, MOVE, UP) && probability(20)) {
@@ -18,7 +23,11 @@ function action(ship) {
 }
 
 function motion(ship) {
-    if (read_global("inGame") == 0) return;
+    if (timer_done(ship, "protection")) {
+        collider_on(ship, "body");
+        stop_timer(ship, "protection");
+    }
+    if (read_global("inGame") == 0 || read_global("asteroids_phase") != "active") return;
     // accelerate already moves this frame; never advance a second time.
     if (input_down(ship, MOVE, UP)) accelerate(ship);
     else advance(ship);

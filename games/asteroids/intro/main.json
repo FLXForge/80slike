@@ -1,0 +1,34 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "intro"
+    ]
+  },
+  "sounds": {
+    "travel": "/commons/sounds:asteroids_hyperspace",
+    "arrival": "/commons/sounds:asteroids_arrival"
+  },
+  "children": {
+    "ship": {
+      "like": "../space/ship/ship",
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 300
+      },
+      "collisions": {
+        "body": {
+          "enabled": false
+        }
+      },
+      "behavior": {
+        "scripts": [
+          "ship"
+        ]
+      }
+    }
+  }
+}

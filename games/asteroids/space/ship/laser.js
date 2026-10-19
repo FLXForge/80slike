@@ -7,7 +7,7 @@ function born(laser) {
 }
 
 function motion(laser) {
-    if (!timer_active(laser, "life") || read_global("inGame") == 0) {
+    if (!timer_active(laser, "life") || read_global("inGame") == 0 || read_global("asteroids_phase") != "active") {
         kill(laser);
         return;
     }

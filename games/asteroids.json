@@ -7,7 +7,8 @@
   },
   "children": {
     "menu": "asteroids/menu/main",
-    "level": "asteroids/space/level"
+    "level": "asteroids/space/level",
+    "intro": "asteroids/intro/main"
   },
   "music": {
     "menu": "/commons/musics:one_more_pilot"
@@ -28,6 +29,11 @@
     "initial": "menu",
     "menu": {
       "next": [
+        "intro"
+      ]
+    },
+    "intro": {
+      "next": [
         "game"
       ]
     },
@@ -38,7 +44,7 @@
     },
     "result": {
       "next": [
-        "game",
+        "intro",
         "menu"
       ]
     }

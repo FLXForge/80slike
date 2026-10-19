@@ -59,6 +59,7 @@ function action(game) {
     if (read_global("pl1") >= WIN_SCORE || read_global("pl2") >= WIN_SCORE) {
         write_global("winer", read_global("pl1") > read_global("pl2") ? 1 : 2);
         write_global("pong_round_over", true);
+        if (read_global("winer") == 1) save("80slike", "pong", true);
         state_to(game, "result");
         return;
     }

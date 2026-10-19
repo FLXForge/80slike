@@ -1,13 +1,11 @@
 # Game data
 title=Sound Test
-name=SundTest
+name=SoundTest
 version=1.0
-engine=0.2.0
+engine=0.3.1
 
 # Configuration
 path=games
 root=sounds
-window.mode=fullscreen
+machine=machines/arcade.yml
 input.mapping=controllers.input
-
-debug.console=true

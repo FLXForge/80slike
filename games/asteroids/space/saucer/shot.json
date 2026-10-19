@@ -1,0 +1,42 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "group": "enemy_laser",
+  "size": {
+    "width": 2,
+    "height": 7
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 180
+      }
+    }
+  },
+  "visual": {
+    "color": "red",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "size": {
+        "width": 4,
+        "height": 4
+      },
+      "with": [
+        "ship"
+      ]
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "shot"
+    ]
+  }
+}
