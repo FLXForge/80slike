@@ -61,7 +61,8 @@
           }
         ]
       }
-    }
+    },
+    "checker": "checker"
   },
   "behavior": {
     "scripts": [

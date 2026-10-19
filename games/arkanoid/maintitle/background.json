@@ -120,6 +120,12 @@
           }
         ]
       }
-    }
+    },
+    "checker": "checker"
+  },
+  "behavior": {
+    "scripts": [
+      "background"
+    ]
   }
 }

@@ -74,5 +74,10 @@
         ]
       }
     }
+  },
+  "behavior": {
+    "scripts": [
+      "board"
+    ]
   }
 }

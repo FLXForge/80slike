@@ -5,3 +5,12 @@ function born(brick) {
     }
     write_global("briks", read_global("briks") + 1);
 }
+
+function draw(brick) {
+    if (read_global("arkanoid_active_mode") != 0) return;
+    const x = brick.width / 2, y = brick.height / 2;
+    draw_line(brick, -x + 1, -y + 1, x - 1, -y + 1, "#d8e2ed");
+    draw_line(brick, -x + 1, -y + 1, -x + 1, y - 1, "#a4b6c9");
+    draw_line(brick, -x + 1, y - 1, x - 1, y - 1, "#18263d");
+    draw_line(brick, x - 1, -y + 1, x - 1, y - 1, "#18263d");
+}

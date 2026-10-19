@@ -1,0 +1,68 @@
+{
+  "origin": {
+    "x": 0,
+    "y": 0
+  },
+  "spawn": "manual",
+  "creation": {
+    "mode": "grid",
+    "rules": {
+      "rows": 10,
+      "columns": 20,
+      "cellWidth": 32,
+      "cellHeight": 32
+    },
+    "pattern": [
+      [
+        "light",
+        "dark"
+      ],
+      [
+        "dark",
+        "light"
+      ]
+    ]
+  },
+  "children": {
+    "light": {
+      "offset": {
+        "x": 16,
+        "y": 16
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "visual": {
+        "depth": -12,
+        "color": "#101e34",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "dark": {
+      "offset": {
+        "x": 16,
+        "y": 16
+      },
+      "size": {
+        "width": 32,
+        "height": 32
+      },
+      "visual": {
+        "depth": -12,
+        "color": "#15263f",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    }
+  }
+}

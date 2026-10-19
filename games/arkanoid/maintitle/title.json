@@ -12,7 +12,15 @@
   },
   "collisions": {
     "body": {
-      "type": "box"
+      "type": "box",
+      "size": {
+        "width": 412,
+        "height": 63
+      },
+      "offset": {
+        "x": 0,
+        "y": -4.5
+      }
     }
   },
   "size": {
