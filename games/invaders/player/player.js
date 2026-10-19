@@ -16,7 +16,10 @@ function born(player) {
 }
 function visibility(player, visible) {
     if (visible) show(player); else hide(player);
-    for (const name of ["reactor_left", "reactor_right"]) for (const part of find_name(name)) { if (visible) show(part); else hide(part); }
+    for (const name of ["reactor_left", "reactor_right"]) for (const part of find_name(name)) {
+        if (read_local(part, "owner") != player.id) continue;
+        if (visible) show(part); else hide(part);
+    }
 }
 
 function action(player){
@@ -62,7 +65,9 @@ function dead(player){
         write_global("invaders_lost", true);
     }
     for (const name of ["reactor_left", "reactor_right", "trail_left", "trail_right"]) {
-        for (const part of find_name(name)) kill(part);
+        for (const part of find_name(name)) {
+            if (read_local(part, "owner") == player.id) kill(part);
+        }
     }
 
 }

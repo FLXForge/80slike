@@ -1,5 +1,7 @@
 function born(trail) {
     const player = find_parent(trail);
+    if (!player) { kill(trail); return; }
+    write_local(trail, "owner", player.id);
     const side = trail.name == "trail_left" ? -1 : 1;
     position(trail, player.x + side * 18, player.y + 8);
     apply_angle(trail, side < 0 ? 270 : 90);

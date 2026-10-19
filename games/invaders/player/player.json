@@ -59,6 +59,11 @@
             "mode": "fill"
           }
         ]
+      },
+      "behavior": {
+        "scripts": [
+          "reactor"
+        ]
       }
     },
     "reactor_right": {
@@ -81,6 +86,11 @@
             "primitive": "triangle",
             "mode": "fill"
           }
+        ]
+      },
+      "behavior": {
+        "scripts": [
+          "reactor"
         ]
       }
     },
