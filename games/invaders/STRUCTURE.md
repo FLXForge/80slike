@@ -3,7 +3,7 @@
 The game uses the collection's 640 × 320 logical screen and existing player-one controls.
 
 - Formation: 11 columns × 6 rows, with two rows each of squid (cyan), crab (green) and octopus (pink). The request's row breakdown summed to seven; this version keeps the stated six-row total.
-- Alien silhouettes are built from native FLX filled geometry strips. All three types reuse `invader/invader.json` and its shooting logic. Each alien awards 100 points. Alien firing uses FLX timers: a first delay of 1–24 seconds and later delays of 18–36 seconds, randomized independently per alien. This avoids fractional probabilities, which FLX 0.3.1 truncates to integers.
+- Alien silhouettes are built from native FLX filled geometry strips, in squid.json, crab.json and octopus.json. The formation and the title previews reuse these prefabs. All three types reuse `invader/invader.json` and its shooting logic. Each alien awards 100 points. Alien firing uses FLX timers: a first delay of 1–24 seconds and later delays of 18–36 seconds, randomized independently per alien. This avoids fractional probabilities, which FLX 0.3.1 truncates to integers.
 - Fleet movement uses surviving aliens' bounds, reverses at the sides, descends 8 pixels per turn and destroys the player when the bottom of any surviving alien reaches the player ship's actual Y position, independently of its column. A downward step crossing that line is checked in the same frame.
 - UFO: one at a time in the top lane, 500 points. First visit after 12–20 seconds; later visits are separated by 18–28 seconds. It disappears on leaving the screen. It fires downwards after 0.8–1.4 seconds, then every 1.5–2.4 seconds while inside the screen.
 - Player: central firing triangle plus two attached reactor triangles. Moving left emits a short trail from the right reactor, and moving right uses the left one. Trails expire independently. Destroying the player removes its reactor parts.
@@ -12,7 +12,7 @@ The game uses the collection's 640 × 320 logical screen and existing player-one
 
 Native FLX 0.3.1 checks cover alien counts and screen bounds, formation reversal/descent, protector erosion by both projectile types, opposite-side reactor trails, alien/UFO points, UFO scheduling/exit and player death.
 
-This is the initial playfield requested for the collection. Menu, modes, waves and achievement milestones can be designed in the following iteration.
+The collection now starts at a title screen, with MODE selection and START to play. See MODES.md for the complete run lifecycle, difficulty rules and adjustment points.
 
 ## Audio
 

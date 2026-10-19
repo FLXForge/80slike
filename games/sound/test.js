@@ -3,11 +3,11 @@
 const ACTION = button(0);
 const EXIT = button(0);
 const MOVE = direction(0);
-const MUSIC_COUNT = 5;
+const MUSIC_COUNT = 6;
 const LABELS = [
     "PONG - Ode to Joy", "ASTEROIDS - Composite 1",
     "PONG - Paddle Ceremony", "ASTEROIDS - One More Pilot",
-    "ARKANOID - Brick by Brick",
+    "ARKANOID - Brick by Brick", "INVADERS - Cosmic Side Step",
     "FX - Thruster", "FX - Hyperspace", "FX - Arrival",
     "FX - Player laser", "FX - Ship explosion",
     "FX - Saucer laser", "FX - Saucer explosion", "FX - Wave",

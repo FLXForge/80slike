@@ -1,10 +1,10 @@
 function born(laser) { play_sound(laser, "shot"); }
 function motion(laser) {
-    if (read_global("game_over") == 1 || laser.y < -10) { kill(laser); return; }
+    if (read_global("invaders_phase") != "active" || laser.y < -10) { kill(laser); return; }
     advance(laser);
 }
 function collision(laser, other) {
-    if (read_local(laser, "spent")) return;
+    if (read_global("invaders_phase") != "active" || read_local(laser, "spent")) return;
     write_local(laser, "spent", true);
     if (read_local(other, "destroyed")) { kill(laser); return; }
     write_local(other, "destroyed", true);
