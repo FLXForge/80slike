@@ -28,13 +28,15 @@ Each pattern has 15 columns. Palette keys are R, B, C, Y and V for ordinary colo
 
 Grey and gold retain their armor colors in both modes. Their ordinary stage uses the mode's normal palette. The final Brick Warden is an original arcade robot face, containing 92 grey and 22 gold bricks.
 
-The earlier level1-level4 files are retained as historical references and are no longer wired into the active root.
+The obsolete level1-level4 definitions and their brick layouts have been removed. The active patterns are exclusively levels/layouts/01.json through 15.json.
+
+[Overview of the 15 levels](arkanoid-levels-overview.png)
 
 ## Damage and progression
 
 Ball and laser contacts enqueue damage on the brick. Only levels/common/brick.js owns health, color transitions, drops, score and the remaining-brick counter. Gold becomes grey, then ordinary, then disappears. Intermediate hits do not decrement the counter, award score or drop capsules. Multiple hits can be processed together, and each destroyed brick awards 100 points once. Pierce delivers one damage per pass rather than once per frame while inside a brick.
 
-A level ends when its actual remaining-brick count reaches zero. Completing level 15 writes save("80slike", "arkanoid", true). Losing does not overwrite achievements. Game over displays the reached level, score and style for four seconds; victory displays all 15 levels cleared for eight seconds. START returns to title after the first second.
+A level ends when its actual remaining-brick count reaches zero. Completing level 5 writes save("80slike", "arkanoid", true); completing level 15 also preserves this completion flag. Losing does not overwrite achievements. Game over displays the reached level, score and style for four seconds; victory displays all 15 levels cleared for eight seconds. START returns to title after the first second.
 
 ## Validation
 

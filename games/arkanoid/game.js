@@ -2,7 +2,6 @@
 
 const INIT_LIVES = 3;
 const MAX_LEVEL = 15;
-const FIRE_BUTTON = button(0);
 
 let currentLevel = 0;
 let nextLevel = 0;
@@ -41,7 +40,6 @@ function reset_game(){
     write_global("briks", 0);
     write_global("ball_lost", 0);
     write_global("level_reached", 1);
-
 
     currentLevel = 0;
     nextLevel = 0;

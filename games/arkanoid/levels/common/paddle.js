@@ -8,8 +8,8 @@
 const RESPAWN_TIME = 1;
 const POWERUP_TIME = 5;
 
-const BIG_FACTOR = 1.5;
-const SMALL_FACTOR = 0.65;
+const EXPAND_FACTOR = 1.5;
+const SHRINK_FACTOR = 0.65;
 
 const RESIZE_SPEED = 180;
 
@@ -21,10 +21,6 @@ function born(paddle){
     normalWidth = paddle.width;
     targetWidth = normalWidth;
 
-    write_global("activeBroken", 0);
-    write_global("activeGun", 0);
-
-
 }
 
 function action(paddle){
@@ -35,19 +31,14 @@ function action(paddle){
     update_respawn(paddle);
 }
 
-function update_powerup_flags(paddle){
-    write_global("activeBroken", timer_active(paddle, "broken") ? 1 : 0);
-    write_global("activeGun", timer_active(paddle, "gun") ? 1 : 0);
-}
-
 function update_target_width(paddle){
     if (timer_active(paddle, "expand")) {
-        targetWidth = normalWidth * BIG_FACTOR;
+        targetWidth = normalWidth * EXPAND_FACTOR;
         return;
     }
 
     if (timer_active(paddle, "shrink")) {
-        targetWidth = normalWidth * SMALL_FACTOR;
+        targetWidth = normalWidth * SHRINK_FACTOR;
         return;
     }
 
