@@ -31,7 +31,14 @@
   },
   "group": "paddle",
   "children": {
-    "ball": "ball"
+    "ball": "ball",
+    "laser_left": {
+      "like": "laser"
+    },
+    "laser_right": {
+      "like": "laser"
+    },
+    "barrier": "barrier"
   },
   "behavior": {
     "scripts": [
@@ -54,7 +61,8 @@
       },
       "duration": 0.06,
       "volume": 0.35
-    }
+    },
+    "laser": "/commons/sounds:asteroids_laser"
   },
   "collisions": {
     "body": {

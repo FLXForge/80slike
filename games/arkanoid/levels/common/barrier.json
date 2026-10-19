@@ -1,0 +1,33 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "origin": {
+    "x": 325,
+    "y": 302
+  },
+  "size": {
+    "width": 550,
+    "height": 4
+  },
+  "group": "barrier",
+  "visual": {
+    "color": "#53d8d0",
+    "depth": 5,
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "barrier"
+    ]
+  }
+}

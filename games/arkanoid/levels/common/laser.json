@@ -1,0 +1,403 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "group": "laser",
+  "size": {
+    "width": 2,
+    "height": 9
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 420
+      }
+    },
+    "rotation": {
+      "angle": 0
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "laser"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "brick",
+        "wall_top"
+      ]
+    }
+  },
+  "visual": {
+    "color": "#ff9fb5",
+    "depth": 5,
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  },
+  "children": {
+    "expand": {
+      "like": "powerup",
+      "visual": {
+        "color": "#a979ef",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "E",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    },
+    "shrink": {
+      "like": "powerup",
+      "visual": {
+        "color": "#f39142",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "S",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    },
+    "glue": {
+      "like": "powerup",
+      "visual": {
+        "color": "#4b96ed",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "G",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    },
+    "pierce": {
+      "like": "powerup",
+      "visual": {
+        "color": "#69c964",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "P",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    },
+    "laser": {
+      "like": "powerup",
+      "visual": {
+        "color": "#ee5a72",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "L",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    },
+    "barrier": {
+      "like": "powerup",
+      "visual": {
+        "color": "#53d8d0",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "B",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    },
+    "life": {
+      "like": "powerup",
+      "visual": {
+        "color": "#f2d75d",
+        "depth": 10,
+        "representation": [
+          {
+            "geometry": [
+              {
+                "x": -12,
+                "y": -3
+              },
+              {
+                "x": -9,
+                "y": -7
+              },
+              {
+                "x": 9,
+                "y": -7
+              },
+              {
+                "x": 12,
+                "y": -3
+              },
+              {
+                "x": 12,
+                "y": 3
+              },
+              {
+                "x": 9,
+                "y": 7
+              },
+              {
+                "x": -9,
+                "y": 7
+              },
+              {
+                "x": -12,
+                "y": 3
+              }
+            ],
+            "mode": "fill"
+          },
+          {
+            "text": "X",
+            "fontSize": 11,
+            "color": "#101828"
+          }
+        ]
+      }
+    }
+  }
+}

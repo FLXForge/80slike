@@ -28,7 +28,7 @@ function born(paddle){
 }
 
 function action(paddle){
-    update_powerup_flags(paddle);
+    update_laser(paddle);
     update_target_width(paddle);
     update_resize(paddle);
     update_movement(paddle);
@@ -41,12 +41,12 @@ function update_powerup_flags(paddle){
 }
 
 function update_target_width(paddle){
-    if (timer_active(paddle, "big")) {
+    if (timer_active(paddle, "expand")) {
         targetWidth = normalWidth * BIG_FACTOR;
         return;
     }
 
-    if (timer_active(paddle, "small")) {
+    if (timer_active(paddle, "shrink")) {
         targetWidth = normalWidth * SMALL_FACTOR;
         return;
     }
@@ -114,33 +114,43 @@ function collision(paddle, other, contacts) {
     }
 }
 
-function apply_powerup(paddle, powerup){
-    if (powerup.name == "broken") {
-        stop_timer(paddle, "broken");
-        play_timer(paddle, "broken", POWERUP_TIME);
+function apply_powerup(paddle, powerup) {
+    if (read_global("arkanoid_active_mode") != 0 || read_local(powerup, "collected")) return;
+    write_local(powerup, "collected", true);
+    const name = powerup.name;
+    if (name == "life") write_global("lives", read_global("lives") + 1);
+    else if (name == "barrier") {
+        const walls = find_name("barrier").filter(wall => wall.group == "barrier");
+        if (walls.length == 0) spawn(paddle, "barrier");
+        else for (const wall of walls) { stop_timer(wall, "life"); play_timer(wall, "life", 10); show(wall); }
+    } else {
+        stop_timer(paddle, name);
+        play_timer(paddle, name, name == "laser" ? 8 : POWERUP_TIME);
+        if (name == "expand") stop_timer(paddle, "shrink");
+        if (name == "shrink") stop_timer(paddle, "expand");
     }
+    play_sound(paddle, "pop");
+}
 
-    if (powerup.name == "gun") {
-        stop_timer(paddle, "gun");
-        play_timer(paddle, "gun", POWERUP_TIME);
-    }
-
-    if (powerup.name == "big") {
-        stop_timer(paddle, "big");
-        play_timer(paddle, "big", POWERUP_TIME);
-        stop_timer(paddle, "small");
-    }
-
-    if (powerup.name == "small") {
-        stop_timer(paddle, "small");
-        play_timer(paddle, "small", POWERUP_TIME);
-        stop_timer(paddle, "big");
-    }
+function update_laser(paddle) {
+    if (!timer_active(paddle, "laser") || timer_active(paddle, "shot") ||
+        !input_down(paddle, button(0)) || !state_active(paddle, "playing") || read_global("briks") <= 0) return;
+    spawn(paddle, "laser_left");
+    spawn(paddle, "laser_right");
+    play_sound(paddle, "laser");
+    stop_timer(paddle, "shot");
+    play_timer(paddle, "shot", 0.22);
 }
 
 function draw(paddle) {
     if (read_global("arkanoid_active_mode") != 0) return;
     const half = paddle.width / 2;
+    if (timer_active(paddle, "laser")) {
+        for (const x of [-half + 5, half - 5]) {
+            for (let dx = -2; dx <= 2; dx++) draw_line(paddle, x + dx, -10, x + dx, 2, "#ee5a72");
+            draw_line(paddle, x - 1, -10, x + 1, -10, "#fff0e5");
+        }
+    }
     for (let y = -4; y <= 4; y++) {
         draw_line(paddle, -half + 1, y, -half + 9, y, y < -1 ? "#ff7b75" : "#bd3448");
         draw_line(paddle, half - 9, y, half - 1, y, y < -1 ? "#ff7b75" : "#bd3448");

@@ -74,7 +74,7 @@ function collision(ball, other, contacts) {
 
     const contact = strongest_contact(contacts);
 
-    if (other.group == "wall_top") {
+    if (other.group == "wall_top" || other.group == "barrier") {
         separate(ball, contact);
         reflect_from_contact(ball, contact);
         play_sound(ball, "paddle");
@@ -90,9 +90,14 @@ function collision(ball, other, contacts) {
 
     if (other.group == "paddle") {
         separate(ball, contact);
+        if (contact && (contact.normalY > 0 || Math.abs(contact.normalX) > Math.abs(contact.normalY))) {
+            reflect_from_contact(ball, contact);
+            play_sound(ball, "paddle");
+            return;
+        }
 
         if (
-            read_global("activeGun") == 1
+            timer_active(other, "glue")
             && !timer_active(ball, "detach")
         ){
             attach(ball);
@@ -109,13 +114,12 @@ function collision(ball, other, contacts) {
     }
 
     if (other.group == "brick") {
-        separate(ball, contact);
-
-        if (read_global("activeBroken") == 0) {
+        if (read_local(other, "destroyed")) return;
+        if (!timer_active(find_parent(ball), "pierce")) {
+            separate(ball, contact);
             reflect_from_contact(ball, contact);
         }
 
-        if (read_local(other, "destroyed")) return;
         write_local(other, "destroyed", true);
         kill(other);
 
@@ -133,15 +137,10 @@ function collision(ball, other, contacts) {
     }
 }
 
-function try_spawn_powerup(ball) {
-    if (read_global("arkanoid_active_mode") == 1 || !probability(15)) {
-        return;
-    }
-
-    let p = Math.floor(random(0, 4));
-
-    if (p == 0) spawn(ball, "gun");
-    if (p == 1) spawn(ball, "big");
-    if (p == 2) spawn(ball, "small");
-    if (p == 3) spawn(ball, "broken");
+function try_spawn_powerup(source) {
+    if (read_global("arkanoid_active_mode") != 0 || !probability(15)) return;
+    // Six equal common weights and a much smaller extra-life weight.
+    const roll = random(0, 37);
+    const names = ["expand", "shrink", "glue", "pierce", "laser", "barrier", "life"];
+    spawn(source, names[Math.min(6, Math.floor(roll / 6))]);
 }
