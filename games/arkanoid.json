@@ -35,12 +35,9 @@
   },
   "children": {
     "title": "arkanoid/maintitle/titlescreen",
-    "level1": "arkanoid/levels/level1",
-    "level2": "arkanoid/levels/level2",
-    "level3": "arkanoid/levels/level3",
-    "level4": "arkanoid/levels/level4",
     "gameover": "arkanoid/levels/gameover",
-    "congratulations": "arkanoid/levels/congratulations"
+    "congratulations": "arkanoid/levels/congratulations",
+    "level": "arkanoid/levels/level"
   },
   "behavior": {
     "scripts": [

@@ -22,7 +22,7 @@ function action(level){
             spawn(level, "background");
             spawn(level, "board");
             spawn(level, "paddle");
-            spawn(level, "bricks");
+            spawn(level, "layout" + read_global("level"));
 
             state_to(level, "playing");
         }

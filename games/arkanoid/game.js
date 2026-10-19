@@ -1,7 +1,7 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
 const INIT_LIVES = 3;
-const MAX_LEVEL = 4;
+const MAX_LEVEL = 15;
 const FIRE_BUTTON = button(0);
 
 let currentLevel = 0;
@@ -21,8 +21,8 @@ function action(game){
     if (input_pressed(system(), button(0))) { exit(); return; }
 
     handle_title_start(game);
-    handle_level_completed(game);
     handle_game_over(game);
+    handle_level_completed(game);
     handle_return_to_title(game);
     handle_transition(game);
     write_global("level", currentLevel);
@@ -40,6 +40,7 @@ function reset_game(){
     write_global("congratulations", 0);
     write_global("briks", 0);
     write_global("ball_lost", 0);
+    write_global("level_reached", 1);
 
 
     currentLevel = 0;
@@ -96,6 +97,7 @@ function handle_game_over(game){
         return;
     }
 
+    write_global("level_reached", currentLevel);
     write_global("game_over", 2);
     write_global("show_hud", 0);
 
@@ -141,25 +143,7 @@ function handle_transition(game){
     write_global("briks", 0);
     write_global("ball_lost", 0);
 
-    if (nextLevel == 1){
-        spawn(game, "level1");
-
-    }
-
-    if (nextLevel == 2){
-        spawn(game, "level2");
-
-    }
-
-    if (nextLevel == 3){
-        spawn(game, "level3");
-
-    }
-
-    if (nextLevel == 4){
-        spawn(game, "level4");
-
-    }
+    spawn(game, "level");
 
     currentLevel = nextLevel;
     nextLevel = 0;

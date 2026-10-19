@@ -23,5 +23,5 @@ Adjustment points:
 - `levels/common/paddle.js`: ordinary effect duration, paddle scale factors, laser duration and firing interval.
 - `levels/common/barrier.js`: wall lifetime and warning blink.
 - `levels/common/barrier.json`: wall position, dimensions and visual.
-- `levels/common/ball.js` and `laser.js`: matching drop probability and weights.
-- `levels/common/ball.json` and `laser.json`: matching capsule colors, letters and shapes.
+- `levels/common/brick.js`: shared drop probability and weights for ball and laser kills.
+- `levels/common/brick.json`: capsule colors, letters and shapes.

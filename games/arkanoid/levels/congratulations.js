@@ -1,42 +1,12 @@
-/// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
-
-let screenTime = 0;
-let end = 0;
-
-function born(congratulations){
-    screenTime = 0;
-    end = 0;
+function born(screen) { play_timer(screen, "display", 8); }
+function action(screen) {
+    const age = 8 - timer_left(screen, "display");
+    if (!timer_active(screen, "display") || (age >= 1 && input_pressed(system(), button(1)))) write_global("congratulations", 2);
 }
-
-function action(congratulations){
-    if (end == 0){
-        screenTime += delta();
-
-        if (screenTime >= 6){
-            end = 1;
-            write_global("congratulations", 2);
-        }
-    }
-}
-
-function draw(congratulations){
-    if (end == 0) {
-        let value = Math.floor(180 + Math.sin(screenTime * 6) * 60);
-        let hex = value.toString(16).padStart(2, "0");
-
-        draw_text(
-            320,
-            154,
-            "CONGRATULATIONS",
-            28,
-            "#" + "0000" + hex 
-        );
-
-        draw_text(
-            320,
-            206,
-            "-- SCORE: " + read_global("score") + " --",
-            12
-        );
-    }
+function draw(screen) {
+    draw_text(320, 104, "CONGRATULATIONS", 28, "#7edbff");
+    draw_text(320, 148, "ALL 15 LEVELS CLEARED", 14, "#d5e4f6");
+    draw_text(320, 182, "SCORE: " + read_global("score"), 16, "white");
+    draw_text(320, 216, read_global("arkanoid_active_mode") == 0 ? "ARKANOID" : "BREAKOUT STYLE", 12, "#94b9d2");
+    draw_text(320, 284, "Start: return to title", 11, "white");
 }

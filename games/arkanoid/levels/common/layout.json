@@ -1,0 +1,98 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "origin": {
+    "x": 65,
+    "y": 65
+  },
+  "children": {
+    "R": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#d95b65",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "B": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#547edb",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "C": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#45bbc6",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "Y": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#e0bc51",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "V": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#a66ed4",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "silver": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#b6bec9",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "gold": {
+      "like": "/arkanoid/levels/common/brick",
+      "visual": {
+        "color": "#d6b357",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "gap": {
+      "spawn": "manual",
+      "visible": false
+    }
+  }
+}
