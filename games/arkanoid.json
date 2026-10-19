@@ -1,0 +1,59 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "control": {
+    "player": 1
+  },
+  "states": {
+    "initial": "title",
+    "title": {
+      "next": [
+        "to_level"
+      ]
+    },
+    "to_level": {
+      "next": [
+        "playing"
+      ]
+    },
+    "playing": {
+      "next": [
+        "to_level",
+        "gameover",
+        "congratulations"
+      ]
+    },
+    "gameover": {
+      "next": [
+        "title"
+      ]
+    },
+    "congratulations": {
+      "next": [
+        "title"
+      ]
+    }
+  },
+  "children": {
+    "title": "arkanoid/maintitle/titlescreen",
+    "level1": "arkanoid/levels/level1",
+    "level2": "arkanoid/levels/level2",
+    "level3": "arkanoid/levels/level3",
+    "level4": "arkanoid/levels/level4",
+    "gameover": "arkanoid/levels/gameover",
+    "congratulations": "arkanoid/levels/congratulations"
+  },
+  "behavior": {
+    "scripts": [
+      "arkanoid/game"
+    ]
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true
+}

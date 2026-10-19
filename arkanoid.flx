@@ -1,0 +1,9 @@
+title=Arkanoid
+name=Arkanoid
+version=1.0
+engine=0.3.1
+
+path=games
+root=arkanoid
+machine=machines/arcade.yml
+input.mapping=controllers.input
