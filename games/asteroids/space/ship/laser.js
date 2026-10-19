@@ -1,6 +1,6 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
-const MAX_LIFE_TIME = 4;
+const MAX_LIFE_TIME = 0.75;
 
 function born(laser) {
     play_timer(laser, "life", MAX_LIFE_TIME);

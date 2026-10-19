@@ -1,6 +1,8 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
 function motion(ship) {
+    if (!state_active(ship, "intro")) return;
+
     const age = state_time(ship);
     const t = Math.min(1, age / 2.4);
     const ease = 1 - (1 - t) * (1 - t);
