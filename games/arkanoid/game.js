@@ -72,6 +72,10 @@ function handle_level_completed(game){
         return;
     }
 
+    if (currentLevel == 5) {
+        save("80slike", "arkanoid", true);
+    }
+
     if (currentLevel < MAX_LEVEL){
         nextLevel = currentLevel + 1;
         write_local(game, "transition", 1);
