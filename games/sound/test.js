@@ -10,7 +10,11 @@ const LABELS = [
     "ARKANOID - Brick by Brick",
     "FX - Thruster", "FX - Hyperspace", "FX - Arrival",
     "FX - Player laser", "FX - Ship explosion",
-    "FX - Saucer laser", "FX - Saucer explosion", "FX - Wave"
+    "FX - Saucer laser", "FX - Saucer explosion", "FX - Wave",
+    "INVADERS - March 1", "INVADERS - March 2",
+    "INVADERS - March 3", "INVADERS - March 4",
+    "INVADERS - Alien down", "INVADERS - Shield chip",
+    "INVADERS - UFO low", "INVADERS - UFO high"
 ];
 
 function born(test) {
@@ -45,8 +49,10 @@ function action(test) {
 function draw(test) {
     draw_text(320, 28, "SOUND TEST", 24);
     const selected = read_local(test, "option");
-    for (let i = 0; i < LABELS.length; i++) {
-        draw_text(320, 65 + i * 18, LABELS[i], 13, selected == i ? "blue" : "white");
+    const first = Math.max(0, Math.min(selected - 5, LABELS.length - 11));
+    draw_text(320, 49, (selected + 1) + " / " + LABELS.length, 11, "#94b9d2");
+    for (let i = first; i < Math.min(LABELS.length, first + 11); i++) {
+        draw_text(320, 75 + (i - first) * 18, LABELS[i], 13, selected == i ? "#7edbff" : "white");
     }
     draw_text(320, 303, "Up/Down: select   Action: play/stop   Exit: close", 11);
 }

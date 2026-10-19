@@ -1,0 +1,50 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "children": {
+    "fleet": "invaders/invader/fleet",
+    "player": "invaders/player/player",
+    "ufo": "invaders/invader/ufo",
+    "shield1": {
+      "like": "invaders/shield/formation",
+      "origin": {
+        "x": 68,
+        "y": 232
+      }
+    },
+    "shield2": {
+      "like": "invaders/shield/formation",
+      "origin": {
+        "x": 208,
+        "y": 232
+      }
+    },
+    "shield3": {
+      "like": "invaders/shield/formation",
+      "origin": {
+        "x": 348,
+        "y": 232
+      }
+    },
+    "shield4": {
+      "like": "invaders/shield/formation",
+      "origin": {
+        "x": 488,
+        "y": 232
+      }
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "invaders/game"
+    ]
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true
+}

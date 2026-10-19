@@ -29,6 +29,14 @@
     "fx4": "/commons/sounds:asteroids_ship_down",
     "fx5": "/commons/sounds:asteroids_saucer_laser",
     "fx6": "/commons/sounds:asteroids_saucer_down",
-    "fx7": "/commons/sounds:asteroids_wave"
+    "fx7": "/commons/sounds:asteroids_wave",
+    "fx8": "/commons/sounds:invaders_step_0",
+    "fx9": "/commons/sounds:invaders_step_1",
+    "fx10": "/commons/sounds:invaders_step_2",
+    "fx11": "/commons/sounds:invaders_step_3",
+    "fx12": "/commons/sounds:invaders_alien_down",
+    "fx13": "/commons/sounds:invaders_shield_chip",
+    "fx14": "/commons/sounds:invaders_ufo_low",
+    "fx15": "/commons/sounds:invaders_ufo_high"
   }
 }

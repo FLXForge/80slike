@@ -1,0 +1,27 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "offset": {
+    "x": 3,
+    "y": 3
+  },
+  "size": {
+    "width": 6,
+    "height": 6
+  },
+  "group": "shield",
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "visual": {
+    "depth": 0,
+    "color": "#7cae83",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "offset": {
+    "x": 14,
+    "y": 9
+  },
+  "attach": {
+    "born": true,
+    "position": true
+  },
+  "children": {
+    "laser": {
+      "like": "laser",
+      "spawn": "manual",
+      "offset": {
+        "x": 0,
+        "y": 12
+      }
+    }
+  },
+  "group": "invader",
+  "behavior": {
+    "scripts": [
+      "invader"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "shield"
+      ]
+    }
+  },
+  "size": {
+    "width": 28,
+    "height": 18
+  },
+  "visual": {
+    "color": "green",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  }
+}

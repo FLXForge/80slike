@@ -1,0 +1,83 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "group": "ufo",
+  "size": {
+    "width": 34,
+    "height": 14
+  },
+  "mechanics": {
+    "type": "direct",
+    "motion": {
+      "speed": {
+        "start": 70
+      }
+    }
+  },
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "visual": {
+    "color": "#ee667f",
+    "representation": [
+      {
+        "geometry": [
+          {
+            "x": -17,
+            "y": 0
+          },
+          {
+            "x": -8,
+            "y": -4
+          },
+          {
+            "x": -4,
+            "y": -7
+          },
+          {
+            "x": 4,
+            "y": -7
+          },
+          {
+            "x": 8,
+            "y": -4
+          },
+          {
+            "x": 17,
+            "y": 0
+          },
+          {
+            "x": 10,
+            "y": 6
+          },
+          {
+            "x": -10,
+            "y": 6
+          }
+        ],
+        "mode": "fill"
+      }
+    ]
+  },
+  "behavior": {
+    "scripts": [
+      "ufo"
+    ]
+  },
+  "children": {
+    "laser": {
+      "like": "laser",
+      "spawn": "manual",
+      "offset": {
+        "x": 0,
+        "y": 12
+      }
+    }
+  },
+  "sounds": {
+    "hum0": "/commons/sounds:invaders_ufo_low",
+    "hum1": "/commons/sounds:invaders_ufo_high"
+  }
+}
