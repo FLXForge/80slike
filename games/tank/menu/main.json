@@ -1,0 +1,13 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "menu"
+    ]
+  },
+  "music": {
+    "theme": "/commons/musics:iron_orders"
+  }
+}

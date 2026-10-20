@@ -19,6 +19,7 @@ function born(tank) {
 }
 
 function action(tank) {
+    if (read_global("tank_phase") != "combat") return;
 
     /*
         An avoidance manoeuvre already in progress has priority.
@@ -106,7 +107,9 @@ function action(tank) {
         !timer_active(tank, "fire")
     ) {
         spawn(tank, "missile");
-        play_timer(tank, "fire", FIRE_DELAY);
+        play_sound(tank, "fire");
+        stop_timer(tank, "fire");
+        play_timer(tank, "fire", read_global("tank_advanced") == 1 ? 0.6 : FIRE_DELAY);
     }
 
     /*

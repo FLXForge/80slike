@@ -11,7 +11,8 @@
     "m3": "/commons/musics:paddle_ceremony",
     "m4": "/commons/musics:one_more_pilot",
     "m5": "/commons/musics:brick_by_brick",
-    "m6": "/commons/musics:cosmic_side_step"
+    "m6": "/commons/musics:cosmic_side_step",
+    "m7": "/commons/musics:iron_orders"
   },
   "origin": {
     "x": 320,
@@ -38,6 +39,7 @@
     "fx12": "/commons/sounds:invaders_alien_down",
     "fx13": "/commons/sounds:invaders_shield_chip",
     "fx14": "/commons/sounds:invaders_ufo_low",
-    "fx15": "/commons/sounds:invaders_ufo_high"
+    "fx15": "/commons/sounds:invaders_ufo_high",
+    "fx16": "/commons/sounds:tank_fire"
   }
 }

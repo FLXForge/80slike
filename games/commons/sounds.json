@@ -391,5 +391,32 @@
     },
     "duration": 0.16,
     "volume": 0.12
+  },
+  "tank_fire": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 120,
+      "slide": -85
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.3,
+        "roughness": 0.6,
+        "noise": 0.4,
+        "resonance": 0.1,
+        "metal": 0.2
+      },
+      "envelope": {
+        "attack": 0,
+        "decay": 0.1,
+        "sustain": 0,
+        "release": 0.04
+      }
+    },
+    "duration": 0.14,
+    "volume": 0.3
   }
 }

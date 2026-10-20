@@ -42,6 +42,7 @@
   },
   "behavior": {
     "scripts": [
+      "combat",
       "player"
     ]
   },
@@ -92,5 +93,11 @@
         "color": "#7A241C"
       }
     ]
+  },
+  "spawn": "manual",
+  "sounds": {
+    "fire": "/commons/sounds:tank_fire",
+    "dead": "/commons/sounds:asteroids_ship_down",
+    "engine": "/commons/sounds:asteroids_thruster"
   }
 }

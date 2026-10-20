@@ -1,0 +1,49 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "children": {
+    "top": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 320,
+        "y": 49
+      },
+      "size": {
+        "width": 640,
+        "height": 10
+      }
+    },
+    "bottom": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 320,
+        "y": 315
+      },
+      "size": {
+        "width": 640,
+        "height": 10
+      }
+    },
+    "left": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 5,
+        "y": 182
+      },
+      "size": {
+        "width": 10,
+        "height": 266
+      }
+    },
+    "right": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 635,
+        "y": 182
+      },
+      "size": {
+        "width": 10,
+        "height": 266
+      }
+    }
+  }
+}
