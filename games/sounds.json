@@ -12,7 +12,8 @@
     "m4": "/commons/musics:one_more_pilot",
     "m5": "/commons/musics:brick_by_brick",
     "m6": "/commons/musics:cosmic_side_step",
-    "m7": "/commons/musics:iron_orders"
+    "m7": "/commons/musics:iron_orders",
+    "m8": "/commons/musics:the_other_side"
   },
   "origin": {
     "x": 320,
@@ -40,6 +41,12 @@
     "fx13": "/commons/sounds:invaders_shield_chip",
     "fx14": "/commons/sounds:invaders_ufo_low",
     "fx15": "/commons/sounds:invaders_ufo_high",
-    "fx16": "/commons/sounds:tank_fire"
+    "fx16": "/commons/sounds:tank_fire",
+    "fx17": "/commons/sounds:frogger_hop",
+    "fx18": "/commons/sounds:frogger_crash",
+    "fx19": "/commons/sounds:frogger_splash",
+    "fx20": "/commons/sounds:frogger_home",
+    "fx21": "/commons/sounds:frogger_round",
+    "fx22": "/commons/sounds:frogger_over"
   }
 }

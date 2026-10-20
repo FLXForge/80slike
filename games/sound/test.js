@@ -3,18 +3,20 @@
 const ACTION = button(0);
 const EXIT = button(0);
 const MOVE = direction(0);
-const MUSIC_COUNT = 7;
+const MUSIC_COUNT = 8;
 const LABELS = [
     "PONG - Ode to Joy", "ASTEROIDS - Composite 1",
     "PONG - Paddle Ceremony", "ASTEROIDS - One More Pilot",
-    "ARKANOID - Brick by Brick", "INVADERS - Cosmic Side Step", "TANK - Iron Orders",
+    "ARKANOID - Brick by Brick", "INVADERS - Cosmic Side Step", "TANK - Iron Orders", "FROGGER - The Other Side",
     "FX - Thruster", "FX - Hyperspace", "FX - Arrival",
     "FX - Player laser", "FX - Ship explosion",
     "FX - Saucer laser", "FX - Saucer explosion", "FX - Wave",
     "INVADERS - March 1", "INVADERS - March 2",
     "INVADERS - March 3", "INVADERS - March 4",
     "INVADERS - Alien down", "INVADERS - Shield chip",
-    "INVADERS - UFO low", "INVADERS - UFO high", "TANK - Cannon"
+    "INVADERS - UFO low", "INVADERS - UFO high", "TANK - Cannon",
+    "FROGGER - Hop", "FROGGER - Crash", "FROGGER - Splash",
+    "FROGGER - Home", "FROGGER - Round", "FROGGER - Game over"
 ];
 
 function born(test) {

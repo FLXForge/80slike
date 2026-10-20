@@ -1,0 +1,34 @@
+{
+  "music": {
+    "theme": "/commons/musics:the_other_side"
+  },
+  "size": {
+    "width": 520,
+    "height": 240
+  },
+  "origin": {
+    "x": 320,
+    "y": 158
+  },
+  "sounds": {
+    "mode": "/commons/sounds:beep"
+  },
+  "spawn": "manual",
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "visual": {
+    "color": "#102b30",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ],
+    "depth": 30
+  }
+}

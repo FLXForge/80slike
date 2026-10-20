@@ -1,0 +1,527 @@
+{
+  "component": true,
+  "children": {
+    "fg_river": {
+      "size": {
+        "width": 640,
+        "height": 96
+      },
+      "component": true,
+      "visual": {
+        "color": "#183e56",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ],
+        "depth": -15
+      },
+      "origin": {
+        "x": 320,
+        "y": 104
+      }
+    },
+    "fg_road": {
+      "size": {
+        "width": 640,
+        "height": 96
+      },
+      "component": true,
+      "visual": {
+        "color": "#303745",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ],
+        "depth": -15
+      },
+      "origin": {
+        "x": 320,
+        "y": 224
+      }
+    },
+    "fg_bank": {
+      "size": {
+        "width": 640,
+        "height": 24
+      },
+      "component": true,
+      "visual": {
+        "color": "#456c4c",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ],
+        "depth": -15
+      },
+      "origin": {
+        "x": 320,
+        "y": 44
+      }
+    },
+    "fg_median": {
+      "size": {
+        "width": 640,
+        "height": 24
+      },
+      "component": true,
+      "visual": {
+        "color": "#456c4c",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ],
+        "depth": -15
+      },
+      "origin": {
+        "x": 320,
+        "y": 164
+      }
+    },
+    "fg_verge": {
+      "size": {
+        "width": 640,
+        "height": 24
+      },
+      "component": true,
+      "visual": {
+        "color": "#456c4c",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ],
+        "depth": -15
+      },
+      "origin": {
+        "x": 320,
+        "y": 284
+      }
+    },
+    "fg_lane_0_0": {
+      "origin": {
+        "x": -31.0,
+        "y": 260
+      },
+      "component": true,
+      "size": {
+        "width": 46,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_0_1": {
+      "origin": {
+        "x": 144.0,
+        "y": 260
+      },
+      "component": true,
+      "size": {
+        "width": 46,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_0_2": {
+      "origin": {
+        "x": 320.0,
+        "y": 260
+      },
+      "component": true,
+      "size": {
+        "width": 46,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_0_3": {
+      "origin": {
+        "x": 496.0,
+        "y": 260
+      },
+      "component": true,
+      "size": {
+        "width": 46,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_1_0": {
+      "origin": {
+        "x": 12.0,
+        "y": 236
+      },
+      "component": true,
+      "size": {
+        "width": 34,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_1_1": {
+      "origin": {
+        "x": 184.0,
+        "y": 236
+      },
+      "component": true,
+      "size": {
+        "width": 34,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_1_2": {
+      "origin": {
+        "x": 357.0,
+        "y": 236
+      },
+      "component": true,
+      "size": {
+        "width": 34,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_1_3": {
+      "origin": {
+        "x": 530.0,
+        "y": 236
+      },
+      "component": true,
+      "size": {
+        "width": 34,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_2_0": {
+      "origin": {
+        "x": -53.0,
+        "y": 212
+      },
+      "component": true,
+      "size": {
+        "width": 90,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_2_1": {
+      "origin": {
+        "x": 196.0,
+        "y": 212
+      },
+      "component": true,
+      "size": {
+        "width": 90,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_2_2": {
+      "origin": {
+        "x": 444.0,
+        "y": 212
+      },
+      "component": true,
+      "size": {
+        "width": 90,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_3_0": {
+      "origin": {
+        "x": 11.0,
+        "y": 188
+      },
+      "component": true,
+      "size": {
+        "width": 36,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_3_1": {
+      "origin": {
+        "x": 242.0,
+        "y": 188
+      },
+      "component": true,
+      "size": {
+        "width": 36,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_3_2": {
+      "origin": {
+        "x": 472.0,
+        "y": 188
+      },
+      "component": true,
+      "size": {
+        "width": 36,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_hazard"
+    },
+    "fg_lane_4_0": {
+      "origin": {
+        "x": -67.0,
+        "y": 140
+      },
+      "component": true,
+      "size": {
+        "width": 118,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_4_1": {
+      "origin": {
+        "x": 126.0,
+        "y": 140
+      },
+      "component": true,
+      "size": {
+        "width": 118,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_4_2": {
+      "origin": {
+        "x": 320.0,
+        "y": 140
+      },
+      "component": true,
+      "size": {
+        "width": 118,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_4_3": {
+      "origin": {
+        "x": 514.0,
+        "y": 140
+      },
+      "component": true,
+      "size": {
+        "width": 118,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_5_0": {
+      "origin": {
+        "x": -18.0,
+        "y": 116
+      },
+      "component": true,
+      "size": {
+        "width": 94,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_5_1": {
+      "origin": {
+        "x": 170.0,
+        "y": 116
+      },
+      "component": true,
+      "size": {
+        "width": 94,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_5_2": {
+      "origin": {
+        "x": 357.0,
+        "y": 116
+      },
+      "component": true,
+      "size": {
+        "width": 94,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_5_3": {
+      "origin": {
+        "x": 544.0,
+        "y": 116
+      },
+      "component": true,
+      "size": {
+        "width": 94,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_6_0": {
+      "origin": {
+        "x": -64.0,
+        "y": 92
+      },
+      "component": true,
+      "size": {
+        "width": 112,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_6_1": {
+      "origin": {
+        "x": 128.0,
+        "y": 92
+      },
+      "component": true,
+      "size": {
+        "width": 112,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_6_2": {
+      "origin": {
+        "x": 320.0,
+        "y": 92
+      },
+      "component": true,
+      "size": {
+        "width": 112,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_6_3": {
+      "origin": {
+        "x": 512.0,
+        "y": 92
+      },
+      "component": true,
+      "size": {
+        "width": 112,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_7_0": {
+      "origin": {
+        "x": -23.0,
+        "y": 68
+      },
+      "component": true,
+      "size": {
+        "width": 104,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_7_1": {
+      "origin": {
+        "x": 167.0,
+        "y": 68
+      },
+      "component": true,
+      "size": {
+        "width": 104,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_7_2": {
+      "origin": {
+        "x": 357.0,
+        "y": 68
+      },
+      "component": true,
+      "size": {
+        "width": 104,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_lane_7_3": {
+      "origin": {
+        "x": 547.0,
+        "y": 68
+      },
+      "component": true,
+      "size": {
+        "width": 104,
+        "height": 16
+      },
+      "like": "mover",
+      "group": "fg_platform"
+    },
+    "fg_snake": {
+      "like": "snake",
+      "component": true
+    },
+    "fg_player1": {
+      "component": true,
+      "control": {
+        "player": 1
+      },
+      "like": "frog"
+    },
+    "fg_player2": {
+      "component": true,
+      "control": {
+        "player": 2
+      },
+      "like": "frog"
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "visual": {
+    "depth": -10
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  }
+}

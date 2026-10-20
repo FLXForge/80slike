@@ -1,0 +1,94 @@
+{
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "ready"
+      ]
+    },
+    "ready": {
+      "next": [
+        "play"
+      ]
+    },
+    "play": {
+      "next": [
+        "round",
+        "over",
+        "victory"
+      ]
+    },
+    "round": {
+      "next": [
+        "ready"
+      ]
+    },
+    "over": {
+      "next": [
+        "ready",
+        "menu"
+      ]
+    },
+    "victory": {
+      "next": [
+        "ready",
+        "menu"
+      ]
+    }
+  },
+  "sounds": {
+    "round": "/commons/sounds:frogger_round",
+    "over": "/commons/sounds:frogger_over"
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "delimit": true,
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "frogger/runtime"
+    ]
+  },
+  "visual": {
+    "depth": 40
+  },
+  "children": {
+    "fg_backdrop": {
+      "size": {
+        "width": 640,
+        "height": 320
+      },
+      "component": true,
+      "visual": {
+        "color": "#101f2b",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ],
+        "depth": -20
+      },
+      "origin": {
+        "x": 320,
+        "y": 160
+      }
+    },
+    "fg_board": {
+      "component": true,
+      "like": "frogger/board",
+      "spawn": "manual"
+    },
+    "fg_menu": {
+      "component": true,
+      "like": "frogger/menu",
+      "spawn": "manual"
+    }
+  }
+}

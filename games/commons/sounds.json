@@ -418,5 +418,107 @@
     },
     "duration": 0.14,
     "volume": 0.3
+  },
+  "frogger_hop": {
+    "tone": {
+      "envelope": {
+        "decay": 0.035750000000000004,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "square"
+    },
+    "duration": 0.055,
+    "kind": {
+      "note": 620,
+      "slide": 420.0
+    },
+    "volume": 0.16
+  },
+  "frogger_crash": {
+    "tone": {
+      "envelope": {
+        "decay": 0.14300000000000002,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "square"
+    },
+    "duration": 0.22,
+    "kind": {
+      "note": 160,
+      "slide": -110.0
+    },
+    "volume": 0.35
+  },
+  "frogger_splash": {
+    "tone": {
+      "envelope": {
+        "decay": 0.195,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "triangle"
+    },
+    "duration": 0.3,
+    "kind": {
+      "note": 430,
+      "slide": -340.0
+    },
+    "volume": 0.4
+  },
+  "frogger_home": {
+    "tone": {
+      "envelope": {
+        "decay": 0.169,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "triangle"
+    },
+    "duration": 0.26,
+    "kind": {
+      "note": 500,
+      "slide": 550.0
+    },
+    "volume": 0.4
+  },
+  "frogger_round": {
+    "tone": {
+      "envelope": {
+        "decay": 0.39,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "pulse"
+    },
+    "duration": 0.6,
+    "kind": {
+      "note": 440,
+      "slide": 880.0
+    },
+    "volume": 0.35
+  },
+  "frogger_over": {
+    "tone": {
+      "envelope": {
+        "decay": 0.39,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "triangle"
+    },
+    "duration": 0.6,
+    "kind": {
+      "note": 300,
+      "slide": -220.0
+    },
+    "volume": 0.35
   }
 }

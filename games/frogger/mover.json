@@ -1,0 +1,23 @@
+{
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "mechanics": {
+    "motion": {
+      "speed": 40
+    },
+    "type": "direct"
+  },
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "visual": {
+    "depth": 0
+  }
+}
