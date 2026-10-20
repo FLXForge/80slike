@@ -70,6 +70,7 @@ function action(game) {
         return;
     }
     if (aliens().length == 0) {
+        if (read_global("wave") == 3) save("80slike", "invaders", true);
         write_global("wave", read_global("wave") + 1); transition(game, "announce"); return;
     }
     if (!timer_active(game, "ufo") && find_name("ufo").length == 0) {
