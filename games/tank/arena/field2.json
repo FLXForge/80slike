@@ -2,48 +2,114 @@
   "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
   "spawn": "manual",
   "children": {
-    "barrier0": {
+    "easy_wall_0": {
       "like": "/tank/arena/wall",
       "origin": {
-        "x": 225,
-        "y": 135
+        "x": 116,
+        "y": 182
       },
       "size": {
-        "width": 18,
-        "height": 76
+        "height": 100,
+        "width": 12
       }
     },
-    "barrier1": {
+    "easy_wall_1": {
       "like": "/tank/arena/wall",
       "origin": {
-        "x": 415,
-        "y": 225
+        "x": 524,
+        "y": 182
       },
       "size": {
-        "width": 18,
-        "height": 76
+        "height": 100,
+        "width": 12
       }
     },
-    "barrier2": {
+    "easy_wall_2": {
       "like": "/tank/arena/wall",
       "origin": {
-        "x": 225,
-        "y": 245
+        "x": 104,
+        "y": 138
       },
       "size": {
-        "width": 80,
-        "height": 18
+        "height": 12,
+        "width": 36
       }
     },
-    "barrier3": {
+    "easy_wall_3": {
       "like": "/tank/arena/wall",
       "origin": {
-        "x": 415,
-        "y": 115
+        "x": 536,
+        "y": 138
       },
       "size": {
-        "width": 80,
-        "height": 18
+        "height": 12,
+        "width": 36
+      }
+    },
+    "easy_wall_4": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 104,
+        "y": 226
+      },
+      "size": {
+        "height": 12,
+        "width": 36
+      }
+    },
+    "easy_wall_5": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 536,
+        "y": 226
+      },
+      "size": {
+        "height": 12,
+        "width": 36
+      }
+    },
+    "easy_wall_6": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 204,
+        "y": 182
+      },
+      "size": {
+        "height": 24,
+        "width": 76
+      }
+    },
+    "easy_wall_7": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 436,
+        "y": 182
+      },
+      "size": {
+        "height": 24,
+        "width": 76
+      }
+    },
+    "easy_wall_8": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 320,
+        "y": 114
+      },
+      "size": {
+        "height": 76,
+        "width": 24
+      }
+    },
+    "easy_wall_9": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 320,
+        "y": 250
+      },
+      "size": {
+        "height": 76,
+        "width": 24
       }
     }
   }
