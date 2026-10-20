@@ -9,5 +9,8 @@
   },
   "music": {
     "theme": "/commons/musics:iron_orders"
+  },
+  "visual": {
+    "depth": 30
   }
 }
