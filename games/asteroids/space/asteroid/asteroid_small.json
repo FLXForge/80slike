@@ -5,31 +5,7 @@
     "overflow": false
   },
   "sounds": {
-    "pff": {
-      "kind": {
-        "source": {
-          "type": "noise",
-          "wave": "noise"
-        },
-        "note": 600,
-        "slide": -400,
-        "movement": {
-          "type": "fall",
-          "amount": 0.5
-        }
-      },
-      "tone": {
-        "material": {
-          "brightness": 0.45,
-          "roughness": 0.7,
-          "noise": 0.35,
-          "resonance": 0,
-          "metal": 0
-        }
-      },
-      "duration": 0.08,
-      "volume": 0.3
-    }
+    "pff": "/commons/sounds:asteroids_rock_small"
   },
   "group": "asteroid",
   "behavior": {

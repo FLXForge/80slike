@@ -432,7 +432,7 @@
     "duration": 0.055,
     "kind": {
       "note": 620,
-      "slide": 420.0
+      "slide": 420
     },
     "volume": 0.16
   },
@@ -449,7 +449,7 @@
     "duration": 0.22,
     "kind": {
       "note": 160,
-      "slide": -110.0
+      "slide": -110
     },
     "volume": 0.35
   },
@@ -466,7 +466,7 @@
     "duration": 0.3,
     "kind": {
       "note": 430,
-      "slide": -340.0
+      "slide": -340
     },
     "volume": 0.4
   },
@@ -483,7 +483,7 @@
     "duration": 0.26,
     "kind": {
       "note": 500,
-      "slide": 550.0
+      "slide": 550
     },
     "volume": 0.4
   },
@@ -500,7 +500,7 @@
     "duration": 0.6,
     "kind": {
       "note": 440,
-      "slide": 880.0
+      "slide": 880
     },
     "volume": 0.35
   },
@@ -517,14 +517,14 @@
     "duration": 0.6,
     "kind": {
       "note": 300,
-      "slide": -220.0
+      "slide": -220
     },
     "volume": 0.35
   },
   "adventure_pickup": {
     "volume": 0.3,
     "kind": {
-      "slide": 360.0,
+      "slide": 360,
       "note": 740
     },
     "duration": 0.18,
@@ -541,7 +541,7 @@
   "adventure_drop": {
     "volume": 0.18,
     "kind": {
-      "slide": -90.0,
+      "slide": -90,
       "note": 440
     },
     "duration": 0.1,
@@ -558,7 +558,7 @@
   "adventure_gate": {
     "volume": 0.25,
     "kind": {
-      "slide": 220.0,
+      "slide": 220,
       "note": 180
     },
     "duration": 0.45,
@@ -575,7 +575,7 @@
   "adventure_hurt": {
     "volume": 0.3,
     "kind": {
-      "slide": -180.0,
+      "slide": -180,
       "note": 260
     },
     "duration": 0.3,
@@ -592,7 +592,7 @@
   "adventure_slain": {
     "volume": 0.3,
     "kind": {
-      "slide": -130.0,
+      "slide": -130,
       "note": 170
     },
     "duration": 0.45,
@@ -609,7 +609,7 @@
   "adventure_growl": {
     "volume": 0.18,
     "kind": {
-      "slide": 30.0,
+      "slide": 30,
       "note": 95
     },
     "duration": 0.22,
@@ -626,7 +626,7 @@
   "adventure_bat": {
     "volume": 0.2,
     "kind": {
-      "slide": -320.0,
+      "slide": -320,
       "note": 980
     },
     "duration": 0.16,
@@ -643,7 +643,7 @@
   "adventure_victory": {
     "volume": 0.3,
     "kind": {
-      "slide": 990.0,
+      "slide": 990,
       "note": 330
     },
     "duration": 1.1,
@@ -660,7 +660,7 @@
   "adventure_travel": {
     "volume": 0.1,
     "kind": {
-      "slide": 60.0,
+      "slide": 60,
       "note": 400
     },
     "duration": 0.06,
@@ -677,7 +677,7 @@
   "adventure_over": {
     "volume": 0.3,
     "kind": {
-      "slide": -220.0,
+      "slide": -220,
       "note": 330
     },
     "duration": 0.7,
@@ -690,5 +690,163 @@
         "release": 0.04
       }
     }
+  },
+  "arkanoid_paddle": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 440
+    },
+    "duration": 0.08,
+    "volume": 0.8
+  },
+  "arkanoid_lost": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 700,
+      "slide": 500,
+      "movement": {
+        "type": "rise",
+        "amount": 0.5
+      }
+    },
+    "duration": 0.08,
+    "volume": 0.4
+  },
+  "arkanoid_powerup": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 900,
+      "slide": 300,
+      "movement": {
+        "type": "rise",
+        "amount": 0.35
+      }
+    },
+    "duration": 0.06,
+    "volume": 0.35
+  },
+  "arkanoid_title_paddle": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 440
+    },
+    "duration": 0.08,
+    "volume": 0.16
+  },
+  "asteroids_menu_mode": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": "E5"
+    },
+    "duration": 0.055,
+    "volume": 0.3
+  },
+  "asteroids_menu_start": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "E4",
+      "slide": 330
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.12,
+        "sustain": 0,
+        "release": 0.04
+      }
+    },
+    "duration": 0.18,
+    "volume": 0.3
+  },
+  "asteroids_rock_large": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 300,
+      "slide": -200,
+      "movement": {
+        "type": "fall",
+        "amount": 0.25
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.35,
+        "roughness": 0.8,
+        "noise": 0.4,
+        "resonance": 0.1,
+        "metal": 0
+      }
+    },
+    "duration": 0.18,
+    "volume": 0.5
+  },
+  "asteroids_rock_small": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 600,
+      "slide": -400,
+      "movement": {
+        "type": "fall",
+        "amount": 0.5
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.45,
+        "roughness": 0.7,
+        "noise": 0.35,
+        "resonance": 0,
+        "metal": 0
+      }
+    },
+    "duration": 0.08,
+    "volume": 0.3
+  },
+  "pong_menu_mode": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "E5"
+    },
+    "duration": 0.045,
+    "volume": 0.25
+  },
+  "pong_menu_start": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "C5",
+      "slide": 260
+    },
+    "duration": 0.16,
+    "volume": 0.35
   }
 }

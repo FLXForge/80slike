@@ -46,22 +46,7 @@
     ]
   },
   "sounds": {
-    "pop": {
-      "kind": {
-        "source": {
-          "type": "oscillator",
-          "wave": "square"
-        },
-        "note": 900,
-        "slide": 300,
-        "movement": {
-          "type": "rise",
-          "amount": 0.35
-        }
-      },
-      "duration": 0.06,
-      "volume": 0.35
-    },
+    "pop": "/commons/sounds:arkanoid_powerup",
     "laser": "/commons/sounds:asteroids_laser"
   },
   "collisions": {

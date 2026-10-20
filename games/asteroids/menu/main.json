@@ -30,36 +30,7 @@
     }
   },
   "sounds": {
-    "mode": {
-      "kind": {
-        "source": {
-          "type": "oscillator",
-          "wave": "triangle"
-        },
-        "note": "E5"
-      },
-      "duration": 0.055,
-      "volume": 0.3
-    },
-    "start": {
-      "kind": {
-        "source": {
-          "type": "oscillator",
-          "wave": "square"
-        },
-        "note": "E4",
-        "slide": 330
-      },
-      "tone": {
-        "envelope": {
-          "attack": 0,
-          "decay": 0.12,
-          "sustain": 0,
-          "release": 0.04
-        }
-      },
-      "duration": 0.18,
-      "volume": 0.3
-    }
+    "mode": "/commons/sounds:asteroids_menu_mode",
+    "start": "/commons/sounds:asteroids_menu_start"
   }
 }
