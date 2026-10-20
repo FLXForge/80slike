@@ -1,0 +1,175 @@
+{
+  "children": {
+    "ad_wall_4_0": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 140,
+        "y": 36
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_1": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 500,
+        "y": 36
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_2": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 140,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_3": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 500,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_4": {
+      "size": {
+        "height": 92,
+        "width": 8
+      },
+      "origin": {
+        "x": 4,
+        "y": 78
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_5": {
+      "size": {
+        "height": 92,
+        "width": 8
+      },
+      "origin": {
+        "x": 4,
+        "y": 250
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_6": {
+      "size": {
+        "height": 92,
+        "width": 8
+      },
+      "origin": {
+        "x": 636,
+        "y": 78
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_4_7": {
+      "size": {
+        "height": 92,
+        "width": 8
+      },
+      "origin": {
+        "x": 636,
+        "y": 250
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_tree_4_140": {
+      "size": {
+        "height": 28,
+        "width": 30
+      },
+      "origin": {
+        "x": 140,
+        "y": 91
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#416354"
+      }
+    },
+    "ad_tree_4_500": {
+      "size": {
+        "height": 28,
+        "width": 30
+      },
+      "origin": {
+        "x": 500,
+        "y": 91
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#416354"
+      }
+    },
+    "ad_floor_4": {
+      "size": {
+        "height": 248,
+        "width": 624
+      },
+      "visual": {
+        "representation": [
+          {
+            "mode": "fill",
+            "primitive": "rectangle"
+          }
+        ],
+        "depth": -20,
+        "color": "#263d36"
+      },
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      }
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "component": true,
+  "visual": {
+    "depth": -10
+  }
+}

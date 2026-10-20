@@ -520,5 +520,175 @@
       "slide": -220.0
     },
     "volume": 0.35
+  },
+  "adventure_pickup": {
+    "volume": 0.3,
+    "kind": {
+      "slide": 360.0,
+      "note": 740
+    },
+    "duration": 0.18,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.108,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_drop": {
+    "volume": 0.18,
+    "kind": {
+      "slide": -90.0,
+      "note": 440
+    },
+    "duration": 0.1,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.06,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_gate": {
+    "volume": 0.25,
+    "kind": {
+      "slide": 220.0,
+      "note": 180
+    },
+    "duration": 0.45,
+    "tone": {
+      "wave": "pulse",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.27,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_hurt": {
+    "volume": 0.3,
+    "kind": {
+      "slide": -180.0,
+      "note": 260
+    },
+    "duration": 0.3,
+    "tone": {
+      "wave": "square",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.18,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_slain": {
+    "volume": 0.3,
+    "kind": {
+      "slide": -130.0,
+      "note": 170
+    },
+    "duration": 0.45,
+    "tone": {
+      "wave": "pulse",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.27,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_growl": {
+    "volume": 0.18,
+    "kind": {
+      "slide": 30.0,
+      "note": 95
+    },
+    "duration": 0.22,
+    "tone": {
+      "wave": "square",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.132,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_bat": {
+    "volume": 0.2,
+    "kind": {
+      "slide": -320.0,
+      "note": 980
+    },
+    "duration": 0.16,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.096,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_victory": {
+    "volume": 0.3,
+    "kind": {
+      "slide": 990.0,
+      "note": 330
+    },
+    "duration": 1.1,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.66,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_travel": {
+    "volume": 0.1,
+    "kind": {
+      "slide": 60.0,
+      "note": 400
+    },
+    "duration": 0.06,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.036,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_over": {
+    "volume": 0.3,
+    "kind": {
+      "slide": -220.0,
+      "note": 330
+    },
+    "duration": 0.7,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.42,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
   }
 }

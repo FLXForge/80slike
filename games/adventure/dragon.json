@@ -1,0 +1,37 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "size": {
+    "height": 30,
+    "width": 34
+  },
+  "mechanics": {
+    "motion": {
+      "diagonal": "vector",
+      "speed": 40
+    },
+    "type": "direct"
+  },
+  "group": "ad_dragon",
+  "sounds": {
+    "growl": "/commons/sounds:adventure_growl",
+    "slain": "/commons/sounds:adventure_slain"
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "visual": {
+    "depth": 6
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "ad_wall",
+        "ad_gate"
+      ]
+    }
+  }
+}

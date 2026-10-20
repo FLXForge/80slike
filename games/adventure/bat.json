@@ -1,0 +1,25 @@
+{
+  "component": true,
+  "mechanics": {
+    "motion": {
+      "speed": 72
+    },
+    "type": "direct"
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "sounds": {
+    "steal": "/commons/sounds:adventure_bat"
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "visual": {
+    "depth": 12
+  },
+  "size": {
+    "height": 16,
+    "width": 36
+  }
+}

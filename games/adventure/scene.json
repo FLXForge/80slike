@@ -1,0 +1,191 @@
+{
+  "children": {
+    "ad_room_0": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room0"
+    },
+    "ad_room_1": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room1"
+    },
+    "ad_room_2": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room2"
+    },
+    "ad_room_3": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room3"
+    },
+    "ad_room_4": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room4"
+    },
+    "ad_room_5": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room5"
+    },
+    "ad_room_6": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room6"
+    },
+    "ad_room_7": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room7"
+    },
+    "ad_room_8": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room8"
+    },
+    "ad_room_9": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room9"
+    },
+    "ad_room_10": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room10"
+    },
+    "ad_room_11": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room11"
+    },
+    "ad_room_12": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room12"
+    },
+    "ad_room_13": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room13"
+    },
+    "ad_room_14": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room14"
+    },
+    "ad_room_15": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room15"
+    },
+    "ad_room_16": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room16"
+    },
+    "ad_room_17": {
+      "spawn": "manual",
+      "component": true,
+      "like": "room17"
+    },
+    "ad_item_gold": {
+      "spawn": "manual",
+      "component": true,
+      "like": "item"
+    },
+    "ad_item_bridge": {
+      "spawn": "manual",
+      "component": true,
+      "like": "item",
+      "collisions": {
+        "body": {
+          "type": "box",
+          "size": {
+            "height": 22,
+            "width": 18
+          },
+          "with": [
+            "ad_dragon",
+            "ad_wall",
+            "ad_gate"
+          ]
+        }
+      }
+    },
+    "ad_item_sword": {
+      "size": {
+        "height": 24,
+        "width": 8
+      },
+      "spawn": "manual",
+      "component": true,
+      "like": "item"
+    },
+    "ad_item_magnet": {
+      "spawn": "manual",
+      "component": true,
+      "like": "item"
+    },
+    "ad_item_white": {
+      "spawn": "manual",
+      "component": true,
+      "like": "item"
+    },
+    "ad_item_black": {
+      "spawn": "manual",
+      "component": true,
+      "like": "item"
+    },
+    "ad_item_chalice": {
+      "spawn": "manual",
+      "component": true,
+      "like": "item"
+    },
+    "ad_dragon_0": {
+      "spawn": "manual",
+      "component": true,
+      "like": "dragon"
+    },
+    "ad_dragon_1": {
+      "spawn": "manual",
+      "component": true,
+      "like": "dragon"
+    },
+    "ad_dragon_2": {
+      "spawn": "manual",
+      "component": true,
+      "like": "dragon"
+    },
+    "ad_bat": {
+      "spawn": "manual",
+      "component": true,
+      "like": "bat"
+    },
+    "ad_hero1": {
+      "spawn": "manual",
+      "component": true,
+      "like": "hero",
+      "control": {
+        "player": 1
+      }
+    },
+    "ad_hero2": {
+      "spawn": "manual",
+      "component": true,
+      "like": "hero",
+      "control": {
+        "player": 2
+      }
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "spawn": "manual",
+  "component": true
+}
