@@ -1,0 +1,25 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "group": "pf_floor",
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "visual": {
+    "depth": 0,
+    "color": "#6c6e42",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  }
+}

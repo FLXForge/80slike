@@ -1,0 +1,155 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "visual": {
+    "depth": -20
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "children": {
+    "pf_floor_13_0": {
+      "like": "floor",
+      "origin": {
+        "x": 37.5,
+        "y": 207
+      },
+      "size": {
+        "width": 75,
+        "height": 14
+      }
+    },
+    "pf_floor_13_1": {
+      "like": "floor",
+      "origin": {
+        "x": 173.5,
+        "y": 207
+      },
+      "size": {
+        "width": 113,
+        "height": 14
+      }
+    },
+    "pf_floor_13_2": {
+      "like": "floor",
+      "origin": {
+        "x": 525,
+        "y": 207
+      },
+      "size": {
+        "width": 230,
+        "height": 14
+      }
+    },
+    "pf_floor_13_underground": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 291
+      },
+      "size": {
+        "width": 640,
+        "height": 18
+      },
+      "visual": {
+        "color": "#645e3f"
+      }
+    },
+    "pf_wall_13_deadend": {
+      "like": "floor",
+      "group": "pf_wall",
+      "origin": {
+        "x": 385,
+        "y": 248
+      },
+      "size": {
+        "width": 18,
+        "height": 68
+      },
+      "visual": {
+        "color": "#736f4b"
+      }
+    },
+    "pf_tar_water_13": {
+      "like": "hazard",
+      "origin": {
+        "x": 320,
+        "y": 222
+      },
+      "size": {
+        "width": 180,
+        "height": 36
+      },
+      "visual": {
+        "depth": -1
+      }
+    },
+    "pf_tar_land_13": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 207
+      },
+      "size": {
+        "width": 180,
+        "height": 14
+      },
+      "visual": {
+        "representation": []
+      }
+    },
+    "pf_vine_13": {
+      "like": "vine"
+    },
+    "pf_scorpion_13": {
+      "like": "hazard",
+      "origin": {
+        "x": 475,
+        "y": 275
+      },
+      "size": {
+        "width": 24,
+        "height": 12
+      },
+      "collisions": {
+        "body": {
+          "with": [
+            "pf_wall"
+          ]
+        }
+      },
+      "mechanics": {
+        "type": "direct",
+        "motion": {
+          "speed": 29
+        }
+      }
+    },
+    "pf_treasure_13": {
+      "like": "treasure"
+    },
+    "pf_background_13": {
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      },
+      "size": {
+        "width": 640,
+        "height": 272
+      },
+      "visual": {
+        "depth": -30,
+        "color": "#1e3b34",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    }
+  }
+}

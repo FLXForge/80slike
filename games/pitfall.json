@@ -1,0 +1,101 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true,
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "ready"
+      ]
+    },
+    "ready": {
+      "next": [
+        "play"
+      ]
+    },
+    "play": {
+      "next": [
+        "respawn",
+        "victory",
+        "over",
+        "pause"
+      ]
+    },
+    "pause": {
+      "next": [
+        "play"
+      ]
+    },
+    "respawn": {
+      "next": [
+        "play",
+        "over"
+      ]
+    },
+    "victory": {
+      "next": [
+        "ready",
+        "menu"
+      ]
+    },
+    "over": {
+      "next": [
+        "ready",
+        "menu"
+      ]
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "pitfall/runtime"
+    ]
+  },
+  "visual": {
+    "depth": 40
+  },
+  "sounds": {
+    "victory": "/commons/sounds:pitfall_victory",
+    "over": "/commons/sounds:pitfall_over"
+  },
+  "children": {
+    "pf_backdrop": {
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 160
+      },
+      "size": {
+        "width": 640,
+        "height": 320
+      },
+      "visual": {
+        "depth": -40,
+        "color": "#172e2a",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "pf_scene": {
+      "like": "pitfall/scene",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_menu": {
+      "like": "pitfall/menu",
+      "component": true,
+      "spawn": "manual"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "group": "pf_treasure",
+  "origin": {
+    "x": 530,
+    "y": 185
+  },
+  "size": {
+    "width": 20,
+    "height": 18
+  },
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "visual": {
+    "depth": 4
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  }
+}

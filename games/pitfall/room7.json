@@ -1,0 +1,109 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "visual": {
+    "depth": -20
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "children": {
+    "pf_floor_7_0": {
+      "like": "floor",
+      "origin": {
+        "x": 37.5,
+        "y": 207
+      },
+      "size": {
+        "width": 75,
+        "height": 14
+      }
+    },
+    "pf_floor_7_1": {
+      "like": "floor",
+      "origin": {
+        "x": 378.5,
+        "y": 207
+      },
+      "size": {
+        "width": 523,
+        "height": 14
+      }
+    },
+    "pf_floor_7_underground": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 291
+      },
+      "size": {
+        "width": 640,
+        "height": 18
+      },
+      "visual": {
+        "color": "#645e3f"
+      }
+    },
+    "pf_snake_7": {
+      "like": "hazard",
+      "origin": {
+        "x": 385,
+        "y": 191
+      },
+      "size": {
+        "width": 19,
+        "height": 17
+      }
+    },
+    "pf_scorpion_7": {
+      "like": "hazard",
+      "origin": {
+        "x": 475,
+        "y": 275
+      },
+      "size": {
+        "width": 24,
+        "height": 12
+      },
+      "collisions": {
+        "body": {
+          "with": [
+            "pf_wall"
+          ]
+        }
+      },
+      "mechanics": {
+        "type": "direct",
+        "motion": {
+          "speed": 29
+        }
+      }
+    },
+    "pf_treasure_7": {
+      "like": "treasure"
+    },
+    "pf_background_7": {
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      },
+      "size": {
+        "width": 640,
+        "height": 272
+      },
+      "visual": {
+        "depth": -30,
+        "color": "#1e3b34",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    }
+  }
+}

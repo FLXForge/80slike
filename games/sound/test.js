@@ -3,7 +3,7 @@
 const ACTION = button(0);
 const EXIT = button(0);
 const MOVE = direction(0);
-const MUSIC_COUNT = 9;
+const MUSIC_COUNT = 10;
 const LABELS = [
     "PONG - Ode to Joy",
     "ASTEROIDS - Composite 1",
@@ -14,6 +14,7 @@ const LABELS = [
     "TANK - Iron Orders",
     "FROGGER - The Other Side",
     "ADVENTURE - Call of the Chalice",
+    "PITFALL - Under the Canopy",
     "FX - Thruster",
     "FX - Hyperspace",
     "FX - Arrival",
@@ -61,7 +62,16 @@ const LABELS = [
     "ASTEROIDS - Large rock",
     "ASTEROIDS - Small rock",
     "PONG - Menu mode",
-    "PONG - Menu start"
+    "PONG - Menu start",
+    "PITFALL - Jump",
+    "PITFALL - Landing",
+    "PITFALL - Vine",
+    "PITFALL - Treasure",
+    "PITFALL - Lost life",
+    "PITFALL - Log",
+    "PITFALL - Tunnel fall",
+    "PITFALL - Victory",
+    "PITFALL - Game over"
 ];
 
 function born(test) {

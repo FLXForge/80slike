@@ -1,0 +1,8 @@
+title=Pitfall
+name=Pitfall
+version=1.0
+engine=0.3.1
+path=games
+root=pitfall
+machine=machines/arcade.yml
+input.mapping=controllers.input

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "group": "pf_hazard",
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "visual": {
+    "depth": 4
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  }
+}

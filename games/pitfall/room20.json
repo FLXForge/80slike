@@ -1,0 +1,116 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "visual": {
+    "depth": -20
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "children": {
+    "pf_floor_20_0": {
+      "like": "floor",
+      "origin": {
+        "x": 37.5,
+        "y": 207
+      },
+      "size": {
+        "width": 75,
+        "height": 14
+      }
+    },
+    "pf_floor_20_1": {
+      "like": "floor",
+      "origin": {
+        "x": 173.5,
+        "y": 207
+      },
+      "size": {
+        "width": 113,
+        "height": 14
+      }
+    },
+    "pf_floor_20_2": {
+      "like": "floor",
+      "origin": {
+        "x": 525,
+        "y": 207
+      },
+      "size": {
+        "width": 230,
+        "height": 14
+      }
+    },
+    "pf_floor_20_underground": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 291
+      },
+      "size": {
+        "width": 640,
+        "height": 18
+      },
+      "visual": {
+        "color": "#645e3f"
+      }
+    },
+    "pf_tar_water_20": {
+      "like": "hazard",
+      "origin": {
+        "x": 320,
+        "y": 222
+      },
+      "size": {
+        "width": 180,
+        "height": 36
+      },
+      "visual": {
+        "depth": -1
+      }
+    },
+    "pf_tar_land_20": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 207
+      },
+      "size": {
+        "width": 180,
+        "height": 14
+      },
+      "visual": {
+        "representation": []
+      }
+    },
+    "pf_vine_20": {
+      "like": "vine"
+    },
+    "pf_treasure_20": {
+      "like": "treasure"
+    },
+    "pf_background_20": {
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      },
+      "size": {
+        "width": 640,
+        "height": 272
+      },
+      "visual": {
+        "depth": -30,
+        "color": "#1e3b34",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    }
+  }
+}

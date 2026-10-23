@@ -1,0 +1,50 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "origin": {
+    "x": 160,
+    "y": 189
+  },
+  "size": {
+    "width": 14,
+    "height": 22
+  },
+  "group": "pf_explorer",
+  "mechanics": {
+    "type": "direct",
+    "motion": {
+      "speed": 0,
+      "inertia": 0
+    }
+  },
+  "visual": {
+    "depth": 8
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "pf_floor",
+        "pf_wall",
+        "pf_hazard",
+        "pf_log",
+        "pf_treasure",
+        "pf_vine"
+      ]
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "sounds": {
+    "jump": "/commons/sounds:pitfall_jump",
+    "land": "/commons/sounds:pitfall_land",
+    "vine": "/commons/sounds:pitfall_vine",
+    "treasure": "/commons/sounds:pitfall_treasure",
+    "hurt": "/commons/sounds:pitfall_hurt",
+    "log": "/commons/sounds:pitfall_log",
+    "tunnel": "/commons/sounds:pitfall_tunnel"
+  }
+}

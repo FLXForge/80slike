@@ -14,7 +14,8 @@
     "m6": "/commons/musics:cosmic_side_step",
     "m7": "/commons/musics:iron_orders",
     "m8": "/commons/musics:the_other_side",
-    "m9": "/commons/musics:call_of_the_chalice"
+    "m9": "/commons/musics:call_of_the_chalice",
+    "m10": "/commons/musics:under_the_canopy"
   },
   "origin": {
     "x": 320,
@@ -73,6 +74,15 @@
     "fx44": "/commons/sounds:asteroids_rock_large",
     "fx45": "/commons/sounds:asteroids_rock_small",
     "fx46": "/commons/sounds:pong_menu_mode",
-    "fx47": "/commons/sounds:pong_menu_start"
+    "fx47": "/commons/sounds:pong_menu_start",
+    "fx48": "/commons/sounds:pitfall_jump",
+    "fx49": "/commons/sounds:pitfall_land",
+    "fx50": "/commons/sounds:pitfall_vine",
+    "fx51": "/commons/sounds:pitfall_treasure",
+    "fx52": "/commons/sounds:pitfall_hurt",
+    "fx53": "/commons/sounds:pitfall_log",
+    "fx54": "/commons/sounds:pitfall_tunnel",
+    "fx55": "/commons/sounds:pitfall_victory",
+    "fx56": "/commons/sounds:pitfall_over"
   }
 }

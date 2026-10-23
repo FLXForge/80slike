@@ -1,0 +1,137 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "spawn": "manual",
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "children": {
+    "pf_room_0": {
+      "like": "room0",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_1": {
+      "like": "room1",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_2": {
+      "like": "room2",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_3": {
+      "like": "room3",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_4": {
+      "like": "room4",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_5": {
+      "like": "room5",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_6": {
+      "like": "room6",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_7": {
+      "like": "room7",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_8": {
+      "like": "room8",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_9": {
+      "like": "room9",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_10": {
+      "like": "room10",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_11": {
+      "like": "room11",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_12": {
+      "like": "room12",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_13": {
+      "like": "room13",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_14": {
+      "like": "room14",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_15": {
+      "like": "room15",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_16": {
+      "like": "room16",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_17": {
+      "like": "room17",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_18": {
+      "like": "room18",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_19": {
+      "like": "room19",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_20": {
+      "like": "room20",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_21": {
+      "like": "room21",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_22": {
+      "like": "room22",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_room_23": {
+      "like": "room23",
+      "component": true,
+      "spawn": "manual"
+    },
+    "pf_explorer": {
+      "like": "explorer",
+      "component": true,
+      "spawn": "manual"
+    }
+  }
+}

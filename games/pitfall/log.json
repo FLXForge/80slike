@@ -1,0 +1,32 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "group": "pf_log",
+  "size": {
+    "width": 22,
+    "height": 16
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "size": {
+        "width": 20,
+        "height": 15
+      }
+    }
+  },
+  "mechanics": {
+    "type": "direct",
+    "motion": {
+      "speed": 34
+    }
+  },
+  "visual": {
+    "depth": 4
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  }
+}

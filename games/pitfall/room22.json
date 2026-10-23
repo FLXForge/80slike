@@ -1,0 +1,74 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "visual": {
+    "depth": -20
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "children": {
+    "pf_floor_22_0": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 207
+      },
+      "size": {
+        "width": 640,
+        "height": 14
+      }
+    },
+    "pf_floor_22_underground": {
+      "like": "floor",
+      "origin": {
+        "x": 320,
+        "y": 291
+      },
+      "size": {
+        "width": 640,
+        "height": 18
+      },
+      "visual": {
+        "color": "#645e3f"
+      }
+    },
+    "pf_fire_22": {
+      "like": "hazard",
+      "origin": {
+        "x": 380,
+        "y": 193
+      },
+      "size": {
+        "width": 17,
+        "height": 17
+      }
+    },
+    "pf_treasure_22": {
+      "like": "treasure"
+    },
+    "pf_background_22": {
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      },
+      "size": {
+        "width": 640,
+        "height": 272
+      },
+      "visual": {
+        "depth": -30,
+        "color": "#1e3b34",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    }
+  }
+}
