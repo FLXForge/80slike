@@ -3,7 +3,7 @@
 const ACTION = button(0);
 const EXIT = button(0);
 const MOVE = direction(0);
-const MUSIC_COUNT = 9;
+const MUSIC_COUNT = 10;
 const LABELS = [
     "PONG - Ode to Joy",
     "ASTEROIDS - Composite 1",
@@ -14,6 +14,7 @@ const LABELS = [
     "TANK - Iron Orders",
     "FROGGER - The Other Side",
     "ADVENTURE - Call of the Chalice",
+    "TRAILER - Press Start to Remember",
     "FX - Thruster",
     "FX - Hyperspace",
     "FX - Arrival",
@@ -74,6 +75,9 @@ function action(test) {
         stop_music();
         exit();
         return;
+    }
+    if (read_local(test, "playing") && !music_active()) {
+        write_local(test, "playing", false);
     }
     let option = read_local(test, "option");
     if (!read_local(test, "playing")) {
