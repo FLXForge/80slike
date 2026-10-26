@@ -23,9 +23,9 @@ through the object's `elapsed` local value. No hub or game behavior is needed.
 
 | Time | Sequence |
 | --- | --- |
-| 0–0.9 | Four Conway glider states in a small visible grid |
+| 0–2.05 | Conway glider keeps evolving through the zoom handoff |
 | 0.9–3.35 | Continuous exponential pullback, progressive brand reveal |
-| 3.1–3.65 | Last cells fill; grid fades away |
+| 2.9–3.65 | Grid fades; whole cells resolve into the exact contours |
 | 3.75–4.47 | Pixel GAMES cycles red/green/blue; four-note signature |
 | 4.47–5 | Solid red descriptor and final hold |
 
@@ -42,3 +42,8 @@ no particles, no random numbers and no generated cell objects.
 To extract the project, copy `e_merge.flx`, `games/e_merge.json`,
 `games/e_merge/` and `games/commons/e_merge.json`, preserving these paths.
 The preview images and test harness used during development are not runtime files.
+
+The cellular reveal draws positive whole squares, using the same GRID origin
+and cell size as the glider and grid lines. No white rectangle hides the logo.
+After the grid disappears at 3.3 seconds, a coverage blend resolves the boundary
+cells into the official vector contours; shared black regions remain black.

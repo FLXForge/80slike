@@ -31,6 +31,7 @@ const CELLS = [
     [[2,1],[0,2],[2,2],[1,3],[2,3]],
     [[1,1],[2,2],[3,2],[1,3],[2,3]]
 ];
+const GRID = { x:38, y:76, cell:19 };
 const VIEW = { width:640, height:480, scale:0.47, x:642.5, y:245.5 };
 function clamp01(value) { return Math.max(0, Math.min(1, value)); }
 function smooth(value) { value=clamp01(value); return value*value*(3-2*value); }
@@ -47,7 +48,7 @@ function screen(point, view) {
 }
 // Public draw_line is an outline primitive. Horizontal spans fill our polygons
 // without inventing a fill API or allocating an object for every brand cell.
-function fill_polygon(points, color, view) {
+function polygon_spans(points, view, emit) {
     const polygon=points.map(point=>screen(point,view));
     const first=Math.max(0,Math.ceil(Math.min(...polygon.map(p=>p[1]))-0.5));
     const last=Math.min(479,Math.ceil(Math.max(...polygon.map(p=>p[1]))-0.5)-1);
@@ -62,9 +63,12 @@ function fill_polygon(points, color, view) {
         for(let i=0;i+1<hits.length;i+=2) {
             const left=Math.max(0,Math.ceil(hits[i]-0.5));
             const right=Math.min(639,Math.ceil(hits[i+1]-0.5)-1);
-            if(right>=left) draw_line(left,y,right,y,color);
+            if(right>=left) emit(left,y,right);
         }
     }
+}
+function fill_polygon(points, color, view) {
+    polygon_spans(points,view,(left,y,right)=>draw_line(left,y,right,y,color));
 }
 function rectangle(x,y,w,h,color,view) {
     fill_polygon([[x,y],[x+w,y],[x+w,y+h],[x,y+h]],color,view);
@@ -84,12 +88,12 @@ function draw_descriptor(view,color) {
     }));
 }
 function draw_grid(view,time) {
-    const fade=smooth((time-2.9)/0.75);
+    const fade=smooth((time-2.9)/0.4);
     if(fade>=1) return;
-    const fine=19*view.scale;
+    const fine=GRID.cell*view.scale;
     // Every fourth line belongs to the next scale. Its position never changes
     // when the fine lines fade: all levels share one world-space origin.
-    const origin=screen([38,76],view);
+    const origin=screen([GRID.x,GRID.y],view);
     for(let level=0;level<3;level++) {
         const spacing=fine*Math.pow(4,level);
         const opacity=(1-fade)*(level===0?clamp01((spacing-5)/7):0.65);
@@ -107,27 +111,73 @@ function draw_grid(view,time) {
         }
     }
 }
+
+function inside_brand(x,y) {
+    return BRAND.some(polygon=>{
+        let inside=false;
+        for(let i=0,j=polygon.length-1;i<polygon.length;j=i++) {
+            const a=polygon[i],b=polygon[j];
+            if((a[1]>y)!==(b[1]>y) && x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0]) inside=!inside;
+        }
+        return inside;
+    });
+}
+// Positive, complete cells share exactly the same origin as every grid level.
+// Sampling the brand here never cuts a live cell into a narrow black fragment.
+const BRAND_CELLS=[];
+for(let y=-1;y<11;y++) for(let x=0;x<65;x++) {
+    if(inside_brand(GRID.x+(x+0.5)*GRID.cell,GRID.y+(y+0.5)*GRID.cell))
+        BRAND_CELLS.push({x,y,rank:((x*37+y*17)%101+101)%101/101});
+}
+function cell_polygon(x,y) {
+    const left=GRID.x+x*GRID.cell,top=GRID.y+y*GRID.cell;
+    return [[left,top],[left+GRID.cell,top],[left+GRID.cell,top+GRID.cell],[left,top+GRID.cell]];
+}
+function draw_cells(view,time) {
+    const reveal=smooth((time-1.0)/2.25);
+    BRAND_CELLS.forEach(cell=>{
+        if(cell.rank<=reveal) fill_polygon(cell_polygon(cell.x,cell.y),'#000000',view);
+    });
+}
+// Once the grid is gone, blend coverage of the cellular silhouette into the
+// official contours. Shared spans stay solid black; only boundary spans fade.
+// This writes each resulting span once, without white masks or alpha overlays.
+function draw_resolved_brand(view,amount) {
+    const rows=Array.from({length:480},()=>[]);
+    function collect(kind) {
+        return (left,y,right)=>{
+            rows[y].push({x:left,kind,delta:1},{x:right+1,kind,delta:-1});
+        };
+    }
+    BRAND_CELLS.forEach(cell=>polygon_spans(cell_polygon(cell.x,cell.y),view,collect(0)));
+    BRAND.forEach(polygon=>polygon_spans(polygon,view,collect(1)));
+    rows.forEach((events,y)=>{
+        events.sort((a,b)=>a.x-b.x);
+        const coverage=[0,0];let previous=0;
+        for(const event of events) {
+            if(event.x>previous && (coverage[0]||coverage[1])) {
+                const color=coverage[0]&&coverage[1]?'#000000':grey(255*(coverage[0]?amount:1-amount));
+                draw_line(previous,y,event.x-1,y,color);
+            }
+            coverage[event.kind]+=event.delta;
+            previous=event.x;
+        }
+    });
+}
 function draw(identity) {
     const time=read_local(identity,'elapsed') || 0;
     const view=camera(time);
-    if(time>=0.9) draw_brand(view);
-    if(time>=0.9 && time<3.65) {
-        // Aligned white cells open the solid shapes, then complete them in a
-        // deterministic sequence; there is no raster logo hidden underneath.
-        const reveal=smooth((time-1.0)/2.25);
-        const left=0, top=38, cell=19;
-        for(let y=0;y<13;y++) for(let x=0;x<67;x++) {
-            const rank=((x*37+y*17)%101)/101;
-            if(rank>reveal) rectangle(left+x*cell,top+y*cell,cell,cell,'white',view);
-        }
-        // A handful of late vacancies visibly click into the final form.
-        if(time>3.1) [[57,7],[7,10],[28,7]].forEach((p,i)=>{
-            if(time<3.32+i*0.12) rectangle(p[0]*cell,38+p[1]*cell,cell,cell,'white',view);
-        });
-    }
-    if(time<1.9) {
-        const step=Math.min(3,Math.floor(time/0.23));
-        CELLS[step].forEach(p=>rectangle(76+p[0]*19,133+p[1]*19,19,19,grey(255*smooth((time-1.2)/0.7)),view));
+    if(time>=3.65) draw_brand(view);
+    else if(time>=3.3) draw_resolved_brand(view,smooth((time-3.3)/0.35));
+    else if(time>=0.9) draw_cells(view,time);
+    if(time<2.05) {
+        // A glider repeats after four generations, displaced by one cell on
+        // both axes. Continue those valid states throughout the zoom handoff.
+        const generation=Math.floor(time/0.16);
+        const shift=Math.floor(generation/CELLS.length);
+        const color=grey(255*smooth((time-1.2)/0.85));
+        CELLS[generation%CELLS.length].forEach(p=>
+            fill_polygon(cell_polygon(2+p[0]+shift,3+p[1]+shift),color,view));
     }
     draw_grid(view,time);
     if(time>=3.75) {
