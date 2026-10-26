@@ -74,6 +74,10 @@
     "fx44": "/commons/sounds:asteroids_rock_large",
     "fx45": "/commons/sounds:asteroids_rock_small",
     "fx46": "/commons/sounds:pong_menu_mode",
-    "fx47": "/commons/sounds:pong_menu_start"
+    "fx47": "/commons/sounds:pong_menu_start",
+    "fx48": "/commons/e_merge:identity_pi_1",
+    "fx49": "/commons/e_merge:identity_pi_2",
+    "fx50": "/commons/e_merge:identity_pi_3",
+    "fx51": "/commons/e_merge:identity_pi_4"
   }
 }

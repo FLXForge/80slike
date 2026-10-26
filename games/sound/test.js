@@ -62,7 +62,11 @@ const LABELS = [
     "ASTEROIDS - Large rock",
     "ASTEROIDS - Small rock",
     "PONG - Menu mode",
-    "PONG - Menu start"
+    "PONG - Menu start",
+    "E-MERGE - Signature 1",
+    "E-MERGE - Signature 2",
+    "E-MERGE - Signature 3",
+    "E-MERGE - Signature 4"
 ];
 
 function born(test) {

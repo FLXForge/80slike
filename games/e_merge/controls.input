@@ -1,0 +1,10 @@
+system.buttons.0=KEY_ESCAPE
+system.buttons.1=KEY_ENTER
+players.1.directions.0.up=KEY_UP
+players.1.directions.0.down=KEY_DOWN
+players.1.directions.0.left=KEY_LEFT
+players.1.directions.0.right=KEY_RIGHT
+players.1.buttons.0=KEY_RIGHT_CONTROL
+players.1.buttons.1=KEY_SPACE
+players.1.buttons.2=KEY_Z
+players.1.buttons.3=KEY_X

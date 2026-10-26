@@ -1,0 +1,16 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": { "x": 320, "y": 240 },
+  "size": { "width": 640, "height": 480 },
+  "visual": {
+    "color": "white",
+    "representation": [{ "primitive": "rectangle", "mode": "fill" }]
+  },
+  "behavior": { "scripts": ["e_merge/geometry", "e_merge/sequence"] },
+  "sounds": {
+    "pi_1": "/commons/e_merge:identity_pi_1",
+    "pi_2": "/commons/e_merge:identity_pi_2",
+    "pi_3": "/commons/e_merge:identity_pi_3",
+    "pi_4": "/commons/e_merge:identity_pi_4"
+  }
+}
