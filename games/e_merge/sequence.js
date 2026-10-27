@@ -7,11 +7,13 @@ const SIGNATURE = [3.75, 3.93, 4.29, 4.47];
 function born(identity) {
     write_local(identity, "elapsed", 0);
     write_local(identity, "note", 0);
+    play_timer(identity, "to_end", 8);
 }
 
 function action(identity) {
-    if (input_pressed(system(), button(0))) { exit(); return; }
-    if (input_pressed(system(), button(1))) born(identity);
+    if (timer_done(identity, "to_end")){
+        exit();
+    }
     const elapsed = Math.min(5, read_local(identity, "elapsed") + delta());
     write_local(identity, "elapsed", elapsed);
     let note = read_local(identity, "note");
