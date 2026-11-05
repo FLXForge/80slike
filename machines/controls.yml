@@ -1,0 +1,22 @@
+machine:
+  title: Collection Controls
+  video:
+    screen:
+      width: 320
+      height: 180
+      color: "#0a1020"
+    color:
+      levels:
+        red: 100
+        green: 100
+        blue: 100
+      alpha: false
+    planes:
+      enabled: false
+    objects:
+      sprites: false
+    output:
+      scale: 4
+      smoothing: false
+  audio: chips/audio/asteroids.yml
+  input: chips/input/80arcade.yml
