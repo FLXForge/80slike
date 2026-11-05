@@ -1,6 +1,9 @@
 /// <reference path="https://flxforge.github.io/FLXEngine/scripts/flx.d.ts" />
 
 const SERVE_PAUSE = 0.65;
+// Matches the native limit in ball.json. Request valid speeds so saturation
+// does not emit a mechanics warning on every subsequent paddle contact.
+const MAX_BALL_SPEED = 300;
 
 function born(ball) {
     play_timer(ball, "serve_pause", SERVE_PAUSE);
@@ -32,6 +35,9 @@ function collision(ball, other, contacts) {
         if (!read_global("pong_frenetic")) {
             restore_speed(ball);
         }
+        // Reverse the horizontal serve and vary its slope after each goal.
+        // Frenetic keeps the accumulated speed, but not an automatic goal loop.
+        apply_angle(ball, other.name == "right_goal" ? random(235, 305) : random(55, 125));
         stop_timer(ball, "serve_pause");
         play_timer(ball, "serve_pause", SERVE_PAUSE);
         return;
@@ -55,7 +61,9 @@ function collision(ball, other, contacts) {
             write_local(ball, "spark_color", other.x < 160 ? "blue" : "red");
             for (let pixel = 0; pixel < 8; pixel++) spawn(ball, "spark");
         }
-        apply_speed(ball, ball.speed + 5);
+        if (ball.speed < MAX_BALL_SPEED) {
+            apply_speed(ball, Math.min(ball.speed + 5, MAX_BALL_SPEED));
+        }
     }
     if (read_global("effects") == 1 && contacts.length > 0) {
         stop_timer(ball, "impact_pulse");

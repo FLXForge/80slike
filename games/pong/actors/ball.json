@@ -42,7 +42,8 @@
     "type": "polar",
     "motion": {
       "speed": {
-        "start": 90
+        "start": 90,
+        "limit": 300
       }
     },
     "rotation": {
