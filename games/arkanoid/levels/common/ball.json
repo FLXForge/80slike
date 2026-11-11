@@ -1,0 +1,61 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "offset": {
+    "x": 0,
+    "y": -9
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 200
+      }
+    },
+    "rotation": {
+      "angle": 0
+    }
+  },
+  "control": {
+    "player": 1
+  },
+  "attach": {
+    "born": true,
+    "x": true
+  },
+  "group": "ball",
+  "behavior": {
+    "scripts": [
+      "ball"
+    ]
+  },
+  "sounds": {
+    "paddle": "/commons/sounds:arkanoid_paddle",
+    "lost": "/commons/sounds:arkanoid_lost"
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "with": [
+        "wall_side",
+        "wall_top",
+        "title",
+        "paddle",
+        "brick",
+        "barrier"
+      ]
+    }
+  },
+  "size": {
+    "width": 10,
+    "height": 10
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "primitive": "ellipse",
+        "mode": "fill"
+      }
+    ]
+  }
+}

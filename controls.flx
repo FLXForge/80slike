@@ -1,0 +1,8 @@
+title=HOW TO PLAY
+name=Collection Controls
+version=1.0
+engine=0.3.1
+path=games
+root=controls
+machine=machines/controls.yml
+input.mapping=games/controls/controllers.input

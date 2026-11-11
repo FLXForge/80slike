@@ -1,0 +1,105 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "game"
+      ]
+    },
+    "game": {
+      "next": [
+        "menu",
+        "result"
+      ]
+    },
+    "result": {
+      "next": [
+        "game",
+        "menu"
+      ]
+    }
+  },
+  "children": {
+    "goal_effect": {
+      "origin": {
+        "x": 160,
+        "y": 10
+      },
+      "spawn": "manual",
+      "behavior": {
+        "scripts": [
+          "pong/effect"
+        ]
+      },
+      "size": {
+        "width": 320,
+        "height": 20
+      },
+      "visual": {
+        "color": "red",
+        "representation": [
+          {
+            "primitive": "rectangle"
+          }
+        ],
+        "depth": -2
+      }
+    },
+    "player": {
+      "like": "pong/actors/paddle.json",
+      "origin": {
+        "x": 18.5
+      },
+      "behavior": {
+        "scripts": [
+          "/pong/actors/player"
+        ]
+      },
+      "mechanics": {
+        "type": "direct",
+        "motion": {
+          "speed": {
+            "start": 120
+          }
+        }
+      }
+    },
+    "enemy": {
+      "like": "pong/actors/paddle.json",
+      "origin": {
+        "x": 301.5
+      },
+      "behavior": {
+        "scripts": [
+          "/pong/actors/enemy"
+        ]
+      },
+      "mechanics": {
+        "type": "direct",
+        "motion": {
+          "speed": {
+            "start": 55
+          }
+        }
+      }
+    },
+    "ball": "pong/actors/ball",
+    "court": "pong/land/court",
+    "menu": "pong/menu/main"
+  },
+  "behavior": {
+    "scripts": [
+      "pong/game"
+    ]
+  },
+  "origin": {
+    "x": 160,
+    "y": 90
+  },
+  "size": {
+    "width": 320,
+    "height": 180
+  },
+  "delimit": true
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "size": {
+    "height": 18,
+    "width": 14
+  },
+  "mechanics": {
+    "motion": {
+      "diagonal": "vector",
+      "speed": 98
+    },
+    "type": "direct"
+  },
+  "group": "ad_hero",
+  "sounds": {
+    "gate": "/commons/sounds:adventure_gate",
+    "hurt": "/commons/sounds:adventure_hurt",
+    "drop": "/commons/sounds:adventure_drop",
+    "pickup": "/commons/sounds:adventure_pickup"
+  },
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "visual": {
+    "depth": 8
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "size": {
+        "height": 14,
+        "width": 12
+      },
+      "with": [
+        "ad_wall",
+        "ad_gate",
+        "ad_gap",
+        "ad_item",
+        "ad_dragon"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+input:
+  system:
+    buttons: 3
+  players:
+    count: 2
+    controls:
+      directions:
+        - type: 4way
+          simultaneous: last
+          buffer: 0
+      buttons: 1

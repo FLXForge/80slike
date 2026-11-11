@@ -1,0 +1,52 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "asteroids/game"
+    ]
+  },
+  "children": {
+    "menu": "asteroids/menu/main",
+    "level": "asteroids/space/level",
+    "intro": "asteroids/intro/main"
+  },
+  "music": {
+    "menu": "/commons/musics:one_more_pilot"
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true,
+  "visual": {
+    "depth": -10
+  },
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "intro"
+      ]
+    },
+    "intro": {
+      "next": [
+        "game"
+      ]
+    },
+    "game": {
+      "next": [
+        "result"
+      ]
+    },
+    "result": {
+      "next": [
+        "intro",
+        "menu"
+      ]
+    }
+  }
+}

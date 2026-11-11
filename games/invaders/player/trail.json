@@ -1,0 +1,31 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "size": {
+    "width": 6,
+    "height": 4
+  },
+  "visual": {
+    "depth": -1,
+    "color": "#72cfff",
+    "representation": [
+      {
+        "primitive": "ellipse",
+        "mode": "fill"
+      }
+    ]
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 60
+      }
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "trail"
+    ]
+  }
+}

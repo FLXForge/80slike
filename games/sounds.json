@@ -1,0 +1,83 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "sound/test"
+    ]
+  },
+  "music": {
+    "m1": "/commons/musics:odetojoy",
+    "m2": "/commons/musics:composite1",
+    "m3": "/commons/musics:paddle_ceremony",
+    "m4": "/commons/musics:one_more_pilot",
+    "m5": "/commons/musics:brick_by_brick",
+    "m6": "/commons/musics:cosmic_side_step",
+    "m7": "/commons/musics:iron_orders",
+    "m8": "/commons/musics:the_other_side",
+    "m9": "/commons/musics:call_of_the_chalice",
+    "m10": "/commons/trailer:press_start_to_remember"
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true,
+  "sounds": {
+    "fx0": "/commons/sounds:asteroids_thruster",
+    "fx1": "/commons/sounds:asteroids_hyperspace",
+    "fx2": "/commons/sounds:asteroids_arrival",
+    "fx3": "/commons/sounds:asteroids_laser",
+    "fx4": "/commons/sounds:asteroids_ship_down",
+    "fx5": "/commons/sounds:asteroids_saucer_laser",
+    "fx6": "/commons/sounds:asteroids_saucer_down",
+    "fx7": "/commons/sounds:asteroids_wave",
+    "fx8": "/commons/sounds:invaders_step_0",
+    "fx9": "/commons/sounds:invaders_step_1",
+    "fx10": "/commons/sounds:invaders_step_2",
+    "fx11": "/commons/sounds:invaders_step_3",
+    "fx12": "/commons/sounds:invaders_alien_down",
+    "fx13": "/commons/sounds:invaders_shield_chip",
+    "fx14": "/commons/sounds:invaders_ufo_low",
+    "fx15": "/commons/sounds:invaders_ufo_high",
+    "fx16": "/commons/sounds:tank_fire",
+    "fx17": "/commons/sounds:frogger_hop",
+    "fx18": "/commons/sounds:frogger_crash",
+    "fx19": "/commons/sounds:frogger_splash",
+    "fx20": "/commons/sounds:frogger_home",
+    "fx21": "/commons/sounds:frogger_round",
+    "fx22": "/commons/sounds:frogger_over",
+    "fx23": "/commons/sounds:adventure_pickup",
+    "fx24": "/commons/sounds:adventure_drop",
+    "fx25": "/commons/sounds:adventure_gate",
+    "fx26": "/commons/sounds:adventure_hurt",
+    "fx27": "/commons/sounds:adventure_slain",
+    "fx28": "/commons/sounds:adventure_growl",
+    "fx29": "/commons/sounds:adventure_bat",
+    "fx30": "/commons/sounds:adventure_victory",
+    "fx31": "/commons/sounds:adventure_travel",
+    "fx32": "/commons/sounds:adventure_over",
+    "fx33": "/commons/sounds:beep",
+    "fx34": "/commons/sounds:lost",
+    "fx35": "/commons/sounds:piuu",
+    "fx36": "/commons/sounds:goalA",
+    "fx37": "/commons/sounds:goalB",
+    "fx38": "/commons/sounds:arkanoid_paddle",
+    "fx39": "/commons/sounds:arkanoid_lost",
+    "fx40": "/commons/sounds:arkanoid_powerup",
+    "fx41": "/commons/sounds:arkanoid_title_paddle",
+    "fx42": "/commons/sounds:asteroids_menu_mode",
+    "fx43": "/commons/sounds:asteroids_menu_start",
+    "fx44": "/commons/sounds:asteroids_rock_large",
+    "fx45": "/commons/sounds:asteroids_rock_small",
+    "fx46": "/commons/sounds:pong_menu_mode",
+    "fx47": "/commons/sounds:pong_menu_start",
+    "fx48": "/commons/e_merge:identity_pi_1",
+    "fx49": "/commons/e_merge:identity_pi_2",
+    "fx50": "/commons/e_merge:identity_pi_3",
+    "fx51": "/commons/e_merge:identity_pi_4"
+  }
+}

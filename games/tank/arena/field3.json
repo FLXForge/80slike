@@ -1,0 +1,248 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "children": {
+    "complex_wall_0": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 66,
+        "x": 320
+      },
+      "size": {
+        "height": 24,
+        "width": 32
+      }
+    },
+    "complex_wall_1": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 298,
+        "x": 320
+      },
+      "size": {
+        "height": 24,
+        "width": 32
+      }
+    },
+    "complex_wall_2": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 88,
+        "x": 116
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_3": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 88,
+        "x": 524
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_4": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 276,
+        "x": 116
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_5": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 276,
+        "x": 524
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_6": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 182,
+        "x": 116
+      },
+      "size": {
+        "height": 100,
+        "width": 12
+      }
+    },
+    "complex_wall_7": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 182,
+        "x": 524
+      },
+      "size": {
+        "height": 100,
+        "width": 12
+      }
+    },
+    "complex_wall_8": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 138,
+        "x": 104
+      },
+      "size": {
+        "height": 12,
+        "width": 36
+      }
+    },
+    "complex_wall_9": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 138,
+        "x": 536
+      },
+      "size": {
+        "height": 12,
+        "width": 36
+      }
+    },
+    "complex_wall_10": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 226,
+        "x": 104
+      },
+      "size": {
+        "height": 12,
+        "width": 36
+      }
+    },
+    "complex_wall_11": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 226,
+        "x": 536
+      },
+      "size": {
+        "height": 12,
+        "width": 36
+      }
+    },
+    "complex_wall_12": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 182,
+        "x": 180
+      },
+      "size": {
+        "height": 24,
+        "width": 28
+      }
+    },
+    "complex_wall_13": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 182,
+        "x": 460
+      },
+      "size": {
+        "height": 24,
+        "width": 28
+      }
+    },
+    "complex_wall_14": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 126,
+        "x": 246
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_15": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 126,
+        "x": 394
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_16": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 132,
+        "x": 228
+      },
+      "size": {
+        "height": 24,
+        "width": 12
+      }
+    },
+    "complex_wall_17": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 132,
+        "x": 412
+      },
+      "size": {
+        "height": 24,
+        "width": 12
+      }
+    },
+    "complex_wall_18": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 238,
+        "x": 246
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_19": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 238,
+        "x": 394
+      },
+      "size": {
+        "height": 12,
+        "width": 48
+      }
+    },
+    "complex_wall_20": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 232,
+        "x": 228
+      },
+      "size": {
+        "height": 24,
+        "width": 12
+      }
+    },
+    "complex_wall_21": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "y": 232,
+        "x": 412
+      },
+      "size": {
+        "height": 24,
+        "width": 12
+      }
+    }
+  }
+}

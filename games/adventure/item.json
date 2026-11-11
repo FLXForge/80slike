@@ -1,0 +1,27 @@
+{
+  "group": "ad_item",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "ad_dragon",
+        "ad_wall",
+        "ad_gate"
+      ]
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "visual": {
+    "depth": 10
+  },
+  "size": {
+    "height": 18,
+    "width": 18
+  }
+}

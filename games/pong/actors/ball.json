@@ -1,0 +1,63 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "origin": {
+    "x": 159.5,
+    "y": 89.5
+  },
+  "children": {
+    "trail": {
+      "like": "ball_trail",
+      "spawn": "manual"
+    },
+    "spark": {
+      "like": "spark",
+      "spawn": "manual"
+    }
+  },
+  "group": "ball",
+  "behavior": {
+    "scripts": [
+      "ball"
+    ]
+  },
+  "sounds": {
+    "beep": "/commons/sounds:beep",
+    "goal_left": "/commons/sounds:goalA",
+    "goal_right": "/commons/sounds:goalB"
+  },
+  "size": {
+    "width": 5,
+    "height": 5
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 90,
+        "limit": 300
+      }
+    },
+    "rotation": {
+      "angle": 45
+    }
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "wall",
+        "goal",
+        "paddle"
+      ]
+    }
+  }
+}

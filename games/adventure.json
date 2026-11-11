@@ -1,0 +1,89 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "ready"
+      ]
+    },
+    "ready": {
+      "next": [
+        "play"
+      ]
+    },
+    "play": {
+      "next": [
+        "over",
+        "victory"
+      ]
+    },
+    "over": {
+      "next": [
+        "ready",
+        "menu"
+      ]
+    },
+    "victory": {
+      "next": [
+        "ready",
+        "menu"
+      ]
+    }
+  },
+  "size": {
+    "height": 320,
+    "width": 640
+  },
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "delimit": true,
+  "sounds": {
+    "over": "/commons/sounds:adventure_over",
+    "travel": "/commons/sounds:adventure_travel",
+    "victory": "/commons/sounds:adventure_victory"
+  },
+  "behavior": {
+    "scripts": [
+      "adventure/runtime"
+    ]
+  },
+  "visual": {
+    "depth": 40
+  },
+  "children": {
+    "ad_backdrop": {
+      "size": {
+        "height": 320,
+        "width": 640
+      },
+      "visual": {
+        "representation": [
+          {
+            "mode": "fill",
+            "primitive": "rectangle"
+          }
+        ],
+        "depth": -30,
+        "color": "#14262e"
+      },
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 160
+      }
+    },
+    "ad_menu": {
+      "spawn": "manual",
+      "component": true,
+      "like": "adventure/menu"
+    },
+    "ad_scene": {
+      "spawn": "manual",
+      "component": true,
+      "like": "adventure/scene"
+    }
+  }
+}

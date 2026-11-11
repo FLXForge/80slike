@@ -1,0 +1,11 @@
+# Game data
+title=Asteroids
+name=Asteroids
+version=1.0
+engine=0.3.1
+
+# Configuration
+path=games
+root=asteroids
+machine=machines/arcade.yml
+input.mapping=controllers.input

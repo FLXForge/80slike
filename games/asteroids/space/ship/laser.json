@@ -1,0 +1,48 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "bounds": {
+    "mode": "wrap",
+    "overflow": false
+  },
+  "group": "laser",
+  "behavior": {
+    "scripts": [
+      "laser"
+    ]
+  },
+  "size": {
+    "width": 1,
+    "height": 12
+  },
+  "visual": {
+    "color": "red",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "size": {
+        "width": 4,
+        "height": 4
+      }
+    }
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 300
+      }
+    }
+  },
+  "inherit": {
+    "creation": {
+      "angle": "copy",
+      "velocity": "compose"
+    }
+  }
+}

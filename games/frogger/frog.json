@@ -1,0 +1,47 @@
+{
+  "mechanics": {
+    "motion": {
+      "step": 24,
+      "speed": 1440
+    },
+    "type": "direct"
+  },
+  "size": {
+    "width": 16,
+    "height": 16
+  },
+  "group": "fg_frog",
+  "sounds": {
+    "hop": "/commons/sounds:frogger_hop",
+    "home": "/commons/sounds:frogger_home",
+    "crash": "/commons/sounds:frogger_crash",
+    "splash": "/commons/sounds:frogger_splash"
+  },
+  "origin": {
+    "x": 320,
+    "y": 284
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "visual": {
+    "depth": 5
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "fg_hazard",
+        "fg_platform"
+      ],
+      "size": {
+        "width": 12,
+        "height": 12
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "children": {
+    "barrier0": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 320,
+        "y": 110
+      },
+      "size": {
+        "width": 90,
+        "height": 18
+      }
+    },
+    "barrier1": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 320,
+        "y": 250
+      },
+      "size": {
+        "width": 90,
+        "height": 18
+      }
+    },
+    "barrier2": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 245,
+        "y": 180
+      },
+      "size": {
+        "width": 18,
+        "height": 70
+      }
+    },
+    "barrier3": {
+      "like": "/tank/arena/wall",
+      "origin": {
+        "x": 395,
+        "y": 180
+      },
+      "size": {
+        "width": 18,
+        "height": 70
+      }
+    }
+  }
+}

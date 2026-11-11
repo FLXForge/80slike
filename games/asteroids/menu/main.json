@@ -1,0 +1,36 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "component": true,
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "behavior": {
+    "scripts": [
+      "menu"
+    ]
+  },
+  "children": {
+    "title": {
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 80
+      },
+      "visual": {
+        "color": "white",
+        "representation": [
+          {
+            "text": "A S T E R O I D S",
+            "fontSize": 32
+          }
+        ]
+      }
+    }
+  },
+  "sounds": {
+    "mode": "/commons/sounds:asteroids_menu_mode",
+    "start": "/commons/sounds:asteroids_menu_start"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "children": {
+    "ad_wall_6_0": {
+      "size": {
+        "height": 8,
+        "width": 640
+      },
+      "origin": {
+        "x": 320,
+        "y": 36
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_1": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 140,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_2": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 500,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_3": {
+      "size": {
+        "height": 264,
+        "width": 8
+      },
+      "origin": {
+        "x": 4,
+        "y": 164
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_4": {
+      "size": {
+        "height": 92,
+        "width": 8
+      },
+      "origin": {
+        "x": 636,
+        "y": 78
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_5": {
+      "size": {
+        "height": 92,
+        "width": 8
+      },
+      "origin": {
+        "x": 636,
+        "y": 250
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_6": {
+      "size": {
+        "height": 48,
+        "width": 48
+      },
+      "origin": {
+        "x": 165,
+        "y": 165
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_wall_6_7": {
+      "size": {
+        "height": 48,
+        "width": 48
+      },
+      "origin": {
+        "x": 475,
+        "y": 165
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#5c7862"
+      }
+    },
+    "ad_floor_6": {
+      "size": {
+        "height": 248,
+        "width": 624
+      },
+      "visual": {
+        "representation": [
+          {
+            "mode": "fill",
+            "primitive": "rectangle"
+          }
+        ],
+        "depth": -20,
+        "color": "#263d36"
+      },
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      }
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "component": true,
+  "visual": {
+    "depth": -10
+  }
+}

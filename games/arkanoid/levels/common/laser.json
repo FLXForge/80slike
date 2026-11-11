@@ -1,0 +1,44 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "group": "laser",
+  "size": {
+    "width": 2,
+    "height": 9
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 420
+      }
+    },
+    "rotation": {
+      "angle": 0
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "laser"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "brick",
+        "wall_top"
+      ]
+    }
+  },
+  "visual": {
+    "color": "#ff9fb5",
+    "depth": 5,
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  }
+}

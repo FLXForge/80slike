@@ -1,0 +1,133 @@
+{
+  "children": {
+    "ad_wall_17_0": {
+      "size": {
+        "height": 8,
+        "width": 640
+      },
+      "origin": {
+        "x": 320,
+        "y": 36
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_wall_17_1": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 140,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_wall_17_2": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 500,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_wall_17_3": {
+      "size": {
+        "height": 264,
+        "width": 8
+      },
+      "origin": {
+        "x": 4,
+        "y": 164
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_wall_17_4": {
+      "size": {
+        "height": 264,
+        "width": 8
+      },
+      "origin": {
+        "x": 636,
+        "y": 164
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_wall_17_5": {
+      "size": {
+        "height": 100,
+        "width": 22
+      },
+      "origin": {
+        "x": 160,
+        "y": 145
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_wall_17_6": {
+      "size": {
+        "height": 100,
+        "width": 22
+      },
+      "origin": {
+        "x": 480,
+        "y": 145
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#595574"
+      }
+    },
+    "ad_floor_17": {
+      "size": {
+        "height": 248,
+        "width": 624
+      },
+      "visual": {
+        "representation": [
+          {
+            "mode": "fill",
+            "primitive": "rectangle"
+          }
+        ],
+        "depth": -20,
+        "color": "#262c3c"
+      },
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      }
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "component": true,
+  "visual": {
+    "depth": -10
+  }
+}

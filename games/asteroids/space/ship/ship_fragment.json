@@ -1,0 +1,27 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "bounds": {
+    "mode": "wrap",
+    "overflow": false
+  },
+  "behavior": {
+    "scripts": [
+      "fragment"
+    ]
+  },
+  "size": {
+    "width": 1,
+    "height": 20
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "primitive": "rectangle"
+      }
+    ]
+  },
+  "mechanics": {
+    "type": "direct"
+  }
+}

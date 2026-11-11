@@ -1,0 +1,119 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "children": {
+    "block": {
+      "like": "block"
+    },
+    "gap": {
+      "spawn": "manual",
+      "visible": false
+    }
+  },
+  "creation": {
+    "mode": "grid",
+    "rules": {
+      "rows": 6,
+      "columns": 14,
+      "cellWidth": 6,
+      "cellHeight": 6
+    },
+    "pattern": [
+      [
+        "gap",
+        "gap",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "gap",
+        "gap"
+      ],
+      [
+        "gap",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "gap"
+      ],
+      [
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block"
+      ],
+      [
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block"
+      ],
+      [
+        "block",
+        "block",
+        "block",
+        "block",
+        "block",
+        "gap",
+        "gap",
+        "gap",
+        "gap",
+        "block",
+        "block",
+        "block",
+        "block",
+        "block"
+      ],
+      [
+        "block",
+        "block",
+        "block",
+        "block",
+        "gap",
+        "gap",
+        "gap",
+        "gap",
+        "gap",
+        "gap",
+        "block",
+        "block",
+        "block",
+        "block"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "children": {
+    "title": "title",
+    "title_ball": "ball",
+    "paddle": "paddle",
+    "background": "background",
+    "top_wall": {
+      "like": "wall",
+      "origin": {
+        "x": 320,
+        "y": -5
+      },
+      "size": {
+        "width": 660,
+        "height": 10
+      },
+      "group": "wall"
+    },
+    "right_wall": {
+      "like": "wall",
+      "origin": {
+        "x": 645,
+        "y": 160
+      },
+      "size": {
+        "width": 10,
+        "height": 340
+      },
+      "group": "wall"
+    },
+    "left_wall": {
+      "like": "wall",
+      "origin": {
+        "x": -5,
+        "y": 160
+      },
+      "size": {
+        "width": 10,
+        "height": 340
+      },
+      "group": "wall"
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "titlescreen"
+    ]
+  },
+  "control": {
+    "player": 1
+  },
+  "music": {
+    "menu": "/commons/musics:brick_by_brick"
+  }
+}

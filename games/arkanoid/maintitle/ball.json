@@ -1,0 +1,50 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": {
+    "x": 320,
+    "y": 240
+  },
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 200
+      }
+    },
+    "rotation": {
+      "angle": 25
+    }
+  },
+  "group": "ball",
+  "behavior": {
+    "scripts": [
+      "ball"
+    ]
+  },
+  "sounds": {
+    "paddle": "/commons/sounds:arkanoid_title_paddle"
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "with": [
+        "wall",
+        "title",
+        "paddle"
+      ]
+    }
+  },
+  "size": {
+    "width": 10,
+    "height": 10
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "primitive": "ellipse",
+        "mode": "fill"
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "component": true,
+  "control": {
+    "player": 1
+  },
+  "behavior": {
+    "scripts": [
+      "menu"
+    ]
+  },
+  "music": {
+    "theme": "/commons/musics:cosmic_side_step"
+  },
+  "children": {
+    "preview_squid": {
+      "like": "/invaders/invader/squid",
+      "origin": {
+        "x": 220,
+        "y": 135
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "attach": {
+        "born": false
+      },
+      "group": "preview",
+      "collisions": {
+        "body": {
+          "enabled": false
+        }
+      },
+      "behavior": {
+        "scripts": [
+          "alien"
+        ]
+      }
+    },
+    "preview_crab": {
+      "like": "/invaders/invader/crab",
+      "origin": {
+        "x": 320,
+        "y": 135
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "attach": {
+        "born": false
+      },
+      "group": "preview",
+      "collisions": {
+        "body": {
+          "enabled": false
+        }
+      },
+      "behavior": {
+        "scripts": [
+          "alien"
+        ]
+      }
+    },
+    "preview_octopus": {
+      "like": "/invaders/invader/octopus",
+      "origin": {
+        "x": 420,
+        "y": 135
+      },
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "attach": {
+        "born": false
+      },
+      "group": "preview",
+      "collisions": {
+        "body": {
+          "enabled": false
+        }
+      },
+      "behavior": {
+        "scripts": [
+          "alien"
+        ]
+      }
+    }
+  }
+}

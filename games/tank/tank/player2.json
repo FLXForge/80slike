@@ -1,0 +1,13 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "like": "enemy",
+  "control": {
+    "player": 2
+  },
+  "behavior": {
+    "scripts": [
+      "combat",
+      "player"
+    ]
+  }
+}

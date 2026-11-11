@@ -1,0 +1,40 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "states": {
+    "initial": "intro",
+    "intro": {
+      "next": [
+        "playing"
+      ]
+    },
+    "playing": {
+      "next": []
+    }
+  },
+  "children": {
+    "background": "/arkanoid/levels/common/background",
+    "board": "/arkanoid/levels/common/board",
+    "paddle": "/arkanoid/levels/common/paddle",
+    "layout1": "/arkanoid/levels/layouts/01",
+    "layout2": "/arkanoid/levels/layouts/02",
+    "layout3": "/arkanoid/levels/layouts/03",
+    "layout4": "/arkanoid/levels/layouts/04",
+    "layout5": "/arkanoid/levels/layouts/05",
+    "layout6": "/arkanoid/levels/layouts/06",
+    "layout7": "/arkanoid/levels/layouts/07",
+    "layout8": "/arkanoid/levels/layouts/08",
+    "layout9": "/arkanoid/levels/layouts/09",
+    "layout10": "/arkanoid/levels/layouts/10",
+    "layout11": "/arkanoid/levels/layouts/11",
+    "layout12": "/arkanoid/levels/layouts/12",
+    "layout13": "/arkanoid/levels/layouts/13",
+    "layout14": "/arkanoid/levels/layouts/14",
+    "layout15": "/arkanoid/levels/layouts/15"
+  },
+  "behavior": {
+    "scripts": [
+      "level"
+    ]
+  }
+}

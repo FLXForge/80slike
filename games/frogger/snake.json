@@ -1,0 +1,36 @@
+{
+  "mechanics": {
+    "motion": {
+      "speed": 32
+    },
+    "type": "direct"
+  },
+  "size": {
+    "width": 32,
+    "height": 10
+  },
+  "group": "fg_hazard",
+  "origin": {
+    "x": 120,
+    "y": 164
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "visual": {
+    "depth": 1
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "size": {
+        "width": 28,
+        "height": 7
+      }
+    }
+  }
+}

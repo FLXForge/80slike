@@ -1,0 +1,25 @@
+{
+  "group": "ad_wall",
+  "component": true,
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box"
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "visual": {
+    "representation": [
+      {
+        "mode": "fill",
+        "primitive": "rectangle"
+      }
+    ],
+    "depth": 0,
+    "color": "#677666"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "bounds": {
+    "mode": "wrap",
+    "overflow": false
+  },
+  "sounds": {
+    "pff": "/commons/sounds:asteroids_rock_small"
+  },
+  "group": "asteroid",
+  "behavior": {
+    "scripts": [
+      "asteroid_small"
+    ]
+  },
+  "children": {
+    "fragment": {
+      "like": "asteroid_fragment",
+      "spawn": "manual"
+    }
+  },
+  "visual": {
+    "color": "white",
+    "representation": [
+      {
+        "geometry": [
+          {
+            "x": 0,
+            "y": -8
+          },
+          {
+            "x": 7,
+            "y": -5
+          },
+          {
+            "x": 8,
+            "y": 2
+          },
+          {
+            "x": 4,
+            "y": 8
+          },
+          {
+            "x": -5,
+            "y": 6
+          },
+          {
+            "x": -8,
+            "y": -1
+          },
+          {
+            "x": -4,
+            "y": -7
+          }
+        ],
+        "mode": "close"
+      }
+    ]
+  },
+  "size": {
+    "width": 16,
+    "height": 16
+  },
+  "collisions": {
+    "body": {
+      "type": "ellipse",
+      "size": {
+        "width": 16,
+        "height": 16
+      },
+      "with": [
+        "ship",
+        "asteroid",
+        "laser"
+      ]
+    }
+  },
+  "mechanics": {
+    "type": "direct"
+  }
+}

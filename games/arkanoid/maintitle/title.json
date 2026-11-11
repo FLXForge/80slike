@@ -1,0 +1,40 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": {
+    "x": 320,
+    "y": 110
+  },
+  "group": "title",
+  "behavior": {
+    "scripts": [
+      "title"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "size": {
+        "width": 412,
+        "height": 63
+      },
+      "offset": {
+        "x": 0,
+        "y": -4.5
+      }
+    }
+  },
+  "size": {
+    "width": 412,
+    "height": 90
+  },
+  "visual": {
+    "color": "black",
+    "depth": 10,
+    "representation": [
+      {
+        "text": "ARKANOID",
+        "fontSize": 90
+      }
+    ]
+  }
+}

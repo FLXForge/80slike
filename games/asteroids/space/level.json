@@ -1,0 +1,54 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "behavior": {
+    "scripts": [
+      "ui"
+    ]
+  },
+  "children": {
+    "field": {
+      "like": "asteroid/deep_space",
+      "origin": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "saucers": {
+      "behavior": {
+        "scripts": [
+          "saucer/director"
+        ]
+      },
+      "children": {
+        "saucer": {
+          "like": "saucer/saucer",
+          "spawn": "manual"
+        }
+      }
+    },
+    "ship": {
+      "like": "ship/ship",
+      "spawn": "manual"
+    }
+  },
+  "visual": {
+    "depth": 10
+  },
+  "states": {
+    "initial": "announce",
+    "announce": {
+      "next": [
+        "active"
+      ]
+    },
+    "active": {
+      "next": [
+        "announce"
+      ]
+    }
+  },
+  "sounds": {
+    "wave": "/commons/sounds:asteroids_wave"
+  }
+}

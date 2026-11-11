@@ -1,0 +1,164 @@
+{
+  "children": {
+    "ad_wall_8_0": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 140,
+        "y": 36
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#536c64"
+      }
+    },
+    "ad_wall_8_1": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 500,
+        "y": 36
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#536c64"
+      }
+    },
+    "ad_wall_8_2": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 140,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#536c64"
+      }
+    },
+    "ad_wall_8_3": {
+      "size": {
+        "height": 8,
+        "width": 280
+      },
+      "origin": {
+        "x": 500,
+        "y": 292
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#536c64"
+      }
+    },
+    "ad_wall_8_4": {
+      "size": {
+        "height": 264,
+        "width": 8
+      },
+      "origin": {
+        "x": 4,
+        "y": 164
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#536c64"
+      }
+    },
+    "ad_wall_8_5": {
+      "size": {
+        "height": 264,
+        "width": 8
+      },
+      "origin": {
+        "x": 636,
+        "y": 164
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#536c64"
+      }
+    },
+    "ad_wall_8_6": {
+      "size": {
+        "height": 42,
+        "width": 270
+      },
+      "origin": {
+        "x": 143,
+        "y": 168
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#1a394d"
+      }
+    },
+    "ad_wall_8_7": {
+      "size": {
+        "height": 42,
+        "width": 270
+      },
+      "origin": {
+        "x": 497,
+        "y": 168
+      },
+      "like": "wall",
+      "visual": {
+        "color": "#1a394d"
+      }
+    },
+    "ad_river_gap": {
+      "size": {
+        "height": 42,
+        "width": 84
+      },
+      "group": "ad_gap",
+      "component": true,
+      "collisions": {
+        "body": {
+          "type": "box"
+        }
+      },
+      "origin": {
+        "x": 320,
+        "y": 168
+      }
+    },
+    "ad_floor_8": {
+      "size": {
+        "height": 248,
+        "width": 624
+      },
+      "visual": {
+        "representation": [
+          {
+            "mode": "fill",
+            "primitive": "rectangle"
+          }
+        ],
+        "depth": -20,
+        "color": "#213b3d"
+      },
+      "component": true,
+      "origin": {
+        "x": 320,
+        "y": 164
+      }
+    }
+  },
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "behavior": {
+    "scripts": [
+      "runtime"
+    ]
+  },
+  "component": true,
+  "visual": {
+    "depth": -10
+  }
+}

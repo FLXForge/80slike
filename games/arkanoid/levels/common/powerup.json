@@ -1,0 +1,35 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "mechanics": {
+    "type": "direct",
+    "motion": {
+      "speed": {
+        "start": 30
+      }
+    }
+  },
+  "group": "powerup",
+  "behavior": {
+    "scripts": [
+      "powerup"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "size": {
+        "width": 24,
+        "height": 14
+      }
+    }
+  },
+  "size": {
+    "width": 24,
+    "height": 14
+  },
+  "visual": {
+    "color": "blue",
+    "depth": 10
+  }
+}

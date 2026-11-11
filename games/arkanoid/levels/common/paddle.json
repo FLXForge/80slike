@@ -1,0 +1,74 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": {
+    "x": 335,
+    "y": 285
+  },
+  "states": {
+    "initial": "playing",
+    "playing": {
+      "next": [
+        "respawn"
+      ]
+    },
+    "respawn": {
+      "next": [
+        "playing"
+      ]
+    }
+  },
+  "spawn": "manual",
+  "mechanics": {
+    "type": "direct",
+    "motion": {
+      "speed": {
+        "start": 200
+      }
+    }
+  },
+  "control": {
+    "player": 1
+  },
+  "group": "paddle",
+  "children": {
+    "ball": "ball",
+    "laser_left": {
+      "like": "laser"
+    },
+    "laser_right": {
+      "like": "laser"
+    },
+    "barrier": "barrier"
+  },
+  "behavior": {
+    "scripts": [
+      "paddle"
+    ]
+  },
+  "sounds": {
+    "pop": "/commons/sounds:arkanoid_powerup",
+    "laser": "/commons/sounds:asteroids_laser"
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "wall_side",
+        "powerup"
+      ]
+    }
+  },
+  "size": {
+    "width": 70,
+    "height": 10
+  },
+  "visual": {
+    "color": "grey",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "mechanics": {
+    "type": "polar",
+    "motion": {
+      "speed": {
+        "start": 160
+      }
+    },
+    "rotation": {
+      "angle": 0
+    }
+  },
+  "group": "laser",
+  "behavior": {
+    "scripts": [
+      "laser"
+    ]
+  },
+  "collisions": {
+    "body": {
+      "type": "box",
+      "with": [
+        "invader",
+        "ufo",
+        "shield"
+      ]
+    }
+  },
+  "size": {
+    "width": 2,
+    "height": 8
+  },
+  "visual": {
+    "color": "#b0e9ff",
+    "representation": [
+      {
+        "primitive": "rectangle",
+        "mode": "fill"
+      }
+    ]
+  },
+  "sounds": {
+    "shot": "/commons/sounds:asteroids_laser",
+    "alien_hit": "/commons/sounds:invaders_alien_down",
+    "ufo_hit": "/commons/sounds:asteroids_saucer_down",
+    "shield_hit": "/commons/sounds:invaders_shield_chip"
+  }
+}

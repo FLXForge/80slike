@@ -1,0 +1,187 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": {
+    "x": 320,
+    "y": 160
+  },
+  "size": {
+    "width": 640,
+    "height": 320
+  },
+  "delimit": true,
+  "visual": {
+    "depth": 20
+  },
+  "states": {
+    "initial": "menu",
+    "menu": {
+      "next": [
+        "ready"
+      ]
+    },
+    "ready": {
+      "next": [
+        "combat"
+      ]
+    },
+    "combat": {
+      "next": [
+        "victory"
+      ]
+    },
+    "victory": {
+      "next": [
+        "menu",
+        "ready"
+      ]
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "tank/game"
+    ]
+  },
+  "children": {
+    "arena": {
+      "like": "tank/arena/main",
+      "spawn": "manual"
+    },
+    "menu": "tank/menu/main",
+    "hud": {
+      "spawn": "manual",
+      "origin": {
+        "x": 320,
+        "y": 22
+      },
+      "size": {
+        "width": 640,
+        "height": 44
+      },
+      "visual": {
+        "depth": 15,
+        "color": "#382e25",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    },
+    "red_classic": {
+      "like": "tank/tank/player",
+      "spawn": "manual",
+      "origin": {
+        "x": 90,
+        "y": 180
+      },
+      "mechanics": {
+        "rotation": {
+          "angle": 90
+        }
+      }
+    },
+    "red_advanced": {
+      "like": "tank/tank/player_advanced",
+      "spawn": "manual",
+      "origin": {
+        "x": 90,
+        "y": 180
+      },
+      "mechanics": {
+        "rotation": {
+          "angle": 90
+        }
+      }
+    },
+    "cpu_classic": {
+      "like": "tank/tank/enemy",
+      "spawn": "manual",
+      "origin": {
+        "x": 550,
+        "y": 180
+      },
+      "mechanics": {
+        "rotation": {
+          "angle": 270
+        }
+      }
+    },
+    "cpu_advanced": {
+      "like": "tank/tank/enemy_advanced",
+      "spawn": "manual",
+      "origin": {
+        "x": 550,
+        "y": 180
+      },
+      "mechanics": {
+        "rotation": {
+          "angle": 270
+        }
+      }
+    },
+    "blue_classic": {
+      "like": "tank/tank/player2",
+      "spawn": "manual",
+      "origin": {
+        "x": 550,
+        "y": 180
+      },
+      "mechanics": {
+        "rotation": {
+          "angle": 270
+        }
+      }
+    },
+    "blue_advanced": {
+      "like": "tank/tank/player2_advanced",
+      "spawn": "manual",
+      "origin": {
+        "x": 550,
+        "y": 180
+      },
+      "mechanics": {
+        "rotation": {
+          "angle": 270
+        }
+      }
+    },
+    "field0": {
+      "like": "tank/arena/field0",
+      "spawn": "manual"
+    },
+    "field1": {
+      "like": "tank/arena/field1",
+      "spawn": "manual"
+    },
+    "field2": {
+      "like": "tank/arena/field2",
+      "spawn": "manual"
+    },
+    "field3": {
+      "like": "tank/arena/field3",
+      "spawn": "manual"
+    },
+    "ground": {
+      "spawn": "manual",
+      "origin": {
+        "x": 320,
+        "y": 160
+      },
+      "size": {
+        "width": 640,
+        "height": 320
+      },
+      "visual": {
+        "depth": -20,
+        "color": "#D8B878",
+        "representation": [
+          {
+            "primitive": "rectangle",
+            "mode": "fill"
+          }
+        ]
+      }
+    }
+  }
+}

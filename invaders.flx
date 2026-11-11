@@ -1,0 +1,11 @@
+# Game data
+title=FLX Engine - Invaders Example
+name=Invaders
+version=1.0
+engine=0.3.1
+
+# Configuration
+path=games
+root=invaders
+machine=machines/arcade.yml
+input.mapping=controllers.input

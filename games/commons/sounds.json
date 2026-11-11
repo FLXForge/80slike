@@ -1,0 +1,852 @@
+{
+  "beep": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 880
+    },
+    "duration": 0.08,
+    "volume": 0.7
+  },
+  "lost": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 700,
+      "slide": 500
+    },
+    "duration": 0.08,
+    "volume": 0.7
+  },
+  "piuu": {
+    "kind": {
+      "note": "A4",
+      "slide": -350
+    },
+    "tone": {
+      "wave": "square",
+      "envelope": {
+        "attack": 0,
+        "decay": 0.14,
+        "sustain": 0,
+        "release": 0
+      }
+    },
+    "duration": 0.1,
+    "volume": 0.5
+  },
+  "goalA": {
+    "kind": {
+      "note": "A4",
+      "slide": -350
+    },
+    "tone": {
+      "wave": "pulse"
+    },
+    "duration": 1
+  },
+  "goalB": {
+    "kind": {
+      "note": "F4",
+      "slide": -350
+    },
+    "tone": {
+      "wave": "pulse"
+    },
+    "duration": 1
+  },
+  "asteroids_laser": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "/commons/notes:laser",
+      "slide": -300,
+      "movement": {
+        "type": "fall",
+        "amount": 0.25
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.9,
+        "roughness": 0.1,
+        "noise": 0.02,
+        "resonance": 0.1,
+        "metal": 0
+      }
+    },
+    "duration": 0.05,
+    "volume": 0.4
+  },
+  "asteroids_ship_down": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "saw"
+      },
+      "note": 800,
+      "slide": -700,
+      "movement": {
+        "type": "fall",
+        "amount": 0.8
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.55,
+        "roughness": 0.7,
+        "noise": 0.1,
+        "resonance": 0.15,
+        "metal": 0
+      }
+    },
+    "duration": 0.35,
+    "volume": 0.4
+  },
+  "asteroids_thruster": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 100
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.25,
+        "roughness": 0.2,
+        "noise": 0,
+        "resonance": 0,
+        "metal": 0
+      }
+    },
+    "duration": 0.05,
+    "volume": 0.15
+  },
+  "asteroids_hyperspace": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "saw"
+      },
+      "note": 60,
+      "slide": 950,
+      "movement": {
+        "type": "rise",
+        "amount": 0.35
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.55,
+        "roughness": 0.3,
+        "noise": 0.15,
+        "resonance": 0.15,
+        "metal": 0.1
+      },
+      "envelope": {
+        "attack": 0.45,
+        "decay": 0.45,
+        "sustain": 0.45,
+        "release": 1.4
+      }
+    },
+    "duration": 3.5,
+    "volume": 0.25
+  },
+  "asteroids_arrival": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 650,
+      "slide": -500
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0.01,
+        "decay": 0.25,
+        "sustain": 0,
+        "release": 0.2
+      }
+    },
+    "duration": 0.45,
+    "volume": 0.22
+  },
+  "asteroids_wave": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "E5",
+      "slide": 220
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.2,
+        "sustain": 0,
+        "release": 0.08
+      }
+    },
+    "duration": 0.3,
+    "volume": 0.2
+  },
+  "asteroids_saucer_laser": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 900,
+      "slide": -450
+    },
+    "duration": 0.12,
+    "volume": 0.25
+  },
+  "asteroids_saucer_down": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 450,
+      "slide": -350
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.3,
+        "sustain": 0,
+        "release": 0.12
+      }
+    },
+    "duration": 0.45,
+    "volume": 0.35
+  },
+  "invaders_step_0": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 110,
+      "slide": -12
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.07,
+        "sustain": 0,
+        "release": 0.025
+      }
+    },
+    "duration": 0.095,
+    "volume": 0.16
+  },
+  "invaders_step_1": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 98,
+      "slide": -12
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.07,
+        "sustain": 0,
+        "release": 0.025
+      }
+    },
+    "duration": 0.095,
+    "volume": 0.16
+  },
+  "invaders_step_2": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 87,
+      "slide": -12
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.07,
+        "sustain": 0,
+        "release": 0.025
+      }
+    },
+    "duration": 0.095,
+    "volume": 0.16
+  },
+  "invaders_step_3": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 82,
+      "slide": -12
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.07,
+        "sustain": 0,
+        "release": 0.025
+      }
+    },
+    "duration": 0.095,
+    "volume": 0.16
+  },
+  "invaders_alien_down": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 320,
+      "slide": -220
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.08,
+        "sustain": 0,
+        "release": 0.03
+      }
+    },
+    "duration": 0.11,
+    "volume": 0.22
+  },
+  "invaders_shield_chip": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 900,
+      "slide": -250
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.025,
+        "sustain": 0,
+        "release": 0.01
+      }
+    },
+    "duration": 0.035,
+    "volume": 0.1
+  },
+  "invaders_ufo_low": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 420,
+      "slide": 100
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0.01,
+        "decay": 0.11,
+        "sustain": 0.25,
+        "release": 0.04
+      }
+    },
+    "duration": 0.16,
+    "volume": 0.12
+  },
+  "invaders_ufo_high": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 560,
+      "slide": -100
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0.01,
+        "decay": 0.11,
+        "sustain": 0.25,
+        "release": 0.04
+      }
+    },
+    "duration": 0.16,
+    "volume": 0.12
+  },
+  "tank_fire": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 120,
+      "slide": -85
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.3,
+        "roughness": 0.6,
+        "noise": 0.4,
+        "resonance": 0.1,
+        "metal": 0.2
+      },
+      "envelope": {
+        "attack": 0,
+        "decay": 0.1,
+        "sustain": 0,
+        "release": 0.04
+      }
+    },
+    "duration": 0.14,
+    "volume": 0.3
+  },
+  "frogger_hop": {
+    "tone": {
+      "envelope": {
+        "decay": 0.035750000000000004,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "square"
+    },
+    "duration": 0.055,
+    "kind": {
+      "note": 620,
+      "slide": 420
+    },
+    "volume": 0.16
+  },
+  "frogger_crash": {
+    "tone": {
+      "envelope": {
+        "decay": 0.14300000000000002,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "square"
+    },
+    "duration": 0.22,
+    "kind": {
+      "note": 160,
+      "slide": -110
+    },
+    "volume": 0.35
+  },
+  "frogger_splash": {
+    "tone": {
+      "envelope": {
+        "decay": 0.195,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "triangle"
+    },
+    "duration": 0.3,
+    "kind": {
+      "note": 430,
+      "slide": -340
+    },
+    "volume": 0.4
+  },
+  "frogger_home": {
+    "tone": {
+      "envelope": {
+        "decay": 0.169,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "triangle"
+    },
+    "duration": 0.26,
+    "kind": {
+      "note": 500,
+      "slide": 550
+    },
+    "volume": 0.4
+  },
+  "frogger_round": {
+    "tone": {
+      "envelope": {
+        "decay": 0.39,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "pulse"
+    },
+    "duration": 0.6,
+    "kind": {
+      "note": 440,
+      "slide": 880
+    },
+    "volume": 0.35
+  },
+  "frogger_over": {
+    "tone": {
+      "envelope": {
+        "decay": 0.39,
+        "sustain": 0.1,
+        "attack": 0.002,
+        "release": 0.02
+      },
+      "wave": "triangle"
+    },
+    "duration": 0.6,
+    "kind": {
+      "note": 300,
+      "slide": -220
+    },
+    "volume": 0.35
+  },
+  "adventure_pickup": {
+    "volume": 0.3,
+    "kind": {
+      "slide": 360,
+      "note": 740
+    },
+    "duration": 0.18,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.108,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_drop": {
+    "volume": 0.18,
+    "kind": {
+      "slide": -90,
+      "note": 440
+    },
+    "duration": 0.1,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.06,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_gate": {
+    "volume": 0.25,
+    "kind": {
+      "slide": 220,
+      "note": 180
+    },
+    "duration": 0.45,
+    "tone": {
+      "wave": "pulse",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.27,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_hurt": {
+    "volume": 0.3,
+    "kind": {
+      "slide": -180,
+      "note": 260
+    },
+    "duration": 0.3,
+    "tone": {
+      "wave": "square",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.18,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_slain": {
+    "volume": 0.3,
+    "kind": {
+      "slide": -130,
+      "note": 170
+    },
+    "duration": 0.45,
+    "tone": {
+      "wave": "pulse",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.27,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_growl": {
+    "volume": 0.18,
+    "kind": {
+      "slide": 30,
+      "note": 95
+    },
+    "duration": 0.22,
+    "tone": {
+      "wave": "square",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.132,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_bat": {
+    "volume": 0.2,
+    "kind": {
+      "slide": -320,
+      "note": 980
+    },
+    "duration": 0.16,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.096,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_victory": {
+    "volume": 0.3,
+    "kind": {
+      "slide": 990,
+      "note": 330
+    },
+    "duration": 1.1,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.66,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_travel": {
+    "volume": 0.1,
+    "kind": {
+      "slide": 60,
+      "note": 400
+    },
+    "duration": 0.06,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.036,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "adventure_over": {
+    "volume": 0.3,
+    "kind": {
+      "slide": -220,
+      "note": 330
+    },
+    "duration": 0.7,
+    "tone": {
+      "wave": "triangle",
+      "envelope": {
+        "attack": 0.006,
+        "decay": 0.42,
+        "sustain": 0.15,
+        "release": 0.04
+      }
+    }
+  },
+  "arkanoid_paddle": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 440
+    },
+    "duration": 0.08,
+    "volume": 0.8
+  },
+  "arkanoid_lost": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": 700,
+      "slide": 500,
+      "movement": {
+        "type": "rise",
+        "amount": 0.5
+      }
+    },
+    "duration": 0.08,
+    "volume": 0.4
+  },
+  "arkanoid_powerup": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 900,
+      "slide": 300,
+      "movement": {
+        "type": "rise",
+        "amount": 0.35
+      }
+    },
+    "duration": 0.06,
+    "volume": 0.35
+  },
+  "arkanoid_title_paddle": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": 440
+    },
+    "duration": 0.08,
+    "volume": 0.16
+  },
+  "asteroids_menu_mode": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "triangle"
+      },
+      "note": "E5"
+    },
+    "duration": 0.055,
+    "volume": 0.3
+  },
+  "asteroids_menu_start": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "E4",
+      "slide": 330
+    },
+    "tone": {
+      "envelope": {
+        "attack": 0,
+        "decay": 0.12,
+        "sustain": 0,
+        "release": 0.04
+      }
+    },
+    "duration": 0.18,
+    "volume": 0.3
+  },
+  "asteroids_rock_large": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 300,
+      "slide": -200,
+      "movement": {
+        "type": "fall",
+        "amount": 0.25
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.35,
+        "roughness": 0.8,
+        "noise": 0.4,
+        "resonance": 0.1,
+        "metal": 0
+      }
+    },
+    "duration": 0.18,
+    "volume": 0.5
+  },
+  "asteroids_rock_small": {
+    "kind": {
+      "source": {
+        "type": "noise",
+        "wave": "noise"
+      },
+      "note": 600,
+      "slide": -400,
+      "movement": {
+        "type": "fall",
+        "amount": 0.5
+      }
+    },
+    "tone": {
+      "material": {
+        "brightness": 0.45,
+        "roughness": 0.7,
+        "noise": 0.35,
+        "resonance": 0,
+        "metal": 0
+      }
+    },
+    "duration": 0.08,
+    "volume": 0.3
+  },
+  "pong_menu_mode": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "E5"
+    },
+    "duration": 0.045,
+    "volume": 0.25
+  },
+  "pong_menu_start": {
+    "kind": {
+      "source": {
+        "type": "oscillator",
+        "wave": "square"
+      },
+      "note": "C5",
+      "slide": 260
+    },
+    "duration": 0.16,
+    "volume": 0.35
+  }
+}

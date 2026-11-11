@@ -1,0 +1,60 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "origin": {
+    "x": 97,
+    "y": 57
+  },
+  "mechanics": {
+    "type": "direct",
+    "motion": {
+      "speed": {
+        "start": 30
+      }
+    }
+  },
+  "behavior": {
+    "scripts": [
+      "fleet"
+    ]
+  },
+  "children": {
+    "squid": "squid",
+    "crab": "crab",
+    "octopus": "octopus"
+  },
+  "creation": {
+    "mode": "grid",
+    "rules": {
+      "rows": 6,
+      "columns": 11,
+      "cellWidth": 42,
+      "cellHeight": 20
+    },
+    "pattern": [
+      [
+        "squid"
+      ],
+      [
+        "squid"
+      ],
+      [
+        "crab"
+      ],
+      [
+        "crab"
+      ],
+      [
+        "octopus"
+      ],
+      [
+        "octopus"
+      ]
+    ]
+  },
+  "sounds": {
+    "step0": "/commons/sounds:invaders_step_0",
+    "step1": "/commons/sounds:invaders_step_1",
+    "step2": "/commons/sounds:invaders_step_2",
+    "step3": "/commons/sounds:invaders_step_3"
+  }
+}

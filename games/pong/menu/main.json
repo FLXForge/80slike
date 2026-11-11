@@ -1,0 +1,97 @@
+{
+  "$schema": "https://flxforge.github.io/FLXEngine/schemas/object.schema.json",
+  "spawn": "manual",
+  "component": true,
+  "origin": {
+    "x": 160,
+    "y": 90
+  },
+  "behavior": {
+    "scripts": [
+      "menu"
+    ]
+  },
+  "children": {
+    "title": {
+      "component": true,
+      "origin": {
+        "x": 160,
+        "y": 48
+      },
+      "size": {
+        "width": 120,
+        "height": 40
+      },
+      "visual": {
+        "depth": 3
+      },
+      "behavior": {
+        "scripts": [
+          "title"
+        ]
+      },
+      "children": {
+        "red_echo": {
+          "component": true,
+          "visible": false,
+          "offset": {
+            "x": -3,
+            "y": -2
+          },
+          "visual": {
+            "depth": 1,
+            "color": "red",
+            "representation": [
+              {
+                "text": "PONG",
+                "fontSize": 40
+              }
+            ]
+          }
+        },
+        "blue_echo": {
+          "component": true,
+          "visible": false,
+          "offset": {
+            "x": 3,
+            "y": 2
+          },
+          "visual": {
+            "depth": 1,
+            "color": "blue",
+            "representation": [
+              {
+                "text": "PONG",
+                "fontSize": 40
+              }
+            ]
+          }
+        },
+        "face": {
+          "component": true,
+          "offset": {
+            "x": 0,
+            "y": 0
+          },
+          "visual": {
+            "depth": 2,
+            "color": "white",
+            "representation": [
+              {
+                "text": "PONG",
+                "fontSize": 40
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "music": {
+    "theme": "/commons/musics:paddle_ceremony"
+  },
+  "sounds": {
+    "mode": "/commons/sounds:pong_menu_mode",
+    "start": "/commons/sounds:pong_menu_start"
+  }
+}
